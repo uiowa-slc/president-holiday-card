@@ -28,8 +28,9 @@
 
 		$(document).ready(function() {
 			$('.carousel').carousel({
-  				interval: 2200,
-  				pause: false
+  				interval: 1500,
+  				pause: false,
+  				wrap: false
 			})
 
 

@@ -108,15 +108,22 @@ class Page_Controller extends ContentController {
 		$baseFolder = Director::baseFolder();
 
 		$stylesheets[] = 'themes/bootstrap3/css/bootstrap.css';
+		$stylesheets[] = $themeDir . "/vendor/flexslider/flexslider.css";
 	    $stylesheets[] = $themeDir . "/css/site.css";
+
 	   
-	    Requirements::set_combined_files_folder($themeDir. '_combined');
+	    Requirements::set_combined_files_folder($themeDir. '/_combined');
 		Requirements::combine_files('allStyles.css', $stylesheets);
 
 		$scripts = array();
 		
-		$scripts[] = $themeDir . "/js/jquery-1.10.2.js";
+		$scripts[] = $themeDir . "/vendor/jquery-1.10.2.js";
+
 		$scripts[] = 'themes/bootstrap3/js/bootstrap.js';
+		$scripts[] = $themeDir . "/vendor/imagesloaded.js";
+		$scripts[] = $themeDir . "/vendor/flexslider/jquery.flexslider.js";
+
+		$scripts[] = $themeDir . "/js/script.js";
 
 		
 		Requirements::combine_files('allScripts.js', $scripts);

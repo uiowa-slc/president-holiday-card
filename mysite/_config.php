@@ -15,3 +15,6 @@ $databaseConfig = array(
 
 // Set the site locale
 i18n::set_locale('en_US');
+
+Security::setDefaultAdmin('admin','password'); 
+Director::set_environment_type("dev");

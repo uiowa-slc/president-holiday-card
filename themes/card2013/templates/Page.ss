@@ -23,23 +23,6 @@
     
     <div id="audio-player"></div>
 
-    <script type="text/javascript">
-    
-
-		$(document).ready(function() {
-			$('.carousel').carousel({
-  				interval: 1500,
-  				pause: false,
-  				wrap: false
-			})
-
-
-		});
-		
-		
-    </script>
-
-
 	
 
   </body>

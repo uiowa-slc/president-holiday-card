@@ -8,6 +8,30 @@ a{
 	color: #fff2bb;
 }
 
+#card {
+	background-image: url('../images/alluncovered.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: #000;
+	border: none;
+}
+
+.allcovered {
+	background-color: red;
+}
+
+.uncovered1 {
+	background-image: url('/images/uncovered2.png');
+}
+
+.uncovered2 {
+	background-image: url('/images/uncovered3.png');
+}
+
+.uncovered3 {
+	background-image: url('/images/uncovered4.png');
+}
+
 /* Slider styles */
 .carousel .item {-webkit-transition: opacity 1s; -moz-transition: opacity 1s; -ms-transition: opacity 1s; -o-transition: opacity 1s; transition: opacity 1s;}
 .carousel .active.left {left:0;opacity:0;z-index:2;}

@@ -1,6 +1,6 @@
   $Form
 
-  <div id="card" class="flexslider">
+  <%--<div id="card" class="flexslider">
     <ul class="slides">
       <li class="alluncovered">
         <img src="{$ThemeDir}/images/allcovered.png" />
@@ -24,9 +24,9 @@
         <img src="{$ThemeDir}/images/alluncovered-card.png" />
       </li>
     </ul>
-  </div>
+  </div>--%>
 
-<%--<div id="card" class="carousel slide" data-ride="carousel">
+<div id="card" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
 
     <div class="item active">
@@ -53,4 +53,7 @@
 		  <img src="{$ThemeDir}/images/alluncovered-card.png" />
     </div><!-- end .item -->
   </div><!-- end .carousel-inner -->
-</div> <!-- end #card -->--%>
+</div> <!-- end #card -->
+
+<h1>Send Your Own Greeting Below</h1>
+$CardForm

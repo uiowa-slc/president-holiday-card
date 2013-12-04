@@ -12,3 +12,8 @@ cms/
 framework/
 themes/simple/
 themes/tutorial/
+spamprotection/
+
+recaptcha/
+
+bootstrap_forms/

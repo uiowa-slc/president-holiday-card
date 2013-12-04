@@ -120,8 +120,7 @@ class Page_Controller extends ContentController {
 		$scripts[] = $themeDir . "/vendor/jquery-1.10.2.js";
 
 		$scripts[] = 'themes/bootstrap3/js/bootstrap.js';
-		$scripts[] = $themeDir . "/vendor/imagesloaded.js";
-		$scripts[] = $themeDir . "/vendor/flexslider/jquery.flexslider.js";
+		$scripts[] = $themeDir . "/vendor/jplayer/jquery.jplayer.min.js";
 
 		$scripts[] = $themeDir . "/js/script.js";
 

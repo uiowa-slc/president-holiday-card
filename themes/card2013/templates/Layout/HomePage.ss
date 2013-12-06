@@ -29,22 +29,22 @@
 <div id="card" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
 
-    <div class="item active">
+    <div class="item active allcovered">
 		  <img src="{$ThemeDir}/images/allcovered.png" />
     </div><!-- end .item -->
 
-    <div class="item">
+    <div class="item uncovered1">
 		  <img src="{$ThemeDir}/images/uncovered1.png" />
     </div><!-- end .item -->
 
-      <div class="item">
+      <div class="item uncovered2">
 		<img src="{$ThemeDir}/images/uncovered2.png" />
     </div><!-- end .item -->
-    <div class="item">
+    <div class="item uncovered3">
 		  <img src="{$ThemeDir}/images/uncovered3.png" />
     </div><!-- end .item -->
     <div class="item">
-      <img src="{$ThemeDir}/images/alluncovered.png" />
+      <img src="{$ThemeDir}/images/nothing.png" />
     </div><!-- end .item -->
     <div class="item">
 		  <img src="{$ThemeDir}/images/alluncovered-card.png" />

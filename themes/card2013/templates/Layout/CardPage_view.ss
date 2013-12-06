@@ -1,7 +1,7 @@
   $Form
 <h1>Seasons Greetings from $SenderName </h1>
 
-<div id="card" class="card-custom carousel slide" data-ride="carousel" style="background-image: url('{$Image.URL}') ">
+<div id="card" class="card-custom carousel slide" data-ride="carousel" >
   <div class="carousel-inner">
 
     <div class="item active">
@@ -19,12 +19,9 @@
 		  <img src="{$ThemeDir}/images/uncovered3.png" />
     </div><!-- end .item -->
     <div class="item">
-		  <img src="{$ThemeDir}/images/uncovered4.png" />
+      <img src="{$ThemeDir}/images/nothing.png" />
     </div><!-- end .item -->
-    <div class="item">
-      <img src="{$ThemeDir}/images/alluncovered.png" />
-    </div><!-- end .item -->
-    <div class="item">
+    <div class="item" style="background-image: url('{$Image.URL}') ">
 		  <img src="{$ThemeDir}/images/alluncovered-custom-card.png" />
     </div><!-- end .item -->
   </div><!-- end .carousel-inner -->

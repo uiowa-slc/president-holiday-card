@@ -51,7 +51,7 @@ a{
 }
 
 .allcovered {
-	background-color: red;
+	background-image: url('/images/uncovered1.png');
 }
 
 .uncovered1 {

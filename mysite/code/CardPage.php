@@ -70,7 +70,7 @@ class CardPage_Controller extends Page_Controller {
 	
 		$card = CustomCard::get()->filter(array('ID' => $card_id))->First();
 		
-		if($card){
+		if(($card) && ($card->Approved == true)){
 			return $this->customise($card)->renderWith(array('CardPage_view', 'Page'));
 		}else{
 			$this->redirect(Director::AbsoluteBaseURL());

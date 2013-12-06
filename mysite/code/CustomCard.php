@@ -4,12 +4,15 @@ class CustomCard extends DataObject {
 	private static $db = array(
 
 		"SenderName" => "Text",
+		"Approved" => "Boolean"
 	
 	);
 
 	private static $has_one = array(
 		"Image" => "Image"
 	);
+
+	private static $summary_fields = array('SenderName', 'Image');
 	
 	public function AbsoluteLink(){
 		

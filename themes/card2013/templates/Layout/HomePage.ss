@@ -44,9 +44,6 @@
 		  <img src="{$ThemeDir}/images/uncovered3.png" />
     </div><!-- end .item -->
     <div class="item">
-		  <img src="{$ThemeDir}/images/uncovered4.png" />
-    </div><!-- end .item -->
-    <div class="item">
       <img src="{$ThemeDir}/images/alluncovered.png" />
     </div><!-- end .item -->
     <div class="item">

@@ -5,7 +5,7 @@ $( document ).ready(function() {
 		pause: true,
 		wrap: false
 	 });
-	 $("#audio-player").jPlayer({
+	 /*$("#audio-player").jPlayer({
 		   ready: function () {
 		    $(this).jPlayer("setMedia", {
 		     mp3: "themes/card2013/media/holiday.mp3"
@@ -14,7 +14,7 @@ $( document ).ready(function() {
 		   swfPath: "themes/card2013/vendor/jplayer/",
 		   supplied: "mp3",
 
-	});
+	});*/
 
 });
 

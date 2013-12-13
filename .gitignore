@@ -7,13 +7,12 @@ silverstripe-cache
 .settings
 .idea
 .DS_Store
-vendor/
 cms/
 framework/
 themes/simple/
 themes/tutorial/
 spamprotection/
-
+vendor/composer
 recaptcha/
 
 bootstrap_forms/

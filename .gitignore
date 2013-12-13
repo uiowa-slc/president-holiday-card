@@ -13,6 +13,6 @@ themes/simple/
 themes/tutorial/
 spamprotection/
 vendor/composer
+vendor/autoload.php
 recaptcha/
-
 bootstrap_forms/

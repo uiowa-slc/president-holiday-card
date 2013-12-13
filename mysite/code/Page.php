@@ -56,12 +56,11 @@ class Page_Controller extends ContentController {
 		
 		//Send card email and redirect to the card
 		if($card){
-		
-			if($card->RecipientEmail){
+			if($card->SenderEmail){
 				$body = 'Someone has submitted a greeting card to the President\'s 2013 Holiday Card site <br />
 
 						 <a href="admin/cards/CustomCard/EditForm/field/CustomCard/item/1/edit/'.$card->ID.'">View the submitted card here to approve it.</a> <br />
-						 <a href="'.$card->Image->AbsoluteLink().'">View the image directly</a>
+						 <a href="#">View the image directly</a>
 				';
 			    
 		        $email = new Email(); 
@@ -72,6 +71,7 @@ class Page_Controller extends ContentController {
 			    $email->send();  
 			    $this->redirect(Director::baseURL().'thanks/');
 			}
+			
 		}
 
 	}

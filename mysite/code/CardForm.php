@@ -14,7 +14,8 @@ class CardForm extends BootstrapForm {
 		
         $fields = new FieldList(
         
-            TextField::create("SenderName")->setAttribute('placeholder', 'Your Name'),
+            TextField::create("SenderName", "Enter Your Name")->setAttribute('placeholder', 'Your Name'),
+            EmailField::create("SenderEmail", "Enter Your Email Address")->setAttribute('placeholder', 'Your Email Address'),
             $uploadField
             //EmailField::create("RecipientEmail")->setAttribute('placeholder', 'Recipient\'s Email Address (optional)'),
             /*TextareaField::create("Message")->setAttribute('placeholder', 'Sincerely, ')->setAttribute('maxlength', '400')*/
@@ -25,10 +26,10 @@ class CardForm extends BootstrapForm {
             
         );
 
-        $actions = new FieldList(FormAction::create("doCreateCard")->setTitle("Send and Share your Card"));
-        $requiredFields = new RequiredFields("ChosenGlobe","Message");
+        $actions = new FieldList(FormAction::create("doCreateCard")->setTitle("Create Your Card!"));
+        $requiredFields = new RequiredFields("SenderName","SenderEmail", "Image");
         
-        parent::__construct($controller, $name, $fields, $actions);
+        parent::__construct($controller, $name, $fields, $actions, $requiredFields);
     }
      
     public function forTemplate() {

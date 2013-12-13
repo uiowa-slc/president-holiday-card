@@ -414,6 +414,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
         .one($.support.transition.end, function () {
           $next.removeClass([type, direction].join(' ')).addClass('active')
           $active.removeClass(['active', direction].join(' '))
+          
           that.sliding = false
           setTimeout(function () { that.$element.trigger('slid') }, 0)
         })

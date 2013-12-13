@@ -55,13 +55,7 @@ class CardPage_Controller extends Page_Controller {
 		parent::init();
 	}
 	
-	public function index(){
-		$this->redirect(Director::AbsoluteBaseURL());
-		
-	}
-	
 
-	
 	public function view($request){
 	
 		$card_id = htmlspecialchars($request->param('ID'));

@@ -5,6 +5,8 @@ $( document ).ready(function() {
 		pause: true,
 		wrap: false
 	 });
+
+	 /* Uncomment when you're ready for music */
 	 /*$("#audio-player").jPlayer({
 		   ready: function () {
 		    $(this).jPlayer("setMedia", {
@@ -16,12 +18,20 @@ $( document ).ready(function() {
 
 	});*/
 
+	$('.carousel').on('slid', function () {
+	  $('.carousel-inner > .item.active .carousel-caption').fadeIn( "slow" );
+	})
+
+	var slideCount = $('.carousel .item').length;
+	$('.carousel').on('slide.bs.carousel', function () {
+		slideCount--;
+	    if (slideCount == 1) {
+
+	        $('.send-your-own').delay(1000).fadeIn(800);
+	        $('.addthis_floating_style').delay(1000).fadeIn(800);
+
+	    }
+
+	})
+
 });
-
-$(window).load(function() {
-
-});
-
-
-
- 			/**/

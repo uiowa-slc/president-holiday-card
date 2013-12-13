@@ -38,7 +38,7 @@ class Page_Controller extends ContentController {
 		"doCreateCard"
 	);
 	
-	function usingIE8orLess(){
+	function usingIE8OrLess(){
 		$browser = new Browser();
 		//print_r($browser);
 	    if( $browser->getBrowser() == Browser::BROWSER_IE && $browser->getVersion()  <= 8 ) {
@@ -52,44 +52,27 @@ class Page_Controller extends ContentController {
 		
 		$card = new CustomCard();
 		$form->saveInto($card);
-		
-		
-		substr(str_shuffle(str_repeat('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',5)),0,5);
-		
-		//$card->URLSegment = uniqid(rand(), false);
-		
-		$card->URLSegment = hash('crc32b', $card->Message.$card->ID.$card->Created);
-		
-		 
 		$card->write();
 		
 		//Send card email and redirect to the card
 		if($card){
 		
 			if($card->RecipientEmail){
-				$body = '
-				<center>
-				<p>Someone sent you a greeting. Tap or click the image below to see it.</p>
-				<p>If you can\'t see the image, <a href="'.$card->AbsoluteLink().'">open your card here.</a></p>
-				<p><a href="'.$card->AbsoluteLink().'"><img src="'.Director::baseURL().'/themes/holiday2012/images/'.$card->ChosenGlobe.'_outside_preview.png" /></a></p>
-				</center>
-				
+				$body = 'Someone has submitted a greeting card to the President\'s 2013 Holiday Card site <br />
+
+						 <a href="admin/cards/CustomCard/EditForm/field/CustomCard/item/1/edit/'.$card->ID.'">View the submitted card here to approve it.</a> <br />
+						 <a href="'.$card->Image->AbsoluteLink().'">View the image directly</a>
 				';
 			    
 		        $email = new Email(); 
-			    $email->setTo($card->RecipientEmail); 
-			    $email->setFrom('The University of Iowa <no-reply@uiowa.edu>'); 
-			    $email->setSubject('Someone Sent You a Holiday Greeting!'); 
+			    $email->setTo('dustin-quam@uiowa.edu'); 
+			    $email->setFrom('The University of Iowa Office of the President<no-reply@uiowa.edu>'); 
+			    $email->setSubject('Someone submitted a greeting card'); 
 			    $email->setBody($body); 
 			    $email->send();  
-			    $this->redirect($card->AbsoluteLink().'?message=sent');
-
-			}else{
-		    	$this->redirect($card->AbsoluteLink().'?message=saved');
-		    }
+			    $this->redirect(Director::baseURL().'thanks/');
+			}
 		}
-		
-
 
 	}
 	
@@ -126,6 +109,13 @@ class Page_Controller extends ContentController {
 
 		
 		Requirements::combine_files('allScripts.js', $scripts);
+
+	}
+
+	public function customCards(){
+		$cards = CustomCard::get()->filter('Approved', '1')->sort('RAND()');
+
+		return $cards;
 
 	}
 

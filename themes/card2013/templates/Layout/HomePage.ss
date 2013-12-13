@@ -47,11 +47,10 @@
       <img src="{$ThemeDir}/images/alluncovered.png" />
     </div><!-- end .item -->
     <div class="item">
-		  <img src="{$ThemeDir}/images/alluncovered-card.png" />
+		  <img src="{$ThemeDir}/images/alluncovered-card.png" alt="Season's Greetings from the University of Iowa" />
     </div><!-- end .item -->
   </div><!-- end .carousel-inner -->
 </div> <!-- end #card -->
+<% include SendYourOwnSection %>
 
-<h1>Send Your Own Greeting Below</h1>
-<p><a href="cards/view/6">Example Card</a></p>
-$CardForm
+

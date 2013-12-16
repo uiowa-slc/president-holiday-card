@@ -21,7 +21,7 @@ class CardApprovalAdmin extends ModelAdmin {
             //$list->exclude('Approved', '1');
             return $list;
         }else{
-       		$list->exclude('Approved', '0');
+       		$list->exclude('Approved', '1');
         }
         return $list;
     }

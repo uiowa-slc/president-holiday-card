@@ -60,7 +60,7 @@ class Page_Controller extends ContentController {
 			if($card->SenderEmail){
 				$body = 'Someone has submitted a greeting card to the President\'s 2013 Holiday Card site <br />
 
-						 <a href="'.$base.'admin/cards/CustomCard?q%5BSenderName%5D=&q%5BSenderEmail%5D=&q%5BApproved%5D=1&action_search=Apply+Filter">View all unapproved cards</a> <br />
+						 <a href="'.$base.'admin/cards/CustomCard?q%5BSenderName%5D=&q%5BSenderEmail%5D=&q%5BApproved%5D=0&action_search=Apply+Filter">View all unapproved cards</a> <br />
 				';
 			    
 		        $email = new Email(); 

@@ -6,7 +6,7 @@ Iowa City, Iowa 52242-1316 <br />
 Phone: 319-335-3549 <br />
 Fax: 319-335-0807 <br />
 
-&copy;The University of Iowa, 2013
+&copy; <a href="http://www.uiowa.edu/" target="_blank">The University of Iowa</a>, 2013
 
 
 </footer>

@@ -41,7 +41,11 @@ class CustomCard extends DataObject {
 			    $email->setTo($this->SenderEmail); 
 			    $email->setFrom('The University of Iowa <no-reply@uiowa.edu>'); 
 			    $email->setSubject('Your Greeting Card is Finished!'); 
-			    $email->setBody('The link will go here.'); 
+			    $email->setBody('Please use the following link to share your card: <br />
+			    	<a href="'.$this->AbsoluteLink.'"></a> <br />
+			    	Thank You!
+
+			    	'); 
 			    $email->send();  
 
 		}

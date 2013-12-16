@@ -17,18 +17,23 @@
   <body>
 
     <!-- AddThis Button BEGIN -->
-    <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="left:50px;top:50px;">
-      <a class="addthis_button_facebook"></a>
-      <a class="addthis_button_twitter"></a>
-      <a class="addthis_button_google_plusone_share"></a>
-      <a class="addthis_button_email"></a>
-      <a class="addthis_button_compact"></a>
+
+    <div class="share-links">
+      <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="left:50px;top:50px;">
+        <a class="addthis_button_facebook"></a>
+        <a class="addthis_button_twitter"></a>
+        <a class="addthis_button_google_plusone_share"></a>
+        <a class="addthis_button_email"></a>
+        <a class="addthis_button_compact"></a>
+      </div>
     </div>
     <!-- AddThis Button END -->
     <div class="container">
     	$Layout
 
     </div><!-- end container -->
+
+    <% include Footer %>
     
     <div id="audio-player"></div>
 

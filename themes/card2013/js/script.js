@@ -38,8 +38,11 @@ $( document ).ready(function() {
 		slideCount--;
 	    if (slideCount == 1) {
 
-	        $('.send-your-own').delay(1000).fadeIn(800);
-	        $('.addthis_floating_style').delay(1000).fadeIn(800);
+	    	var timer = 1500;
+
+	        $('.send-your-own').delay(timer).fadeIn(800);
+	        $('footer').delay(timer).fadeIn(800);
+	        $('.addthis_floating_style').delay(timer).fadeIn(800);
 
 	    }
 

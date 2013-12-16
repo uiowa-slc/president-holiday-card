@@ -20,26 +20,28 @@ body{
 	background: #010101;
 	font-family: 'Merriweather', serif;
 	color: white;
-	font-size: 1em;
+	font-size: 13px;
 }
-@media only screen and (max-width: 400px) {
-	body { font-size:90%;}
+@media only screen and (min-width: 480px) {
+	body { font-size: 14px}
 }
-@media only screen and (max-width: 800px) {
-	body { font-size:100%;}
+@media only screen and (min-width: 768px) {
+	body { font-size: 16px}
 }  
  
-@media only screen and (max-width: 1100px) {
-    body { font-size:120%;}
+@media only screen and (min-width: 1100px) {
+    body { font-size: 18px}
 } 
 
-@media only screen and (min-width: 1100px) {
-	body { font-size:120%;}
-}
 
 
 a{
 	color: #fff2bb;
+}
+
+a:hover {
+	color: #fff9de;
+	text-decoration: none;
 }
 
 
@@ -50,6 +52,10 @@ a{
 	background-repeat: no-repeat;
 	background-color: #000;
 	border: none;
+}
+
+#card.homepage {
+	margin-top: 3%;
 }
 
 #card.card-custom {
@@ -75,29 +81,23 @@ a{
 .send-your-own {
 	display: none;
 	position: relative;
-	margin-top: -8%;
 	background-color: black;
 	background-color: rgba(0, 0, 0, 0.86);
 }
 
 .send-your-own p{
-	font-size: 1.5em;
 	text-align: center;
 }
 
 .steps {
-	font-size: 1.5em;
 	margin: 0;
 	padding: 0;
-	width: 75%;
-	margin: auto;
 	margin-bottom: 5%;
 
 }
 
 .steps li {
 	list-style-type: none;
-	text-align: center;
 }
 
 .steps strong {
@@ -134,12 +134,13 @@ a{
 @media screen and (min-width: 1024px) {
 	.card-list li {
 		width: 32%;
+
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	.card-list li {
-		width: 24%;
+		width: 23%;
 	}
 }
 .card-list li img {
@@ -154,6 +155,11 @@ a{
 	font-size: 2.5em;
 	display: block;
 	text-align: center;
+}
+
+.card-list li.card-form {
+	background: none;
+	border: 0;
 }
 .card-list .filler {
 	height: 0;
@@ -170,11 +176,10 @@ a{
 
 #CardForm_CardForm {
 	background: rgba(0,0,0,0.2);
-	padding: 4%;
 	font-family: 'Merriweather', serif;
+	font-size: 0.9em;
 }
 #CardForm_CardForm label {
-	font-size: 1.1em;
 	margin: 0.4em 0;
 	font-weight: normal;
 	text-align: center;
@@ -204,10 +209,27 @@ a{
 	}
 }
 
+/* Footer */
+
+footer {
+	display: none;
+	border-top: 1px solid #665c3c;
+	padding-top: 1em;
+	font-size: 0.6em;
+}
+
 
 /* Social Media */
 
+.share-links {
+	display: none;
+}
+@media screen and (min-width: 768px) {
+.share-links {
+	display: block;
+}
 
+}
 .addthis_floating_style {
 	background: none !important;
 	display: none;

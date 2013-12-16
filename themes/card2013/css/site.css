@@ -97,6 +97,7 @@ a{
 
 .steps li {
 	list-style-type: none;
+	text-align: center;
 }
 
 .steps strong {
@@ -162,7 +163,7 @@ a{
 
 /* Slider styles */
 .carousel .item {-webkit-transition: opacity 1s; -moz-transition: opacity 1s; -ms-transition: opacity 1s; -o-transition: opacity 1s; transition: opacity 1s;}
-.carousel .active.left {left:0;opacity:0;z-index:2;}
+.carousel .active.left {left:0;opacity:0;z-index:2; }
 .carousel .next {left:0;opacity:1;z-index:1;}
 
 /* Card Form */
@@ -206,6 +207,7 @@ a{
 
 /* Social Media */
 
+
 .addthis_floating_style {
 	background: none !important;
 	display: none;
@@ -215,4 +217,8 @@ a{
 .addthis_floating_style.addthis_32x32_style {
 	top: 35% !important;
 	left: 0 !important;
+}
+
+.at3winwrapper {
+	color: #333;
 }

@@ -49,7 +49,8 @@ class Page_Controller extends ContentController {
 	}
 	
 	public function doCreateCard($data,$form){
-		
+		$base = Director::baseURL();
+
 		$card = new CustomCard();
 		$form->saveInto($card);
 		$card->write();
@@ -59,8 +60,7 @@ class Page_Controller extends ContentController {
 			if($card->SenderEmail){
 				$body = 'Someone has submitted a greeting card to the President\'s 2013 Holiday Card site <br />
 
-						 <a href="admin/cards/CustomCard/EditForm/field/CustomCard/item/1/edit/'.$card->ID.'">View the submitted card here to approve it.</a> <br />
-						 <a href="#">View the image directly</a>
+						 <a href="'.$base.'admin/cards/CustomCard?q%5BSenderName%5D=&q%5BSenderEmail%5D=&q%5BApproved%5D=1&action_search=Apply+Filter">View all unapproved cards</a> <br />
 				';
 			    
 		        $email = new Email(); 
@@ -69,7 +69,7 @@ class Page_Controller extends ContentController {
 			    $email->setSubject('Someone submitted a greeting card'); 
 			    $email->setBody($body); 
 			    $email->send();  
-			    $this->redirect(Director::baseURL().'thanks/');
+			    $this->redirect($base.'thanks/');
 			}
 			
 		}
@@ -101,10 +101,8 @@ class Page_Controller extends ContentController {
 		$scripts = array();
 		
 		$scripts[] = $themeDir . "/vendor/jquery-1.10.2.js";
-
 		$scripts[] = 'themes/bootstrap3/js/bootstrap.js';
 		$scripts[] = $themeDir . "/vendor/jplayer/jquery.jplayer.min.js";
-
 		$scripts[] = $themeDir . "/js/script.js";
 
 		

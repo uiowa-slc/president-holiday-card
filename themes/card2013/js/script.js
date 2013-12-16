@@ -1,5 +1,6 @@
 $( document ).ready(function() {
 
+
      $('.carousel').carousel({
 		interval: 1500,
 		pause: true,
@@ -21,6 +22,16 @@ $( document ).ready(function() {
 	$('.carousel').on('slid', function () {
 	  $('.carousel-inner > .item.active .carousel-caption').fadeIn( "slow" );
 	})
+
+	    if(!Modernizr.csstransitions){
+            $('.carousel').on('slide.bs.carousel', function(){
+            $(this).find('.carousel-inner .active').hide();
+        });
+        $('.carousel').on('slid', function(){
+            $(this).find('.carousel-inner .next').slideDown();
+        });
+    }
+
 
 	var slideCount = $('.carousel .item').length;
 	$('.carousel').on('slide.bs.carousel', function () {

@@ -13,7 +13,11 @@ class CustomCard extends DataObject {
 		"Image" => "Image"
 	);
 
-	private static $summary_fields = array('SenderName', 'SenderEmail', 'Thumbnail');
+	private static $searchable_fields = array (
+		"SenderName", "SenderEmail", "Approved"
+
+	);
+	private static $summary_fields = array('SenderName', 'SenderEmail', 'Thumbnail', 'Approved');
 
 	function getThumbnail() { 
       return $this->Image()->CMSThumbnail(); 

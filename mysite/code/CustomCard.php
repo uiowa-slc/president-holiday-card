@@ -25,7 +25,7 @@ class CustomCard extends DataObject {
 	
 	public function Link(){
 		
-		$card_holder = DataObject::get_one('CardPage');	
+		$card_holder = CardPage::get()->First();	
 		$card_url = $card_holder->AbsoluteLink().'view/'.$this->ID;
 		
 		return $card_url;
@@ -42,7 +42,7 @@ class CustomCard extends DataObject {
 			    $email->setFrom('The University of Iowa <no-reply@uiowa.edu>'); 
 			    $email->setSubject('Your Greeting Card is Finished!'); 
 			    $email->setBody('Please use the following link to share your card: <br />
-			    	<a href="http://studentlife.uiowa.edu/greeting/'.$this->ID.'"></a> <br />
+			    	<a href="'.$this->Link().'">'.$this->Link().'</a> <br />
 			    	Thank You!
 
 			    	'); 

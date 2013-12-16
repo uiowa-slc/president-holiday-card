@@ -54,6 +54,10 @@ class CardPage_Controller extends Page_Controller {
 	public function init() {
 		parent::init();
 	}
+
+	public function index(){
+		$this->redirect(Director::AbsoluteBaseURL());
+	}
 	
 
 	public function view($request){

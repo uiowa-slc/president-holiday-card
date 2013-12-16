@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Happy Holidays from <% if $SenderName %>$SenderName<% else %>Sally and Ken Mason<% end_if %></title>
+    <title>Seasons Greetings from <% if $SenderName %>$SenderName<% else %>Sally and Ken Mason<% end_if %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">

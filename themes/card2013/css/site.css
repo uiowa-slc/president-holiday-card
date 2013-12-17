@@ -61,7 +61,9 @@ a:hover {
 }
 
 #card.card-custom {
-	background-size: cover;
+	background-size: 85%;
+	background-position-x: 50%;
+	background-position-y: 50%;
 }
 
 .allcovered {

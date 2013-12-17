@@ -214,12 +214,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/chillu/silverstripe-recaptcha.git",
-                "reference": "7824a7c1105f9b7d89a984771bc7125af1747f77"
+                "reference": "f76f0da795bb6e187e90abd7d11db351af271aeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chillu/silverstripe-recaptcha/zipball/7824a7c1105f9b7d89a984771bc7125af1747f77",
-                "reference": "7824a7c1105f9b7d89a984771bc7125af1747f77",
+                "url": "https://api.github.com/repos/chillu/silverstripe-recaptcha/zipball/f76f0da795bb6e187e90abd7d11db351af271aeb",
+                "reference": "f76f0da795bb6e187e90abd7d11db351af271aeb",
                 "shasum": ""
             },
             "require": {
@@ -241,7 +241,7 @@
                 "silverstripe",
                 "spamprotection"
             ],
-            "time": "2013-07-04 12:59:00"
+            "time": "2013-12-16 23:26:33"
         },
         {
             "name": "silverstripe/spamprotection",

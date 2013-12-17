@@ -60,8 +60,8 @@ a:hover {
 	margin-top: 3%;
 }
 
-#card.card-custom {
-	background-size: 85%;
+#card.card-custom, .card-list li {
+	background-size: 70%;
 	background-position-x: 50%;
 	background-position-y: 50%;
 }

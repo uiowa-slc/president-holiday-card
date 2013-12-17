@@ -62,8 +62,7 @@ a:hover {
 
 #card.card-custom, .card-list li {
 	background-size: 70%;
-	background-position-x: 50%;
-	background-position-y: 50%;
+	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
 
@@ -100,7 +99,7 @@ a:hover {
 	margin-bottom: 5%;
 	font-size: 1.1em;
 	text-align: center;
-	
+
 }
 
 .steps li {

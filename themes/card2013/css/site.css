@@ -8,8 +8,9 @@ h2 {
 
 }
 
-h1, h2, h3 {
-	
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Merriweather', serif;
+
 }
 
 hr {
@@ -93,11 +94,12 @@ a:hover {
 	margin: 0;
 	padding: 0;
 	margin-bottom: 5%;
-
+	font-size: 1.1em;
 }
 
 .steps li {
 	list-style-type: none;
+	margin: 0.8em 0;
 }
 
 .steps strong {

@@ -10,7 +10,7 @@ class CardForm extends BootstrapForm {
 		
 		//$message_options = array($cardPage->Message1, $cardPage->Message2, $cardPage->Message3);
 
-        $uploadField = FileField::create("Image","Upload Your Image");
+        $uploadField = FileField::create("Image","Upload Your Photo");
 		
         $fields = new FieldList(
         

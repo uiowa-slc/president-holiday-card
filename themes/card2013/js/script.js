@@ -8,16 +8,16 @@ $( document ).ready(function() {
 	 });
 
 	 /* Uncomment when you're ready for music */
-	 /*$("#audio-player").jPlayer({
+	 $("#audio-player").jPlayer({
 		   ready: function () {
 		    $(this).jPlayer("setMedia", {
-		     mp3: "themes/card2013/media/holiday.mp3"
+		     mp3: "themes/card2013/media/winterwonder_short.mp3"
 		    }).jPlayer("play");
 		   },
 		   swfPath: "themes/card2013/vendor/jplayer/",
 		   supplied: "mp3",
 
-	});*/
+	});
 
 	$('.carousel').on('slid', function () {
 	  $('.carousel-inner > .item.active .carousel-caption').fadeIn( "slow" );

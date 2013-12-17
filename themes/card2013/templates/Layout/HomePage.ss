@@ -25,5 +25,6 @@
   </div><!-- end .carousel-inner -->
 </div> <!-- end #card -->
 <% include SendYourOwnSection %>
+<div id="audio-player"></div>
 
 

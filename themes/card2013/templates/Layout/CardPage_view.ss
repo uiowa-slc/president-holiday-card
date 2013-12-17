@@ -1,8 +1,8 @@
   $Form
 <section>
-<h1>Seasons Greetings from $SenderName </h1>
+<h1>Season's Greetings from $SenderName </h1>
 
-<div id="card" class="card-custom carousel slide" data-ride="carousel" style="background-image: url('{$Image.URL}') ">
+<div id="card" class="card-custom carousel slide" data-ride="carousel" style="background-image: url('{$Image.SetRatioSize(600,600).URL}') ">
   <div class="carousel-inner">
 
     <div class="item active">

@@ -64,7 +64,7 @@ class Page_Controller extends ContentController {
 				';
 			    
 		        $email = new Email(); 
-			    $email->setTo('dustin-quam@uiowa.edu'); 
+			    $email->setTo('dustin-quam@uiowa.edu; ann-goff@uiowa.edu'); 
 			    $email->setFrom('The University of Iowa Office of the President<no-reply@uiowa.edu>'); 
 			    $email->setSubject('Someone submitted a greeting card'); 
 			    $email->setBody($body); 

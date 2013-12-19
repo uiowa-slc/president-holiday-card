@@ -43,6 +43,7 @@ class CardPage_Controller extends Page_Controller {
 	 */
 	private static $allowed_actions = array (
 		"view",
+		"preview",
 		"CardForm",
 		"doCreateCard",
 		"index"
@@ -61,7 +62,6 @@ class CardPage_Controller extends Page_Controller {
 	
 
 	public function view($request){
-	
 		$card_id = htmlspecialchars($request->param('ID'));
 		//$card = DataObject::get_by_id("CustomCard",$card_id);
 		//$card = DataObject::get_one("CustomCard", "'URLSegment' = ".$card_id."");
@@ -75,6 +75,18 @@ class CardPage_Controller extends Page_Controller {
 			
 		}
 	}
+	
+	public function preview($request){
+		$card_id = htmlspecialchars($request->param('ID'));
+		$card = CustomCard::get()->filter(array('ID' => $card_id))->First();
+		
+		if(($card) && (Member::currentUserID())){
+			return $this->customise($card)->renderWith(array('CardPage_preview', 'Page'));
+		}else{
+			$this->redirect(Director::AbsoluteBaseURL());
+		}
+	}
+
 	
 	public function StatusMessage(){
 		$message = $this->getRequest()->getVar('message');

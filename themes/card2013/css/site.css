@@ -52,7 +52,7 @@ a:hover {
 	background-image: url('../images/alluncovered.png');
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-color: #000;
+	background-color: black;
 	border: none;
 }
 
@@ -60,7 +60,7 @@ a:hover {
 }
 
 #card.card-custom, .card-list li {
-	background-size: 70%;
+	background-size: 65%;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }

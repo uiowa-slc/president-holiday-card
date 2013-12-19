@@ -19,6 +19,21 @@ class CustomCard extends DataObject {
 	);
 	private static $summary_fields = array('SenderName', 'SenderEmail', 'Thumbnail', 'Approved');
 
+
+
+	public function getCMSFields() {
+
+		$extras = '
+		<p><a href="'.$this->PreviewLink().'" target="_blank">Preview Card</a> <br /></p>
+		';
+
+
+
+	    $fields = parent::getCMSFields();
+	    $fields->addFieldToTab('Root.Main', new LiteralField("Extras", $extras));
+	    return $fields;
+	}
+
 	function getThumbnail() { 
       return $this->Image()->CMSThumbnail(); 
    	}
@@ -30,7 +45,13 @@ class CustomCard extends DataObject {
 		
 		return $card_url;
 	}
-
+	public function PreviewLink(){
+		
+		$card_holder = CardPage::get()->First();	
+		$card_url = $card_holder->AbsoluteLink().'preview/'.$this->ID;
+		
+		return $card_url;
+	}
 	public function onAfterWrite(){
 
 		$approved = $this->Approved;

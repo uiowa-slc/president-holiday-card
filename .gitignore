@@ -16,3 +16,5 @@ vendor/composer
 vendor/autoload.php
 recaptcha/
 bootstrap_forms/
+
+focuspoint/

@@ -8,7 +8,8 @@
 		"silverstripe-themes/simple": "*",
 		"unclecheese/bootstrap-forms": "*",
 		"silverstripe/spamprotection": "*",
-		"silverstripe/recaptcha": "*"
+		"silverstripe/recaptcha": "*",
+		"jonom/focuspoint": "*"
 	},
 	"config": {
 		"process-timeout": 600	

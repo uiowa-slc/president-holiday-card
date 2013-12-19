@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "237b214d91b82d34b36bb85d3aa18264",
+    "hash": "c3b1430ec5f635b1ae735a910ba38abf",
     "packages": [
         {
             "name": "composer/installers",
@@ -78,6 +78,45 @@
                 "zend"
             ],
             "time": "2013-12-07 19:47:46"
+        },
+        {
+            "name": "jonom/focuspoint",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jonom/silverstripe-focuspoint.git",
+                "reference": "ac845ea072febecef3261ca15762fd8020389911"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jonom/silverstripe-focuspoint/zipball/ac845ea072febecef3261ca15762fd8020389911",
+                "reference": "ac845ea072febecef3261ca15762fd8020389911",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathon Menz",
+                    "homepage": "http://jonathonmenz.com"
+                }
+            ],
+            "description": "Image cropping enhancement module for SilverStripe",
+            "keywords": [
+                "crop",
+                "cropping",
+                "focus",
+                "focuspoint",
+                "image",
+                "silverstripe"
+            ],
+            "time": "2013-10-08 13:40:48"
         },
         {
             "name": "silverstripe-themes/simple",
@@ -214,19 +253,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/chillu/silverstripe-recaptcha.git",
-                "reference": "f76f0da795bb6e187e90abd7d11db351af271aeb"
+                "reference": "13f24e9b9d25f97154739c2b012ecd3ae17f4b81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chillu/silverstripe-recaptcha/zipball/f76f0da795bb6e187e90abd7d11db351af271aeb",
-                "reference": "f76f0da795bb6e187e90abd7d11db351af271aeb",
+                "url": "https://api.github.com/repos/chillu/silverstripe-recaptcha/zipball/13f24e9b9d25f97154739c2b012ecd3ae17f4b81",
+                "reference": "13f24e9b9d25f97154739c2b012ecd3ae17f4b81",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/framework": "3.*",
+                "silverstripe/framework": "~3.1",
                 "silverstripe/spamprotection": "*"
             },
             "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
@@ -241,7 +285,7 @@
                 "silverstripe",
                 "spamprotection"
             ],
-            "time": "2013-12-16 23:26:33"
+            "time": "2013-12-19 19:18:36"
         },
         {
             "name": "silverstripe/spamprotection",

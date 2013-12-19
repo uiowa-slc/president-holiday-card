@@ -30,7 +30,7 @@ class CustomCard extends DataObject {
 
 
 	    $fields = parent::getCMSFields();
-	    $fields->addFieldToTab('Root.Main', new LiteralField("Extras", $extras));
+	    $fields->addFieldToTab('Root.Main', new LiteralField("Extras", $extras), "Image");
 	    return $fields;
 	}
 

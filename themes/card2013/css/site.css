@@ -122,16 +122,16 @@ a:hover {
 	width: 100%;
 }
 .card-list li {
-	margin-bottom: 0.8em;
 	vertical-align: top;
 	text-align: left;
 	background-image: url('../images/previewmask.png');
 	border: 1px solid #303030;
+	float: left;
+	margin: 5px;
 }
 
 @media screen and (min-width: 550px) {
 	.card-list li {
-		display: inline-block;
 		width: 48%;
 	}
 }

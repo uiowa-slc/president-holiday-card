@@ -128,6 +128,7 @@ a:hover {
 	border: 1px solid #303030;
 	float: left;
 	margin: 5px;
+	overflow: auto;
 }
 
 @media screen and (min-width: 550px) {

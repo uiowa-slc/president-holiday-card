@@ -129,6 +129,7 @@ a:hover {
 	float: left;
 	margin: 5px;
 	overflow: auto;
+	width: 100%;
 }
 
 @media screen and (min-width: 550px) {

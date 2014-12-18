@@ -5,3 +5,15 @@
 @import "foundation/components/flex-video";
 
 $include-html-type-classes: $include-html-classes;
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;}
+.video-container{
+    @media #{$large-up}{
+
+        iframe {margin-top: 40px;}
+    }
+}
+
+
+.at4-share-outer{
+    display: none;
+}

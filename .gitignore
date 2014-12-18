@@ -18,3 +18,5 @@ recaptcha/
 bootstrap_forms/
 
 focuspoint/
+.sass-cache/*
+*.scssc

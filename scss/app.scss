@@ -2,18 +2,55 @@
 
 @import "normalize";
 @import "foundation/components/grid";
-@import "foundation/components/flex-video";
+
 
 $include-html-type-classes: $include-html-classes;
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;}
-.video-container{
-    @media #{$large-up}{
 
-        iframe {margin-top: 40px;}
-    }
+.video-container{
+	background-image: url('../images/thumbnail.png');
+	background-size: cover;
+
+	//max-width: 1920px;
+	/*text-align: center;
+
+	&:before{
+	  content: '';
+	  display: inline-block;
+	  height: 100%;
+	  vertical-align: middle;
+	  margin-right: -0.25em; 	
+	}
+
+	.video{
+	  display: inline-block;
+	  vertical-align: middle;
+	  //width: 300px;
+	}*/
+	iframe{
+		//display: none;
+	}
+
 }
 
+.video {
+	/*position: relative;
+	padding-bottom: 56.25%; 
+	padding-top: 25px;
+	height: 0;*/
+}
+.video iframe {
+	/*position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;*/
+}
 
 .at4-share-outer{
     display: none;
+}
+
+.video-js{
+	background: #312F31;
 }

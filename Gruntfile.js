@@ -23,7 +23,10 @@ module.exports = function(grunt) {
       js:{
         src: [
          // 'bower_components/foundation/js/foundation.min.js',
-          //'bower_components/fitvids/jquery.fitvids.js',
+          'bower_components/fitvids/jquery.fitvids.js',
+          //'bower_components/jquery-ui/jquery-ui.js',
+          //'bower_components/imagesloaded/imagesloaded.pkgd.js',
+          //'bower_components/BigVideo.js/lib/bigvideo.js',
           'javascript/*.js'
         ],
         dest: 'build/build.src.js'

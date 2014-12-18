@@ -80,9 +80,9 @@ $(document).ready(function() {
       $(".at4-share-outer").fadeIn();
    }, 27500);
 */
-   setTimeout(function() {
+   /*setTimeout(function() {
       $(".at4-share-outer").fadeIn();
-   }, 27000);
+   }, 23000);*/
 
    $(".video").fitVids();
 

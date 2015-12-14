@@ -70,6 +70,7 @@
 
 // We use this to control whether or not CSS classes come through in the gem files.
 $include-html-classes: true;
+
 // $include-print-styles: true;
 $include-html-global-classes: $include-html-classes;
 
@@ -79,7 +80,8 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
- $row-width: rem-calc(1280);
+$row-width: rem-calc(1280);
+
 // $total-columns: 12;
 // $column-gutter: rem-calc(30);
 
@@ -95,7 +97,8 @@ $include-html-global-classes: $include-html-classes;
 // $font-weight-normal: normal !default;
 // $font-weight-bold: bold !default;
 
- $white       : #FFFFFF;
+$white: #FFFFFF;
+
 // $ghost       : #FAFAFA;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
@@ -112,9 +115,10 @@ $include-html-global-classes: $include-html-classes;
 // $charcoal    : #555555;
 // $tuatara     : #444444;
 // $oil         : #333333;
- $jet         : #222222;
- $jetoil : #312F31;
-$black       : #000000;
+$jet: #222222;
+$jetoil: #312F31;
+$black: #000000;
+$babyblue: #A0C8E2;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;
@@ -125,8 +129,9 @@ $black       : #000000;
 // $info-color: #a0d3e8;
 
 // We use these to control various global styles
- $body-bg: $jetoil;
- $body-font-color: $white;
+$body-bg: $babyblue;
+$body-font-color: $black;
+
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -554,7 +559,6 @@ $black       : #000000;
 
 // Default radius for dropdown.
 // $f-dropdown-radius: $global-radius;
-
 
 // 09. Dropdown Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -

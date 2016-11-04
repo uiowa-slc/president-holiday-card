@@ -90,6 +90,10 @@ gulp.task('styles', () => {
     .pipe($.newer('.tmp/styles'))
     .pipe($.sourcemaps.init())
     .pipe($.sass({
+      includePaths: [
+        "bower_components/foundation-sites/scss",
+        "bower_components/motion-ui/src"
+      ],
       precision: 10
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
@@ -109,6 +113,7 @@ gulp.task('scripts', () =>
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
+      './bower_components/foundation-sites/dist/foundation.js',
       './app/scripts/main.js'
       // Other scripts
     ])

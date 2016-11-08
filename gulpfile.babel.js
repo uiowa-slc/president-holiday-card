@@ -39,7 +39,7 @@ const reload = browserSync.reload;
 
 // Lint JavaScript
 gulp.task('lint', () =>
-  gulp.src('app/scripts/**/*.js')
+  gulp.src('mysite/src/scripts/**/*.js')
     .pipe($.eslint())
     .pipe($.eslint.format())
     .pipe($.if(!browserSync.active, $.eslint.failOnError()))
@@ -47,24 +47,24 @@ gulp.task('lint', () =>
 
 // Optimize images
 gulp.task('images', () =>
-  gulp.src('app/images/**/*')
+  gulp.src('mysite/src/images/**/*')
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true
     })))
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('mysite/dist/images'))
     .pipe($.size({title: 'images'}))
 );
 
 // Copy all files at the root level (app)
 gulp.task('copy', () =>
   gulp.src([
-    'app/*',
-    '!app/*.html',
-    'node_modules/apache-server-configs/dist/.htaccess'
+    'mysite/src/*',
+    '!mysite/src/*.html',
+    // 'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true
-  }).pipe(gulp.dest('dist'))
+  }).pipe(gulp.dest('mysite/dist'))
     .pipe($.size({title: 'copy'}))
 );
 
@@ -84,8 +84,7 @@ gulp.task('styles', () => {
 
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
-    'app/styles/**/*.scss',
-    'app/styles/**/*.css'
+    'mysite/src/styles/main.scss'
   ])
     .pipe($.newer('.tmp/styles'))
     .pipe($.sourcemaps.init())
@@ -102,7 +101,7 @@ gulp.task('styles', () => {
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest('dist/styles'));
+    .pipe(gulp.dest('mysite/dist/styles'));
 });
 
 // Concatenate and minify JavaScript. Optionally transpiles ES2015 code to ES5.
@@ -114,10 +113,13 @@ gulp.task('scripts', () =>
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
       './bower_components/foundation-sites/dist/foundation.js',
-      './app/scripts/main.js'
+      './bower_components/flickity/dist/flickity.pkgd.js',
+      './mysite/src/scripts/snow/ThreeCanvas.js',
+      './mysite/src/scripts/snow/Snow.js',
+      './mysite/src/scripts/main.js'
       // Other scripts
     ])
-      .pipe($.newer('.tmp/scripts'))
+      // .pipe($.newer('.tmp/scripts'))
       .pipe($.sourcemaps.init())
       .pipe($.babel())
       .pipe($.sourcemaps.write())
@@ -127,80 +129,84 @@ gulp.task('scripts', () =>
       // Output files
       .pipe($.size({title: 'scripts'}))
       .pipe($.sourcemaps.write('.'))
-      .pipe(gulp.dest('dist/scripts'))
+      .pipe(gulp.dest('mysite/dist/scripts'))
 );
 
 // Scan your HTML for assets & optimize them
 gulp.task('html', () => {
-  return gulp.src('app/**/*.html')
+  return gulp.src('mysite/src/templates/**/*.ss')
     .pipe($.useref({
-      searchPath: '{.tmp,app}',
+      searchPath: '{.tmp,mysite}',
       noAssets: true
     }))
 
     // Minify any HTML
-    .pipe($.if('*.html', $.htmlmin({
+    .pipe($.if('*.ss', $.htmlmin({
       removeComments: true,
       collapseWhitespace: true,
       collapseBooleanAttributes: true,
-      removeAttributeQuotes: true,
+      removeAttributeQuotes: false,
       removeRedundantAttributes: true,
-      removeEmptyAttributes: true,
+      removeEmptyAttributes: false,
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true,
-      removeOptionalTags: true
+      removeOptionalTags: false
     })))
     // Output files
-    .pipe($.if('*.html', $.size({title: 'html', showFiles: true})))
-    .pipe(gulp.dest('dist'));
+    .pipe($.if('*.ss', $.size({title: 'ss', showFiles: true})))
+    .pipe(gulp.dest('mysite/templates/'));
 });
 
 // Clean output directory
-gulp.task('clean', () => del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
+gulp.task('clean', () => del(['.tmp', 'mysite/dist/*', '!mysite/dist/.git'], {dot: true}));
 
 // Watch files for changes & reload
-gulp.task('serve', ['scripts', 'styles'], () => {
-  browserSync({
-    notify: false,
-    // Customize the Browsersync console logging prefix
-    logPrefix: 'WSK',
-    // Allow scroll syncing across breakpoints
-    scrollElementMapping: ['main', '.mdl-layout'],
-    // Run as an https by uncommenting 'https: true'
-    // Note: this uses an unsigned certificate which on first access
-    //       will present a certificate warning in the browser.
-    // https: true,
-    server: ['.tmp', 'app'],
-    port: 3000
-  });
+gulp.task('serve', ['clean'], () => {
 
-  gulp.watch(['app/**/*.html'], reload);
-  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['app/scripts/**/*.js'], ['lint', 'scripts', reload]);
-  gulp.watch(['app/images/**/*'], reload);
+  runSequence(
+    ['styles','scripts','html', 'images', 'copy']
+  );
+  // browserSync({
+  //   notify: false,
+  //   // Customize the Browsersync console logging prefix
+  //   logPrefix: 'WSK',
+  //   // Allow scroll syncing across breakpoints
+  //   scrollElementMapping: ['main', '.mdl-layout'],
+  //   // Run as an https by uncommenting 'https: true'
+  //   // Note: this uses an unsigned certificate which on first access
+  //   //       will present a certificate warning in the browser.
+  //   // https: true,
+  //   server: ['.tmp', 'app'],
+  //   port: 3000
+  // });
+  gulp.watch(['mysite/src/templates/**/*.ss'], ['html', reload]);
+  gulp.watch(['mysite/src/styles/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['mysite/src/styles/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['mysite/src/scripts/**/*.js'], ['scripts', reload]);
+  gulp.watch(['mysite/src/images/**/*'], reload);
 });
 
-// Build and serve the output from the dist build
-gulp.task('serve:dist', ['default'], () =>
-  browserSync({
-    notify: false,
-    logPrefix: 'WSK',
-    // Allow scroll syncing across breakpoints
-    scrollElementMapping: ['main', '.mdl-layout'],
-    // Run as an https by uncommenting 'https: true'
-    // Note: this uses an unsigned certificate which on first access
-    //       will present a certificate warning in the browser.
-    // https: true,
-    server: 'dist',
-    port: 3001
-  })
-);
+// // Build and serve the output from the dist build
+// gulp.task('serve:dist', ['default'], () =>
+//   browserSync({
+//     notify: false,
+//     logPrefix: 'WSK',
+//     // Allow scroll syncing across breakpoints
+//     scrollElementMapping: ['main', '.mdl-layout'],
+//     // Run as an https by uncommenting 'https: true'
+//     // Note: this uses an unsigned certificate which on first access
+//     //       will present a certificate warning in the browser.
+//     // https: true,
+//     server: 'dist',
+//     port: 3001
+//   })
+// );
 
 // Build production files, the default task
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['lint', 'html', 'scripts', 'images', 'copy'],
+    [/*'lint', */'html', 'scripts', 'images', 'copy'],
     'generate-service-worker',
     cb
   )
@@ -219,8 +225,8 @@ gulp.task('pagespeed', cb =>
 
 // Copy over the scripts that are used in importScripts as part of the generate-service-worker task.
 gulp.task('copy-sw-scripts', () => {
-  return gulp.src(['node_modules/sw-toolbox/sw-toolbox.js', 'app/scripts/sw/runtime-caching.js'])
-    .pipe(gulp.dest('dist/scripts/sw'));
+  return gulp.src(['node_modules/sw-toolbox/sw-toolbox.js', 'mysite/src/scripts/sw/runtime-caching.js'])
+    .pipe(gulp.dest('mysite/dist/scripts/sw'));
 });
 
 // See http://www.html5rocks.com/en/tutorials/service-worker/introduction/ for
@@ -229,7 +235,7 @@ gulp.task('copy-sw-scripts', () => {
 // local resources. This should only be done for the 'dist' directory, to allow
 // live reload to work as expected when serving from the 'app' directory.
 gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
-  const rootDir = 'dist';
+  const rootDir = 'mysite/dist';
   const filepath = path.join(rootDir, 'service-worker.js');
 
   return swPrecache.write(filepath, {
@@ -237,8 +243,8 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
     cacheId: pkg.name || 'web-starter-kit',
     // sw-toolbox.js needs to be listed first. It sets up methods used in runtime-caching.js.
     importScripts: [
-      'scripts/sw/sw-toolbox.js',
-      'scripts/sw/runtime-caching.js'
+      'mysite/src/scripts/sw/sw-toolbox.js',
+      'mysite/src/scripts/sw/runtime-caching.js'
     ],
     staticFileGlobs: [
       // Add/remove glob patterns to match your directory setup.

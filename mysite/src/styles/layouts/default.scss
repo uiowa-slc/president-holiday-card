@@ -1,0 +1,26 @@
+.main{
+	background: white;
+	z-index: 99;
+	position: relative;
+	padding-top: rem-calc(40);
+}
+
+.card{
+	canvas{
+		position: absolute;
+	}
+}
+
+.main-content{
+	@include grid-column(12);
+	@include breakpoint(large){
+		@include grid-column(8);
+		@include grid-column-position(center);
+	}
+
+
+	&__container{
+		@include grid-row;
+	}
+
+}

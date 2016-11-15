@@ -87,6 +87,22 @@
         'transform: translate3d(0px, ' + yPos + 'px, 0px)'
       );
     }
+
+    var pWin = $('#p-window');
+    // var pWinTop = pWin.offset().top;
+    var pWinTop = this.pageYOffset;
+    var pWinFrontLayers = document.getElementsByClassName('p-window__layer--front');
+    var pWinSpeed;
+    var pWinY;
+
+
+    for (var i = 0; i < pWinFrontLayers.length; i++) {
+      layer = pWinFrontLayers[i];
+      pWinSpeed = layer.getAttribute('data-speed');
+      pWinY = (pWinTop * pWinSpeed / 100);
+      layer.setAttribute('style', 'background-position-y: ' + pWinY + '%');
+    }
+
   });
 
 /**

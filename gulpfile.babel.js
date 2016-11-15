@@ -61,6 +61,7 @@ gulp.task('copy', () =>
   gulp.src([
     'mysite/src/*',
     '!mysite/src/*.html',
+    '!mysite/src/templates'
     // 'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true
@@ -112,8 +113,8 @@ gulp.task('scripts', () =>
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
-      './bower_components/foundation-sites/dist/foundation.js',
-      './bower_components/flickity/dist/flickity.pkgd.js',
+      // './bower_components/foundation-sites/dist/foundation.js',
+      // './bower_components/flickity/dist/flickity.pkgd.js',
       './mysite/src/scripts/snow/ThreeCanvas.js',
       './mysite/src/scripts/snow/Snow.js',
       './mysite/src/scripts/main.js'
@@ -134,10 +135,12 @@ gulp.task('scripts', () =>
 
 // Scan your HTML for assets & optimize them
 gulp.task('html', () => {
+  console.log(`Current directory: ${process.cwd()}`);
   return gulp.src('mysite/src/templates/**/*.ss')
     .pipe($.useref({
-      searchPath: '{.tmp,mysite}',
-      noAssets: true
+      searchPath: ['mysite', 'tmp'],
+      noAssets: false,
+      noconcat: false
     }))
 
     // Minify any HTML
@@ -183,7 +186,8 @@ gulp.task('serve', ['clean'], () => {
   gulp.watch(['mysite/src/styles/*.{scss,css}'], ['styles', reload]);
   gulp.watch(['mysite/src/styles/**/*.{scss,css}'], ['styles', reload]);
   gulp.watch(['mysite/src/scripts/**/*.js'], ['scripts', reload]);
-  gulp.watch(['mysite/src/images/**/*'], reload);
+  gulp.watch(['mysite/src/images/*'], ['images', reload]);
+  gulp.watch(['mysite/src/images/**/*'], ['images', reload]);
 });
 
 // // Build and serve the output from the dist build
@@ -248,9 +252,9 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
     ],
     staticFileGlobs: [
       // Add/remove glob patterns to match your directory setup.
-      `${rootDir}/images/**/*`,
-      `${rootDir}/scripts/**/*.js`,
-      `${rootDir}/styles/**/*.css`,
+      `${rootDir}/mysite/dist/images/**/*`,
+      `${rootDir}/mysite/dist/scripts/**/*.js`,
+      `${rootDir}/mysite/dist/styles/**/*.css`,
       `${rootDir}/*.{html,json}`
     ],
     // Translates a static file path to the relative URL that it's served from.

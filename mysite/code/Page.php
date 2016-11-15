@@ -28,6 +28,10 @@ class Page_Controller extends ContentController {
 	private static $allowed_actions = array (
 	);
 
+	public function BuildingPages(){
+		return BuildingPage::get();
+	}
+
 	public function init() {
 		parent::init();
 		// You can include any CSS or JS required by your project here.

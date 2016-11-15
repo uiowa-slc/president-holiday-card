@@ -31,7 +31,7 @@
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Web Starter Kit">
+    <meta name="application-name" content="Warmest Wishes From Bruce And Mary Harreld!">
     <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
 
     <!-- Add to homescreen for Safari on iOS -->
@@ -51,50 +51,13 @@
   </head>
   <body>
 
-  <div >
-  <div class="parallax__container">
-      <!-- "furthest" layer, aka sunset/sky/ backdrop: -->
-      <div class="parallax__layer parallax__layer--0 parallax" data-speed="2"></div>    <!-- 00.0 -->
+    $Layout
 
-      <div class="parallax__layer parallax__layer--1 parallax" data-speed="5"></div>  <!-- 12.5 -->
-      <div class="parallax__layer parallax__layer--2 parallax" data-speed="11"></div>   <!-- 25.0 -->
-      <div class="parallax__layer parallax__layer--3 parallax" data-speed="16"></div> <!-- 37.5 -->
-      <div class="parallax__layer parallax__layer--4 parallax" data-speed="26"></div>   <!-- 50.0 -->
-      <div class="parallax__layer parallax__layer--5 parallax card" id="card" data-speed="40"></div> <!-- 62.5 -->
-      <div class="parallax__layer parallax__layer--6 parallax" data-speed="65"></div>   <!-- 75.0 -->
-      <%-- <div class="parallax__layer parallax__layer--7" data-speed="69"></div>  --%>  <!-- 87.5 -->
-
-      <!-- closest layer: -->
-      <%-- <div class="parallax__layer parallax__layer--8 card" id="card" data-speed="100"></div>  --%>  <!-- 100. -->
-  </div>
-
-
-<div class="main">
-  <div class="main-content__container">
-    <div class="main-content">
-      $Content
-      $Form
-      <h1>Share our campus this holiday</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in auctor augue, nec commodo eros. Integer dignissim elementum velit, vel eleifend enim euismod quis. Donec tristique lacus in varius pellentesque. Quisque fermentum libero arcu, nec laoreet tellus egestas eu. Ut volutpat sapien et urna pretium euismod. Morbi bibendum nulla in nulla maximus, eget maximus turpis facilisis. Mauris eleifend eros ac ipsum tempor, ut sodales dui ultrices. Vestibulum lacinia nunc eu dui porta molestie. Morbi ullamcorper accumsan lorem ac luctus. Cras viverra ultricies arcu, sit amet pretium nunc ultricies a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque luctus placerat ante. Suspendisse potenti. Nullam vel mauris sed nisi feugiat auctor et eu lectus. Curabitur fermentum leo non congue tincidunt.</p>
-
-        <p>Nam quam felis, luctus et magna nec, mattis feugiat dolor. Sed suscipit, lorem at faucibus porta, nibh lorem ullamcorper nunc, at laoreet mi arcu sit amet diam. Fusce ex leo, viverra id rutrum vitae, convallis ac sem. Aenean vestibulum arcu ut eros ultrices, a maximus nulla vulputate. Curabitur vestibulum mattis lacus, sed fringilla diam ornare vitae. Proin ac metus et nisi varius porttitor a non orci. Cras ultrices elit libero, a lacinia tellus iaculis ac. Sed vestibulum semper felis, sed pharetra nibh efficitur nec. Suspendisse potenti. Vivamus suscipit vel nulla vitae ullamcorper. Nulla sit amet mi diam. Etiam tempus sapien eget massa pulvinar commodo. Quisque sit amet mauris enim. Sed et maximus ligula.</p>
-
-      
-    </div>
-  </div>
-  <div class="carousel" data-flickity='{ "wrapAround": true }'>
-    <a href="https://google.com" class="carousel-cell"><img src="http://placekitten.com/400/300" height="400"></a>
-    <a href="https://google.com" class="carousel-cell"><img src="http://placekitten.com/400/300" height="400"></a>
-    <a href="https://google.com" class="carousel-cell"><img src="http://placekitten.com/400/300" height="400"></a>
-    <a href="https://google.com" class="carousel-cell"><img src="http://placekitten.com/400/300" height="400"></a>
-  </div>
-</div>
     <!-- Add your site or app content here -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2" async="async"></script>
-    <!-- build:js scripts/main.min.js -->
-    <script src="./bower_components/foundation-sites/dist/foundation.js"></script>
+    <!-- build:js mysite/dist/scripts/main.min.js -->
     <script src="./mysite/src/scripts/snow/ThreeCanvas.js"></script>
     <script src="./mysite/src/scripts/snow/Snow.js"></script>
     <script src="./mysite/dist/scripts/main.min.js"></script>

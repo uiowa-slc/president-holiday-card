@@ -1,3 +1,23 @@
+.unstyled-list{
+	list-style-type: none;
+	margin: 0;
+}
+.caret-link {
+	&:after {
+		@include css-triangle(4px, $primary-color, right);
+
+		margin-left: 7px;
+		display: inline-block;
+	}
+}
+
+
+
+.addthis_inline_share_toolbox{
+	text-align: center;
+	padding-top: rem-calc(20);
+	border-top: 1px solid #eee;
+}	
 .main{
 	background: white;
 	z-index: 99;
@@ -14,10 +34,10 @@
 .image-header{
 	width: 100%;
 	display: block;
-	padding: rem-calc(20) 0;
+	// padding: rem-calc(20) 0;
 
 	&__container{
-		max-width: rem-calc(1400);
+		// max-width: rem-calc(1400);
 		margin: auto;
 	}
 }
@@ -36,6 +56,8 @@
 	&__container{
 		@include grid-row;
 	}
+
+
 
 
 }
@@ -57,7 +79,7 @@
 	font-weight: bold;
 	&--small{
 		text-transform: uppercase;
-		font-size: rem-calc(20);
+		font-size: rem-calc(16);
 	}
 	&--centered{
 		text-align: center;

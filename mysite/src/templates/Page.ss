@@ -20,7 +20,7 @@
     content="$Content.Summary.ATT" />
     
     <meta property="og:site_name" content="The University of Iowa Office of the President"/>
-    <meta property="og:url" content="https://greeting.president.uiowa.edu/" />
+    <meta property="og:url" content="{$BaseUrl}" />
     <% if $Image %>
     <meta property="og:image" content="{$Image.Fill(1200,630).AbsoluteURL}" />
     <% else %>

@@ -21,14 +21,16 @@
       <div class="main-content">
         
         $Form
-        <h1 class="main-content__header">Our New Homes For The Holiday</h1>
+        <h1 class="main-content__header">Our New Homes For The Holidays</h1>
           $Content
 
           <h2>Share:</h2>
           <div class="addthis_inline_share_toolbox"></div>
       </div>
     </div>
+
     <div class="building-grid building-grid--padding row small-up-2">
+      <h2 class="heading heading--small heading--centered">Click a building to learn more:</h2>
       <% loop $BuildingPages %>
         <% include BuildingPageColumn %>
       <% end_loop %>

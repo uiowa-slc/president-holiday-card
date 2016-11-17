@@ -28,6 +28,7 @@
     </div>
 
     <div class="building-grid building-grid--padding row small-up-2">
+      <h2 class="heading heading--small heading--centered">Click a building to learn more:</h2>
       <% loop $BuildingPages %>
         <% include BuildingPageColumn %>
       <% end_loop %>

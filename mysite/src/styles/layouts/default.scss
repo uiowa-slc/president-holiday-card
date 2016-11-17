@@ -53,6 +53,17 @@
 	}
 }
 
+.heading{
+	font-weight: bold;
+	&--small{
+		text-transform: uppercase;
+		font-size: rem-calc(20);
+	}
+	&--centered{
+		text-align: center;
+	}
+}
+
 
 .building-grid{
 	&__column{

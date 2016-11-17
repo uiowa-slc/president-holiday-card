@@ -62,7 +62,7 @@
     <!-- Add your site or app content here -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2" async="async"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2"></script>
     <!-- build:js mysite/dist/scripts/main.min.js -->
     <script src="./mysite/src/scripts/snow/ThreeCanvas.js"></script>
     <script src="./mysite/src/scripts/snow/Snow.js"></script>

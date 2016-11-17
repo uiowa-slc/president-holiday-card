@@ -21,16 +21,15 @@
       <div class="main-content">
         
         $Form
-        <h1 class="main-content__header">Our New Homes For The Holidays</h1>
-          $Content
-
-          <h2>Share:</h2>
-          <div class="addthis_inline_share_toolbox"></div>
+        <h1 class="main-content__header">Warmest Wishes From Bruce and Mary Harreld</h1>
+        <p>Pro posse minim ea, sale detraxit quaerendum ea per, at enim labores vel. Ne mei doctus democritum, mei in aliquam delenit. Ex sea utroque mentitum, lorem dolorum recteque mel ei, utinam dolorum mel ex. Pri ullum dolor nonumes at. Viderer aliquid ocurreret sit ne, quot quodsi eloquentiam at per. Ut verear laoreet nominavi usu, in cum oratio commodo scripta, cu mutat iudico abhorreant vis.</p>
+        <h2 class="heading heading--small heading--centered">Share:</h2>
+        <div class="addthis_inline_share_toolbox"></div>
       </div>
     </div>
 
     <div class="building-grid building-grid--padding row small-up-2">
-      <h2 class="heading heading--small heading--centered">Click a building to learn more:</h2>
+      <h2 class="heading heading--small heading--centered">Share a building below:</h2>
       <% loop $BuildingPages %>
         <% include BuildingPageColumn %>
       <% end_loop %>

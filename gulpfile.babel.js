@@ -48,10 +48,10 @@ gulp.task('lint', () =>
 // Optimize images
 gulp.task('images', () =>
   gulp.src('mysite/src/images/**/*')
-    .pipe($.cache($.imagemin({
+    .pipe($.imagemin({
       progressive: true,
       interlaced: true
-    })))
+    }))
     .pipe(gulp.dest('mysite/dist/images'))
     .pipe($.size({title: 'images'}))
 );

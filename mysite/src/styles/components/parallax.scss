@@ -20,16 +20,9 @@
 }
 
 //"furthest" layer aka sky/backrop
-.parallax__layer--0 {
-	background-image: url('../images/parallax/parallax0.png');
-	background-color: #fff;
-
-	//Temporary width adjustment until wide version is available:
-	background-size: cover;
-	background-position: 50% 50%;
-}
 .parallax__layer--1 {
 	background-image: url('../images/parallax/parallax1.png');
+	background-color: #fff;
 	//Temporary width adjustment until wide version is available:
 	background-size: cover;
 	background-position: 50% 50%;
@@ -62,8 +55,7 @@
 .parallax__layer--6 {
 	background-image: url('../images/parallax/parallax6.png');
 	//Temporary width adjustment until wide version is available:
-	background-size: 70%;
-	background-position: 80% 100%;
+	background-size: cover;
 }
 // .parallax__layer--7 {
 // 	background-image: url('../images/parallax/parallax7.png');

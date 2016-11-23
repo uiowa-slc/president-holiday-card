@@ -5,7 +5,8 @@ class BuildingPage extends Page {
 	);
 
 	private static $has_one = array(
-		'Image' => 'Image'
+		'Image' => 'Image',
+		'Thumbnail' => 'Image'
 	);
 
 	private static $allowed_children = array ();
@@ -13,7 +14,7 @@ class BuildingPage extends Page {
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 		$fields->addFieldToTab('Root.Main', new UploadField('Image', 'Image'), 'Content');
-
+		$fields->addFieldToTab('Root.Main', new UploadField('Thumbnail', 'Thumbnail (with snow)'), 'Content');
 		return $fields;
 	}
 }

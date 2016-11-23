@@ -1,5 +1,16 @@
 .parallax__container, .parallax__layer {
-	height: 1000px;
+	// height:  500px;
+	height:100vh;
+	@include breakpoint(medium){
+		// height: 700px;
+
+	}
+	@include breakpoint(large){
+		height: 1000px;
+	}
+	@include breakpoint(xlarge){
+		height: 1400px;
+	}
 }
 
 .parallax__container--small, .parallax__layer--small{
@@ -52,19 +63,19 @@
 	background-size: cover;
 	background-position: 50% 50%;
 }
+
+//closest layer aka Old Cap + Hill:
 .parallax__layer--6 {
 	background-image: url('../images/parallax/parallax6.png');
 	//Temporary width adjustment until wide version is available:
 	background-size: cover;
-}
-// .parallax__layer--7 {
-// 	background-image: url('../images/parallax/parallax7.png');
-// }
 
-//"closest layer aka old cap/frontmost elements"
-// .parallax__layer--8 {
-// 	background-image: url('../images/parallax/parallax8.png');
-// }
+	@include breakpoint(xlarge){
+		
+	}
+
+
+}
 
 .p-window{
 	background-image: url('../images/parallax-window/layer0.jpg');

@@ -6,10 +6,10 @@
 
 	}
 	@include breakpoint(large){
-		height: 1000px;
+		// height: 1000px;
 	}
-	@include breakpoint(xlarge){
-		height: 1400px;
+	@include breakpoint(xxlarge){
+		height: 1200px;
 	}
 }
 
@@ -32,33 +32,33 @@
 
 //"furthest" layer aka sky/backrop
 .parallax__layer--1 {
-	background-image: url('../images/parallax/parallax1.png');
+	//background-image: url('../images/parallax/parallax1.png');
 	background-color: #fff;
 	//Temporary width adjustment until wide version is available:
 	background-size: cover;
 	background-position: 50% 50%;
 }
 .parallax__layer--2 {
-	background-image: url('../images/parallax/parallax2.png');
+	//background-image: url('../images/parallax/parallax2.png');
 	//Temporary width adjustment until wide version is available:
 	background-size: cover;
 	background-position: 50% 50%;
 }
 .parallax__layer--3 {
-	background-image: url('../images/parallax/parallax3.png');
+	//background-image: url('../images/parallax/parallax3.png');
 	//Temporary width adjustment until wide version is available:
 	background-size: cover;
 	background-position: 50% 50%;
 }
 .parallax__layer--4 {
-	background-image: url('../images/parallax/parallax4.png');
+	//background-image: url('../images/parallax/parallax4.png');
 
 		//Temporary width adjustment until wide version is available:
 	background-size: cover;
 	background-position: 50% 50%;
 }
 .parallax__layer--5 {
-	background-image: url('../images/parallax/parallax5.png');
+	//background-image: url('../images/parallax/parallax5.png');
 		//Temporary width adjustment until wide version is available:
 	background-size: cover;
 	background-position: 50% 50%;
@@ -66,7 +66,7 @@
 
 //closest layer aka Old Cap + Hill:
 .parallax__layer--6 {
-	background-image: url('../images/parallax/parallax6.png');
+	//background-image: url('../images/parallax/parallax6.png');
 	//Temporary width adjustment until wide version is available:
 	background-size: cover;
 
@@ -75,6 +75,11 @@
 	}
 
 
+}
+
+.parallax__layer--scroll-indicator{
+	background: rgba(#222, 0.8);
+	color: white;
 }
 
 .p-window{

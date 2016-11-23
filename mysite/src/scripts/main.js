@@ -72,21 +72,37 @@
     });
   }
 
+
+  $(document).foundation();
+
+
   window.addEventListener('scroll', function() {
     var top = this.pageYOffset;
-    var layers = document.getElementsByClassName('parallax__layer');
+    var layers = $('.parallax__layer');
+
     var layer;
     var speed;
     var yPos;
-    for (var i = 0; i < layers.length; i++) {
-      layer = layers[i];
-      speed = layer.getAttribute('data-speed');
+
+    layers.each(function(index, element){
+      //console.log(element);
+      speed = element.getAttribute('data-speed');
       yPos = -(top * speed / 100);
-      layer.setAttribute(
-        'style',
-        'transform: translate3d(0px, ' + yPos + 'px, 0px)'
-      );
-    }
+      $( element ).css({
+        'transform' : 'translate3d(0px, ' + yPos + 'px, 0px)'
+      });
+    })
+
+    // for (var i = 0; i < layers.length; i++) {
+    //   layer = layers[i];
+    //   speed = layer.getAttribute('data-speed');
+    //   yPos = -(top * speed / 100);
+      
+    //   // layer.css({
+    //   //   'transform' : 'translate3d(0px, ' + yPos + 'px, 0px)'
+    //   // });
+
+    // }
 
     var pWin = $('#p-window');
     // var pWinTop = pWin.offset().top;

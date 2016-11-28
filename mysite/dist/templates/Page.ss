@@ -59,7 +59,9 @@
 
     $Layout
 
-
+    <audio autoplay>
+      <source src="mysite/dist/media/song.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- Add your site or app content here -->
 

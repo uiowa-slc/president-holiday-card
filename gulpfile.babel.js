@@ -60,6 +60,7 @@ gulp.task('images', () =>
 gulp.task('copy', () =>
   gulp.src([
     'mysite/src/*',
+    'mysite/src/**/*',
     '!mysite/src/*.html',
     '!mysite/src/templates'
     // 'node_modules/apache-server-configs/dist/.htaccess'

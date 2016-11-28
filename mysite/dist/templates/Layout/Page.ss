@@ -1,4 +1,6 @@
-
+    <audio autoplay>
+      <source src="mysite/dist/media/song.mp3" type="audio/mpeg">
+    </audio>
   <div class="parallax__container" id="parallax__container" data-scroll="parallax__container">
       <!-- "furthest" layer, aka sunset/sky/ backdrop: -->
       <div class="parallax__layer parallax__layer--1 parallax" data-speed="2" 

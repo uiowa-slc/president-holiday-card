@@ -1,14 +1,21 @@
 <?php
-class Page extends SiteTree {
+class HomePage extends Page {
 
 	private static $db = array(
 	);
 
 	private static $has_one = array(
+
 	);
 
+	private static $allowed_children = array ();
+
+	public function getCMSFields(){
+		$fields = parent::getCMSFields();
+		return $fields;
+	}
 }
-class Page_Controller extends ContentController {
+class HomePage_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -25,30 +32,13 @@ class Page_Controller extends ContentController {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array('feed');
-
-	private static $url_handlers = array(
-        'feed//' => 'feed'
-    );
-	public function BuildingPages(){
-		return BuildingPage::get();
-	}
+	private static $allowed_actions = array (
+	);
 
 	public function init() {
 		parent::init();
 		// You can include any CSS or JS required by your project here.
 		// See: http://doc.silverstripe.org/framework/en/reference/requirements
 	}
-	public function feed(){
 
-		//print_r($this->renderWith(array($this->ClassName))->getValue());
-		$feed['className'] = $this->ClassName;
-		$feed['title'] = $this->Title;
-		$feed['body'] = $this->renderWith(array($this->ClassName))->getValue();
-
-		$feed['section'] = $this->Level(1)->URLSegment;
-
-		$json = Convert::array2json($feed);
-		return $json;
-	}
 }

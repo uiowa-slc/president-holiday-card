@@ -117,6 +117,14 @@ gulp.task('scripts', () =>
       './bower_components/foundation-sites/dist/foundation.js',
       './mysite/src/scripts/snow/ThreeCanvas.js',
       './mysite/src/scripts/snow/Snow.js',
+      
+      'bower_components/angular-route/angular-route.js',
+
+      './mysite/src/scripts/services.js',
+      './mysite/src/scripts/controllers.js',
+      './mysite/src/scripts/filters.js',
+      './mysite/src/scripts/directives.js',
+
       './mysite/src/scripts/main.js'
       // Other scripts
     ])
@@ -126,7 +134,7 @@ gulp.task('scripts', () =>
       .pipe($.sourcemaps.write())
       .pipe(gulp.dest('.tmp/scripts'))
       .pipe($.concat('main.min.js'))
-      .pipe($.uglify({preserveComments: 'some'}))
+      // .pipe($.uglify({preserveComments: 'some'}))
       // Output files
       .pipe($.size({title: 'scripts'}))
       .pipe($.sourcemaps.write('.'))

@@ -1,7 +1,7 @@
 
   <div class="image-header__container card" id="card" >
     <a href="{$Baseurl}" class="back-button"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
-    <img src="{$Image.Fill(1520,720).URL}" class="image-header" alt="" role="presentation" />
+    <img sb-load="onImgLoad($event)" src="{$Image.Fill(1520,720).URL}" width="1520" height="720" class="image-header" alt="" role="presentation" />
   </div>
 
   <div class="main">

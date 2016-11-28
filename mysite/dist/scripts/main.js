@@ -1,4 +1,28 @@
+// Declare app level module which depends on filters, and services
+angular.module('myApp', [
+  'ngRoute',
+  'myApp.filters',
+  'myApp.services',
+  'myApp.directives',
+  'myApp.controllers'
+]).
+config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
+  $routeProvider.when('/:pageId/', {
+    templateUrl: 'mysite/src/partials/page.html', 
+    controller: 'PageCtrl',
+    resolve: {
+      page: function(pageContentService){
+        //console.log('/:pageId:/ detected as route');
+        //console.log(pageContentService.getPage());
+        return pageContentService.getPage('','/feed');
+        console.log('feed returned');
+      }
+    }
+  }); 
+  $routeProvider.otherwise({redirectTo: '/home'});
+  $locationProvider.html5Mode(true);
+}]);
 
 
   $(document).foundation();
@@ -70,59 +94,24 @@ Redistribution and use in source and binary forms, with or without modification,
 
  **/
 
-  var container;
-  container = document.getElementById('card');
 
-  
-  /*cardWidth = 596;
-  cardHeight = 596;
-  */
-  var cardWidth;
-  var cardHeight;
-
-  cardWidth = $("#card").width();
-  cardHeight = $("#card").height();
-  
-  var SCREEN_WIDTH = cardWidth;
-  var SCREEN_HEIGHT = cardHeight;
-  
-  
-  var particle;
-  
-  var camera;
-  var scene;
-  var renderer;
-  
-  var mouseX = 0;
-  var mouseY = 0;
-  
-  var windowHalfX = cardWidth / 2;
-  var windowHalfY = cardWidth / 2;
-  //alert(windowHalfX);
-  var particles = []; 
-  var particleImage = new Image();//THREE.ImageUtils.loadTexture( "img/ParticleSmoke.png" );
-  particleImage.src = 'mysite/dist/images/snow/particle.png'; 
 
 $(window).load(function() {
-  cardWidth = $("#card").width();
-  cardHeight = $("#card").height();
-  
-  SCREEN_WIDTH = cardWidth;
-  SCREEN_HEIGHT = cardHeight;
-  
-  windowHalfX = cardWidth / 2;
-  windowHalfY = cardWidth / 2;
+ 
   
   
-  snowInit();
-
+ 
 });
+
+var particles = []; 
+var particleImage = new Image();//THREE.ImageUtils.loadTexture( "img/ParticleSmoke.png" );
+particleImage.src = 'mysite/dist/images/snow/particle.png'; 
 
 function snowInit() {
 
-  //container = document.createElement('div');
-  //document.body.appendChild(container);
-  // container = document.getElementById('card');
+  container = document.createElement('div');
+  document.body.appendChild(container);
+  container = document.getElementById('card');
   camera = new THREE.PerspectiveCamera( 75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000 );
   camera.position.z = 1000;
 

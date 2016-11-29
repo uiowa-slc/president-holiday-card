@@ -1,5 +1,5 @@
-<article>
-  <div class="parallax__container" id="parallax__container" data-scroll="parallax__container">
+<article class="document-body">
+  <div class="parallax__container" id="parallax__container">
       <!-- "furthest" layer, aka sunset/sky/ backdrop: -->
       <div class="parallax__layer parallax__layer--1 parallax" data-speed="2" 
         data-interchange="[mysite/dist/images/parallax/parallax-1--small.png, small], [mysite/dist/images/parallax/parallax-1--large.png, large], [mysite/dist/images/parallax/parallax-1--2x.png, retina]"></div>  
@@ -27,15 +27,13 @@
             <span class="main-content__holiday">holiday season</span>
         </h1>
         <p class="main-content__signature">Bruce and Mary Harreld</p>
-        <h2 class="heading heading--small heading--centered">Share:</h2>
-        <div class="addthis_inline_share_toolbox"></div>
-        
+        <% include AddThis %>
 
       </div>
     </div>
 
     <div class="building-grid row expanded small-up-2">
-      <%-- <h2 class="heading heading--small heading--centered">Share a building below:</h2> --%>
+      <h2 class="heading heading--small heading--centered">View and share our campus this holiday season:</h2>
       <% loop $BuildingPages %>
         <% include BuildingPageColumn %>
       <% end_loop %>

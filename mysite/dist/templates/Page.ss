@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wishing You A Joyous Holiday Season From Bruce And Mary Harreld | The University of Iowa</title>
+    <% if $URLSegment == "home" %>
+        <title>Wishing You A Joyous Holiday Season From Bruce And Mary Harreld | The University of Iowa</title>
+    <% else %>
+        <title>$Title | The University of Iowa</title>
+    <% end_if %>
+    
     <% base_tag %>
 
     <meta name="title" content="Wishing You A Joyous Holiday Season From Bruce And Mary Harreld | The University of Iowa"/>
@@ -55,8 +60,13 @@
     <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i" rel="stylesheet">
     <link rel="stylesheet" href="mysite/dist/styles/main.css">
   </head>
-  <body>
+  <body id="body" data-scroll="body">
 
+    <% if not $isAjax %>
+        <audio autoplay>
+          <source src="mysite/dist/media/song.mp3" type="audio/mpeg">
+        </audio>
+    <% end_if %>
     $Layout
 
 
@@ -64,7 +74,19 @@
     <!-- Add your site or app content here -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#async=1"></script>
+<!--pubid=ra-52a72bea3c0127e2 -->
+
+    <!-- jQuery ScrollTo Plugin -->
+    <script src="//balupton.github.io/jquery-scrollto/lib/jquery-scrollto.js"></script>
+
+
+    <!-- History.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/history.js/1.8/bundled-uncompressed/html4+html5/jquery.history.js"></script>
+
+
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+
     <!-- build:js mysite/dist/scripts/main.min.js -->
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="./mysite/src/scripts/snow/ThreeCanvas.js"></script>

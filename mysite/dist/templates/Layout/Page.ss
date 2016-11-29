@@ -1,7 +1,5 @@
-    <audio autoplay>
-      <source src="mysite/dist/media/song.mp3" type="audio/mpeg">
-    </audio>
-  <div class="parallax__container" id="parallax__container" data-scroll="parallax__container">
+<article class="document-body">
+  <div class="parallax__container" id="parallax__container">
       <!-- "furthest" layer, aka sunset/sky/ backdrop: -->
       <div class="parallax__layer parallax__layer--1 parallax" data-speed="2" 
         data-interchange="[mysite/dist/images/parallax/parallax-1--small.png, small], [mysite/dist/images/parallax/parallax-1--large.png, large], [mysite/dist/images/parallax/parallax-1--2x.png, retina]"></div>  
@@ -30,7 +28,11 @@
         </h1>
         <p class="main-content__signature">Bruce and Mary Harreld</p>
         <h2 class="heading heading--small heading--centered">Share:</h2>
-        <div class="addthis_inline_share_toolbox"></div>
+          <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_email"></a>
+          </div>
         
 
       </div>
@@ -44,3 +46,4 @@
     </div>
     <% include Footer %>
   </div>
+</article>

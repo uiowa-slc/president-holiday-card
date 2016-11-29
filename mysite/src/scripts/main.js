@@ -1,4 +1,5 @@
 
+
 // Ajaxify
 // v1.0.1 - 30 September, 2012
 // https://github.com/browserstate/ajaxify
@@ -20,7 +21,7 @@
     // Prepare Variables
     var
       /* Application Specific Variables */
-      contentSelector = '#content,article:first,.article:first,.post:first',
+      contentSelector = 'article:first'
       $content = $(contentSelector).filter(':first'),
       contentNode = $content.get(0),
       $menu = $('#menu,#nav,nav:first,.nav:first').filter(':first'),
@@ -125,6 +126,9 @@
             $dataBody = $data.find('.document-body:first'),
             $dataContent = $dataBody.find(contentSelector).filter(':first'),
             $menuChildren, contentHtml, $scripts;
+
+
+        
           
           // Fetch the scripts
           $scripts = $dataContent.find('.document-script');
@@ -147,7 +151,7 @@
 
           // Update the content
           $content.stop(true,true);
-          $content.html(contentHtml).ajaxify().css('opacity',100).show(); /* you could fade in here if you'd like */
+          $content.html(contentHtml).ajaxify().css('opacity',100).show().foundation(); /* you could fade in here if you'd like */
 
           // Update the title
           document.title = $data.find('.document-title:first').text();
@@ -168,8 +172,11 @@
           });
 
           // Complete the change
-          if ( $body.ScrollTo||false ) { $body.ScrollTo(scrollOptions); } /* http://balupton.com/projects/jquery-scrollto */
+          // if ( $body.ScrollTo||false ) { $body.ScrollTo(scrollOptions); } /* http://balupton.com/projects/jquery-scrollto */
           
+          
+          $("html, body").scrollTop(0);
+          $('.scroll-indicator').removeClass('scroll-indicator--scrolled');
           $body.removeClass('loading');
           $window.trigger(completedEventName);
   
@@ -196,12 +203,18 @@
 
 })(window); // end closure
 
+//****** END AJAXIFY ******/
+
+
+
+
   $(document).foundation();
 
-  $('#parallax__container').on('scrollme.zf.trigger', handleScroll);
+
+  
 
   function handleScroll(){
-  
+    //alert('handling scroll');
     var top = $('html').scrollTop() || $('body').scrollTop();
     var layers = $('.parallax__layer');
 
@@ -221,20 +234,9 @@
       });
     });
 
-    // for (var i = 0; i < layers.length; i++) {
-    //   layer = layers[i];
-    //   speed = layer.getAttribute('data-speed');
-    //   yPos = -(top * speed / 100);
-      
-    //   // layer.css({
-    //   //   'transform' : 'translate3d(0px, ' + yPos + 'px, 0px)'
-    //   // });
-
-    // }
-
     var pWin = $('#p-window');
-    // var pWinTop = pWin.offset().top;
-    var pWinTop = this.pageYOffset;
+    var pWinTop = pWin.offset().top;
+    var pWinTop = window.pageYOffset;
     var pWinFrontLayers = document.getElementsByClassName('p-window__layer--front');
     var pWinSpeed;
     var pWinY;
@@ -248,6 +250,35 @@
     }
 
   };
+
+$('#body').on('scrollme.zf.trigger', handleScroll);
+
+function addthisInit() {
+  var addthis_config = addthis_config||{};
+  addthis_config.pubid = 'ra-52a72bea3c0127e2';
+  console.log(addthis_config);
+  addthis.init();
+}
+
+$(window).load(function() {
+  addthisInit();
+
+  $('#document-body').imagesLoaded( function() {
+    snowInit();
+    // alert('images loaded global');
+  });
+});
+
+$( window ).on( "statechangecomplete", function() {
+  // $('#parallax__container').on('scrollme.zf.trigger', handleScroll);
+  
+  $('#document-body').imagesLoaded( function() {
+    // clearInterval(interval);
+    // var interval = setInterval( loop, 1000 / 60 );
+    snowInit();
+    addthis.toolbox('.addthis_toolbox');
+  });
+});
 
 /**
 Copyright (c)2010-2011, Seb Lee-Delisle, sebleedelisle.com
@@ -266,22 +297,13 @@ Redistribution and use in source and binary forms, with or without modification,
  **/
 
   var container;
-  container = document.getElementById('card');
 
-  
-  /*cardWidth = 596;
-  cardHeight = 596;
-  */
   var cardWidth;
   var cardHeight;
 
-  cardWidth = $("#card").width();
-  cardHeight = $("#card").height();
-  
-  var SCREEN_WIDTH = cardWidth;
-  var SCREEN_HEIGHT = cardHeight;
-  
-  
+  var SCREEN_WIDTH;
+  var SCREEN_HEIGHT;
+
   var particle;
   
   var camera;
@@ -291,29 +313,32 @@ Redistribution and use in source and binary forms, with or without modification,
   var mouseX = 0;
   var mouseY = 0;
   
-  var windowHalfX = cardWidth / 2;
-  var windowHalfY = cardWidth / 2;
-  //alert(windowHalfX);
-  var particles = []; 
-  var particleImage = new Image();//THREE.ImageUtils.loadTexture( "img/ParticleSmoke.png" );
-  particleImage.src = 'mysite/dist/images/snow/particle.png'; 
+  var windowHalfX;
+  var windowHalfY;
 
-$(window).load(function() {
+  var particles = []; 
+  var particleImage = new Image();
+  particleImage.src = 'mysite/dist/images/snow/particle.png'; 
+  var interval = setInterval( loop, 1000 / 60 );
+
+function snowInit() {
+  
+  container = document.getElementById('card');
+
+  
   cardWidth = $("#card").width();
   cardHeight = $("#card").height();
   
   SCREEN_WIDTH = cardWidth;
   SCREEN_HEIGHT = cardHeight;
+
+  // alert(cardWidth + ' ' + cardHeight);
+
+  SCREEN_WIDTH = cardWidth;
+  SCREEN_HEIGHT = cardHeight;
   
   windowHalfX = cardWidth / 2;
   windowHalfY = cardWidth / 2;
-  
-  
-  snowInit();
-
-});
-
-function snowInit() {
 
   //container = document.createElement('div');
   //document.body.appendChild(container);
@@ -323,7 +348,9 @@ function snowInit() {
 
   scene = new THREE.Scene();
   scene.add(camera);
-    
+
+  particles = [];
+   
   renderer = new THREE.CanvasRenderer();
   renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
   var material = new THREE.ParticleBasicMaterial( { map: new THREE.Texture(particleImage) } );
@@ -348,7 +375,8 @@ function snowInit() {
   /*document.addEventListener( 'touchstart', onDocumentTouchStart, false );
   document.addEventListener( 'touchmove', onDocumentTouchMove, false );*/
   
-  setInterval( loop, 1000 / 60 );
+  
+
   
 }
 

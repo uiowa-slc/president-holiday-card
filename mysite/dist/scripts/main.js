@@ -128,7 +128,7 @@
             $menuChildren, contentHtml, $scripts;
 
 
-          clearScene();
+        
           
           // Fetch the scripts
           $scripts = $dataContent.find('.document-script');
@@ -174,9 +174,10 @@
           // Complete the change
           // if ( $body.ScrollTo||false ) { $body.ScrollTo(scrollOptions); } /* http://balupton.com/projects/jquery-scrollto */
           
-          $body.removeClass('loading');
+          
           $("html, body").scrollTop(0);
-
+          $('.scroll-indicator').removeClass('scroll-indicator--scrolled');
+          $body.removeClass('loading');
           $window.trigger(completedEventName);
   
           // Inform Google Analytics of the change
@@ -234,8 +235,8 @@
     });
 
     var pWin = $('#p-window');
-    // var pWinTop = pWin.offset().top;
-    var pWinTop = this.pageYOffset;
+    var pWinTop = pWin.offset().top;
+    var pWinTop = window.pageYOffset;
     var pWinFrontLayers = document.getElementsByClassName('p-window__layer--front');
     var pWinSpeed;
     var pWinY;
@@ -263,8 +264,8 @@ $(window).load(function() {
   addthisInit();
 
   $('#document-body').imagesLoaded( function() {
-    // snowInit();
-    alert('images loaded global');
+    snowInit();
+    // alert('images loaded global');
   });
 });
 
@@ -272,6 +273,8 @@ $( window ).on( "statechangecomplete", function() {
   // $('#parallax__container').on('scrollme.zf.trigger', handleScroll);
   
   $('#document-body').imagesLoaded( function() {
+    // clearInterval(interval);
+    // var interval = setInterval( loop, 1000 / 60 );
     snowInit();
     addthis.toolbox('.addthis_toolbox');
   });
@@ -316,9 +319,10 @@ Redistribution and use in source and binary forms, with or without modification,
   var particles = []; 
   var particleImage = new Image();
   particleImage.src = 'mysite/dist/images/snow/particle.png'; 
+  var interval = setInterval( loop, 1000 / 60 );
 
 function snowInit() {
-
+  
   container = document.getElementById('card');
 
   
@@ -371,7 +375,7 @@ function snowInit() {
   /*document.addEventListener( 'touchstart', onDocumentTouchStart, false );
   document.addEventListener( 'touchmove', onDocumentTouchMove, false );*/
   
-  setInterval( loop, 1000 / 60 );
+  
 
   
 }
@@ -387,7 +391,7 @@ function loop() {
 
       var particle = particles[i]; 
       particle.updatePhysics(); 
-      // console.log(particle.velocity);
+
       var particlePos = particle.position;
 
       if(particlePos.y<-1000) particlePos.y+=2000; 
@@ -420,11 +424,6 @@ function doResize() {
   renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
   
 };
-
-function clearScene(){
-    scene = null;
-    camera = null;
-}
 
 var resizeTimer;
 $(window).resize(function() {

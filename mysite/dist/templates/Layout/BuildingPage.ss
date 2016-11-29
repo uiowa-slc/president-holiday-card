@@ -9,40 +9,33 @@
     <div class="main-content__container">
       <article class="main-content main-content--building" role="main">
         <h1 class="main-content__header">$Title</h1>
+
+          <div class="main-content__body">
           $Content
-          <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-            <a class="addthis_button_facebook"></a>
-            <a class="addthis_button_twitter"></a>
-            <a class="addthis_button_email"></a>
           </div>
+
+          <% include AddThis %>
       </article>
     </div>
 
     <div class="building-grid building-grid--padding row expanded small-up-2"  id="building-grid">
-      <h2 class="heading heading--small heading--centered">Share a building below:</h2>
+      <h2 class="heading heading--small heading--centered">View and share our campus this holiday season:</h2>
       <% loop $BuildingPages %>
         <% include BuildingPageColumn %>
       <% end_loop %>
     </div>
-    <div class="building-grid row small-12 columns">
-
+    <div class="building-grid row expanded small-12 columns">
       <a href="{$BaseURL}" class="building-grid__link">
 
-        <div class="p-window" id="p-window">
-          <div class="p-window__layer p-window__layer--small p-window__layer--0 p-window-parallax" data-speed="2">
-          </div>    
-          <div class="p-window__layer p-window__layer--small p-window__layer--1 p-window__layer--front p-window-parallax" data-speed="4">
-          </div>    
-          <div class="p-window__layer p-window__layer--small p-window__layer--front p-window__layer--screen p-window-parallax">
-          </div>
-          <div class="image-screen image-screen--darker"><h2 class="building-grid__header">Share Our Campus</h2></div>
-          
-  <%--         <div class="p-window__layer p-window__layer--small p-window__layer--2 p-window__layer--front p-window-parallax" data-speed="5">
-            <h2>Happy Holidays from Bruce and Mary Herrald</h2>
-          </div> --%>   
+        <div class="image-screen image-screen--darker">
+          <h2 class="building-grid__header">Our Campus</h2>
         </div>
+        <img src="mysite/dist/images/card-main-nav.jpg" alt="Sprawling view of our campus" />
 
-      </a>
+       </a>
+    </div>
+
+     
     </div>
     <% include Footer %>
   </div>

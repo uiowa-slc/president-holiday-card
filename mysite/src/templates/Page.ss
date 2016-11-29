@@ -56,7 +56,9 @@
     <link rel="stylesheet" href="mysite/dist/styles/main.css">
   </head>
   <body>
-
+    <audio autoplay>
+      <source src="mysite/dist/media/song.mp3" type="audio/mpeg">
+    </audio>
     $Layout
 
 
@@ -65,6 +67,14 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2"></script>
+
+    <!-- jQuery ScrollTo Plugin -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+
+    <!-- History.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/history.js/1.8/bundled-uncompressed/html4+html5/jquery.history.js"></script>
+
+
     <!-- build:js mysite/dist/scripts/main.min.js -->
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="./mysite/src/scripts/snow/ThreeCanvas.js"></script>

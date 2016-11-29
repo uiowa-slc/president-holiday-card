@@ -1,6 +1,6 @@
-
+<article>
   <div class="image-header__container card" id="card" >
-    <a href="{$Baseurl}" class="back-button"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
+    <a href="{$BaseURL}" class="back-button"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
     <img src="{$Image.Fill(1520,720).URL}" class="image-header" alt="" role="presentation" />
   </div>
 
@@ -28,7 +28,7 @@
       <% end_loop %>
     </div>
     <div class="building-grid row small-12 columns" >
-      <a href="$Baseurl" class="building-grid__link">
+      <a href="{$BaseURL}" class="building-grid__link">
 
         <div class="p-window" id="p-window">
           <div class="p-window__layer p-window__layer--small p-window__layer--0 p-window-parallax" data-speed="2">
@@ -48,3 +48,4 @@
     </div>
     <% include Footer %>
   </div>
+</article>

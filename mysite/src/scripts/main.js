@@ -21,7 +21,7 @@ Roots = {
 
       var snowElement; 
 
-      $('#body').on('scrollme.zf.trigger', handleScroll);
+      
 
       $('.scroll-indicator').click(function(){
         $(window).scrollTo('#main', 2000);
@@ -44,10 +44,12 @@ Roots = {
           
           else if (platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1)
           {
+            $('#body').on('scrollme.zf.trigger', handleScroll);
             useParallax();
             snowElement = $('#card');
 
           }else{
+            $('#body').on('scrollme.zf.trigger', handleScroll);
             useParallax();
             snowElement = $('#card');
           }

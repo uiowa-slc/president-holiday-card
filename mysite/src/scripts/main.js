@@ -264,7 +264,7 @@ function addthisInit() {
 }
 
 $(window).load(function() {
-  
+  addthisInit();
 
   $('#document-body').imagesLoaded( function() {
     snowInit();
@@ -279,7 +279,7 @@ $( window ).on( "statechangecomplete", function() {
     // clearInterval(interval);
     // var interval = setInterval( loop, 1000 / 60 );
     snowInit();
-    //addthis.toolbox('.addthis_toolbox');
+    addthis.toolbox('.addthis_toolbox');
   });
 });
 

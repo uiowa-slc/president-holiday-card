@@ -22,7 +22,7 @@
     <meta property="og:title"
     content="$Title.ATT" />
     <meta property="og:description"
-    content="Wishing you a joyous holiday season from the University of Iowa" />
+    content="$Content.ATT" />
     
     <meta property="og:site_name" content="The University of Iowa - Office of the President"/>
     <meta property="og:url" content="$AbsoluteLink" />

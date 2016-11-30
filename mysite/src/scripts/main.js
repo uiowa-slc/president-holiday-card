@@ -257,12 +257,14 @@ function addthisInit() {
   var addthis_config = addthis_config||{};
   addthis_config.pubid = 'ra-52a72bea3c0127e2';
   addthis_config.data_track_clickback = false;
-  //console.log(addthis_config);
+  console.log(addthis_config);
   addthis.init();
+
+
 }
 
 $(window).load(function() {
-  addthisInit();
+  
 
   $('#document-body').imagesLoaded( function() {
     snowInit();
@@ -277,7 +279,7 @@ $( window ).on( "statechangecomplete", function() {
     // clearInterval(interval);
     // var interval = setInterval( loop, 1000 / 60 );
     snowInit();
-    addthis.toolbox('.addthis_toolbox');
+    //addthis.toolbox('.addthis_toolbox');
   });
 });
 

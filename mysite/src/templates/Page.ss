@@ -62,11 +62,7 @@
   </head>
   <body id="body" data-scroll="body">
 
-    <% if not $isAjax %>
-        <audio autoplay>
-          <source src="mysite/dist/media/song.mp3" type="audio/mpeg">
-        </audio>
-    <% end_if %>
+
     $Layout
 
 

@@ -21,7 +21,7 @@
     // Prepare Variables
     var
       /* Application Specific Variables */
-      contentSelector = 'html'
+      contentSelector = 'article:first'
       $content = $(contentSelector).filter(':first'),
       contentNode = $content.get(0),
       $menu = $('#menu,#nav,nav:first,.nav:first').filter(':first'),

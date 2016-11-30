@@ -74,7 +74,8 @@
     <!-- Add your site or app content here -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script async src="https://static.addtoany.com/menu/page.js"></script>
+    <script type="text/javascript">var addthis_config = {"data_track_clickback":false};</script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#async=1"></script>
 <!--pubid=ra-52a72bea3c0127e2 -->
 
     <!-- jQuery ScrollTo Plugin -->

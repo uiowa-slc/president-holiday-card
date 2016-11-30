@@ -21,7 +21,7 @@
     // Prepare Variables
     var
       /* Application Specific Variables */
-      contentSelector = 'article:first'
+      contentSelector = 'html'
       $content = $(contentSelector).filter(':first'),
       contentNode = $content.get(0),
       $menu = $('#menu,#nav,nav:first,.nav:first').filter(':first'),
@@ -264,7 +264,7 @@ function addthisInit() {
 }
 
 $(window).load(function() {
-  
+  addthisInit();
 
   $('#document-body').imagesLoaded( function() {
     snowInit();
@@ -279,7 +279,7 @@ $( window ).on( "statechangecomplete", function() {
     // clearInterval(interval);
     // var interval = setInterval( loop, 1000 / 60 );
     snowInit();
-    //addthis.toolbox('.addthis_toolbox');
+    addthis.toolbox('.addthis_toolbox');
   });
 });
 

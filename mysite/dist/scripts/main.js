@@ -160,6 +160,7 @@
           }
           catch ( Exception ) { }
           
+          addthis.layers.refresh();
           // Add the scripts
           $scripts.each(function(){
             var $script = $(this), scriptText = $script.text(), scriptNode = document.createElement('script');
@@ -279,7 +280,7 @@ $( window ).on( "statechangecomplete", function() {
     // clearInterval(interval);
     // var interval = setInterval( loop, 1000 / 60 );
     snowInit();
-    addthis.toolbox('.addthis_toolbox');
+    
   });
 });
 

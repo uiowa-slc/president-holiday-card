@@ -1,19 +1,5 @@
 
 <article>
-    <meta property="og:title"
-    content="$Title.ATT" />
-    <meta property="og:description"
-    content="$Content.Summary.ATT" />
-    
-    <meta property="og:site_name" content="The University of Iowa Office of the President"/>
-    <meta property="og:url" content="{$baseURL}" />
-    <% if $Image %>
-    <meta property="og:image" content="{$Image.Fill(1200,630).AbsoluteURL}" />
-    <% else %>
-    <meta property="og:image" content="{$baseURL}mysite/dist/og--default.jpg" />
-    <% end_if %>
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
   <div class="parallax__container" id="parallax__container">
       <!-- "furthest" layer, aka sunset/sky/ backdrop: -->
       <div class="parallax__layer parallax__layer--1 parallax" data-speed="2" 

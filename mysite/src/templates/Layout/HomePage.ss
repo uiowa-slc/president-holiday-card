@@ -25,7 +25,7 @@
   </div>
   <div class="main">
     <div class="main-content__container">
-      <div class="main-content main-content--shift-up">
+      <div class="main-content main-content--with-padding">
 
         $Form
         <h1 class="main-content__header">wishing you a joyous

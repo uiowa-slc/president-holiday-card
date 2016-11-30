@@ -247,7 +247,7 @@ function snowInit(element) {
   }
 
   
-  container.prepend( renderer.domElement );
+  container.append( renderer.domElement );
   //container.insertBefore(renderer.domElement,container.firstChild);
 
   document.addEventListener( 'mousemove', onDocumentMouseMove, false );

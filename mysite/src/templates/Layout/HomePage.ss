@@ -8,9 +8,6 @@
       <div class="parallax__layer parallax__layer--greeting parallax__layer--static">
         <p>From our neighborhood to yours...</p>
       </div>        
-      <div class="parallax__layer parallax__layer--scroll-indicator parallax" data-speed="99">
-        <span class="scroll-indicator"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
-      </div>
   </div>
   <div class="parallax__container" id="parallax__container" style="display: none;">
       

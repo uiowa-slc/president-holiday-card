@@ -1,9 +1,119 @@
+// http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/
+// Modified to only fire on body class (not body class + ID, working off strictly WordPress body_class)
+
+Roots = {
+  // all pages
+  'common': {
+    init: function(){
+       $(document).foundation();
+       addthisInit();
+      // $('a').click(function() {
+      //   alert('Hello world!');
+      // });
+
+    },
+    finalize: function(){ }
+  },
+
+  // Home page
+  'HomePage': {
+    init: function(){
+
+      var snowElement; 
+
+      $('#body').on('scrollme.zf.trigger', handleScroll);
+
+      $('.scroll-indicator').click(function(){
+        $(window).scrollTo('#main', 2000);
+      });
 
 
-  $(document).foundation();
+        $('#body').imagesLoaded( function() {
+
+          var platform = navigator.platform.toLowerCase();
+          var userAgent = navigator.userAgent.toLowerCase();
+         
+          // var snowElement;    
+
+          if ( userAgent.indexOf('ipad') != -1  ||  userAgent.indexOf('iphone') != -1 ) 
+          {
+            
+            snowElement = $('#parallax__container--static');
+            
+          }
+          
+          else if (platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1)
+          {
+            useParallax();
+            snowElement = $('#card');
+
+          }else{
+            useParallax();
+            snowElement = $('#card');
+          }
+          
+          snowInit(snowElement);
+          // else
+          // {
+          //   castParallax();
+          // }
+
+          
+          // alert('images loaded global');
+        });
+      // $('a').click(function() {
+      //   alert('Hello world!');
+      // })
+
+    }
+  },
+
+  //Building Page:
+  'BuildingPage': {
+    init: function(){
+      snowInit($("#card"));
+      // $('a').click(function() {
+      //   alert('Hello world!');
+      // });
+
+    },
+    finalize: function(){ }
+  },
+}
+
+UTIL = {
+  fire : function(func,funcname, args){
+    var namespace = Roots;  // indicate your obj literal namespace here
+    funcname = (funcname === undefined) ? 'init' : funcname;
+    if (func !== '' && namespace[func] && typeof namespace[func][funcname] == 'function'){
+      namespace[func][funcname](args);
+    }
+  },
+  loadEvents : function(){
+
+    // hit up common first.
+    UTIL.fire('common');
+
+    // do all the classes too.
+    $.each(document.body.className.split(/\s+/),function(i,classnm){
+      UTIL.fire(classnm);
+    });
+
+    UTIL.fire('common','finalize');
+  }
+};
+
+// kick it all off here
+$(document).ready(UTIL.loadEvents);
 
 
-  
+ 
+
+
+  function useParallax(){
+    $("#parallax__container--static").css('display','none');
+    $("#parallax__container").css('display','block');
+  }
 
   function handleScroll(){
     //alert('handling scroll');
@@ -28,7 +138,7 @@
 
   };
 
-$('#body').on('scrollme.zf.trigger', handleScroll);
+
 
 
 function addthisInit() {
@@ -42,31 +152,13 @@ function addthisInit() {
 }
 
 $(window).load(function() {
-  addthisInit();
-
-
-
-  $('.scroll-indicator').click(function(){
-    $(window).scrollTo('#main', 2000);
-  });
-
-
-  $('#document-body').imagesLoaded( function() {
-    snowInit();
-    // alert('images loaded global');
-  });
-});
-
-$( window ).on( "statechangecomplete", function() {
-  // $('#parallax__container').on('scrollme.zf.trigger', handleScroll);
   
-  $('#document-body').imagesLoaded( function() {
-    // clearInterval(interval);
-    // var interval = setInterval( loop, 1000 / 60 );
-    snowInit();
-    
-  });
+
+
+
 });
+
+
 
 /**
 Copyright (c)2010-2011, Seb Lee-Delisle, sebleedelisle.com
@@ -84,7 +176,6 @@ Redistribution and use in source and binary forms, with or without modification,
 
  **/
 
-  var container;
 
   var cardWidth;
   var cardHeight;
@@ -109,13 +200,13 @@ Redistribution and use in source and binary forms, with or without modification,
   particleImage.src = 'mysite/dist/images/snow/particle.png'; 
   var interval;
 
-function snowInit() {
+function snowInit(element) {
   
-  container = document.getElementById('card');
-
+  var container = element;
+  console.log(container);
   
-  cardWidth = $("#card").width();
-  cardHeight = $("#card").height();
+  cardWidth = container.width();
+  cardHeight = container.height();
   
   SCREEN_WIDTH = cardWidth;
   SCREEN_HEIGHT = cardHeight;
@@ -156,8 +247,8 @@ function snowInit() {
   }
 
   
-  //container.appendChild( renderer.domElement );
-  container.insertBefore(renderer.domElement,container.firstChild);
+  container.prepend( renderer.domElement );
+  //container.insertBefore(renderer.domElement,container.firstChild);
 
   document.addEventListener( 'mousemove', onDocumentMouseMove, false );
   /*document.addEventListener( 'touchstart', onDocumentTouchStart, false );

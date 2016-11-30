@@ -4,8 +4,16 @@
         </audio>
     <% end_if %>
 <article>
-  <div class="parallax__container" id="parallax__container">
-      <!-- "furthest" layer, aka sunset/sky/ backdrop: -->
+  <div class="parallax__container parallax__container--static" id="parallax__container--static">
+      <div class="parallax__layer parallax__layer--greeting parallax__layer--static">
+        <p>From our neighborhood to yours...</p>
+      </div>        
+      <div class="parallax__layer parallax__layer--scroll-indicator parallax" data-speed="99">
+        <span class="scroll-indicator"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+      </div>
+  </div>
+  <div class="parallax__container" id="parallax__container" style="display: none;">
+      
       <div class="parallax__layer parallax__layer--1 parallax" data-speed="2" 
         data-interchange="[mysite/dist/images/parallax/parallax-1--small.png, small], [mysite/dist/images/parallax/parallax-1--large.png, large], [mysite/dist/images/parallax/parallax-1--2x.png, retina]"></div>  
       <div class="parallax__layer parallax__layer--2 parallax" data-speed="11" data-interchange="[mysite/dist/images/parallax/parallax-2--small.png, small],  [mysite/dist/images/parallax/parallax-2--large.png, large], [mysite/dist/images/parallax/parallax-2--2x.png, retina]"></div>  
@@ -19,10 +27,8 @@
       <div class="parallax__layer parallax__layer--greeting parallax" data-speed="99">
         <p>From our neighborhood to yours...</p>
       </div>  
-      <%-- <div class="parallax__layer parallax__layer--7" data-speed="69"></div>  --%>  
-      <!-- closest layer: -->
-      <%-- <div class="parallax__layer parallax__layer--8 card" id="card" data-speed="100"></div>  --%>  <!-- 100. -->
   </div>
+
   <div class="main" id="main">
     <div class="main-content__container">
       <div class="main-content main-content--with-padding">

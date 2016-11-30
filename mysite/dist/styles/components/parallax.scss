@@ -15,6 +15,13 @@
 
 }
 
+.parallax__container--static{
+	background-image: url('../images/card-main-nav.jpg');
+	background-size: cover;
+	background-position-x: 50%;
+	background-position-y: 50%;
+}
+
 .parallax__container--small, .parallax__layer--small{
 	height: 740px;
 }

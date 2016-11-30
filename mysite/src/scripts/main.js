@@ -274,12 +274,12 @@ $(window).load(function() {
 
 $( window ).on( "statechangecomplete", function() {
   // $('#parallax__container').on('scrollme.zf.trigger', handleScroll);
-  
+  addthis.layers.refresh();
   $('#document-body').imagesLoaded( function() {
     // clearInterval(interval);
     // var interval = setInterval( loop, 1000 / 60 );
     snowInit();
-    addthis.layers.refresh();
+    
   });
 });
 

@@ -25,4 +25,3 @@ if(Director::isLive()) {
 	Director::forceSSL();
 }
 
-Config::inst()->update('SSViewer', 'rewrite_hash_links', false);

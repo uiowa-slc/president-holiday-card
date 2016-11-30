@@ -256,6 +256,7 @@ $('#body').on('scrollme.zf.trigger', handleScroll);
 function addthisInit() {
   var addthis_config = addthis_config||{};
   addthis_config.pubid = 'ra-52a72bea3c0127e2';
+  addthis_config.data_track_clickback = false;
   //console.log(addthis_config);
   addthis.init();
 }

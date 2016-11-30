@@ -6,3 +6,5 @@ framework
 _ss_environment.php
 vendor
 assets
+.phpintel
+.sass-cache/

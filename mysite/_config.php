@@ -24,3 +24,5 @@ if (class_exists('SiteTree')) SiteTree::enable_nested_urls();
 if(Director::isLive()) {
 	Director::forceSSL();
 }
+
+Config::inst()->update('SSViewer', 'rewrite_hash_links', false);

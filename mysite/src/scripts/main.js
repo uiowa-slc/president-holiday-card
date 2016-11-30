@@ -39,7 +39,7 @@ Roots = {
           {
             
             snowElement = $('#parallax__container--static');
-            
+            $('#body').on('scrollme.zf.trigger', handleNonParallaxScroll);
           }
           
           else if (platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1)
@@ -117,8 +117,12 @@ $(document).ready(UTIL.loadEvents);
     $("#parallax__container").css('display','block');
   }
 
+  function handleNonParallaxScroll(){
+    $('.scroll-indicator').addClass('scroll-indicator--scrolled');
+  }
+
   function handleScroll(){
-    //alert('handling scroll');
+    
     var top = $('html').scrollTop() || $('body').scrollTop();
     var layers = $('.parallax__layer');
 
@@ -152,13 +156,6 @@ function addthisInit() {
 
 
 }
-
-$(window).load(function() {
-  
-
-
-
-});
 
 
 
@@ -249,7 +246,7 @@ function snowInit(element) {
   }
 
   
-  container.append( renderer.domElement );
+  container.prepend( renderer.domElement );
   //container.insertBefore(renderer.domElement,container.firstChild);
 
   document.addEventListener( 'mousemove', onDocumentMouseMove, false );

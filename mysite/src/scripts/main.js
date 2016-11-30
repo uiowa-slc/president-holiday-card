@@ -26,24 +26,10 @@
       });
     });
 
-    var pWin = $('#p-window');
-    var pWinTop = pWin.offset().top;
-    var pWinTop = window.pageYOffset;
-    var pWinFrontLayers = document.getElementsByClassName('p-window__layer--front');
-    var pWinSpeed;
-    var pWinY;
-
-
-    for (var i = 0; i < pWinFrontLayers.length; i++) {
-      layer = pWinFrontLayers[i];
-      pWinSpeed = layer.getAttribute('data-speed');
-      pWinY = (pWinTop * pWinSpeed / 100);
-      layer.setAttribute('style', 'background-position-y: ' + pWinY + '%');
-    }
-
   };
 
 $('#body').on('scrollme.zf.trigger', handleScroll);
+
 
 function addthisInit() {
   var addthis_config = addthis_config||{};
@@ -57,6 +43,13 @@ function addthisInit() {
 
 $(window).load(function() {
   addthisInit();
+
+
+
+  $('.scroll-indicator').click(function(){
+    $(window).scrollTo('#main', 2000);
+  });
+
 
   $('#document-body').imagesLoaded( function() {
     snowInit();
@@ -114,7 +107,7 @@ Redistribution and use in source and binary forms, with or without modification,
   var particles = []; 
   var particleImage = new Image();
   particleImage.src = 'mysite/dist/images/snow/particle.png'; 
-  var interval = setInterval( loop, 1000 / 60 );
+  var interval;
 
 function snowInit() {
   
@@ -170,7 +163,7 @@ function snowInit() {
   /*document.addEventListener( 'touchstart', onDocumentTouchStart, false );
   document.addEventListener( 'touchmove', onDocumentTouchMove, false );*/
   
-  
+  setInterval( loop, 1000 / 60 );
 
   
 }

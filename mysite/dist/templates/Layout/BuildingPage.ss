@@ -30,7 +30,7 @@
         <div class="image-screen image-screen--darker">
           <h2 class="building-grid__header">Our Campus</h2>
         </div>
-        <img src="mysite/dist/images/card-main-nav.jpg" alt="Sprawling view of our campus" />
+        <img src="mysite/dist/images/card-main-nav.jpg" class="building-grid__image" alt="Sprawling view of our campus" />
 
        </a>
     </div>

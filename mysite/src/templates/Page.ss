@@ -14,7 +14,7 @@
     <% base_tag %>
 
     <meta name="title" content="Wishing You A Joyous Holiday Season From Bruce And Mary Harreld | The University of Iowa"/>
-    <meta name="description" content="Wishing You A Joyous Holiday Season From Bruce And Mary Harreld | The University of Iowa"/>
+    <meta name="description" content="$Content.Summary(50).ATT"/>
     <meta name="author" content="The University of Iowa"/>
     <meta name="copyright" content="The University of Iowa. Copyright (c) 2016"/>
 
@@ -26,7 +26,9 @@
     
     <meta property="og:site_name" content="The University of Iowa - Office of the President"/>
     <meta property="og:url" content="$AbsoluteLink" />
-    <% if $Image %>
+    <% if $Thumbnail %>
+    <meta property="og:image" content="{$Thumbnail.Fill(1200,630).AbsoluteURL}" />
+    <% else_if $Image %>
     <meta property="og:image" content="{$Image.Fill(1200,630).AbsoluteURL}" />
     <% else %>
     <meta property="og:image" content="{$absoluteBaseURL}mysite/dist/images/og--default.jpg" />
@@ -72,15 +74,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">var addthis_config = {"data_track_clickback":false};</script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2"></script>
-<!--pubid=ra-52a72bea3c0127e2 -->
 
     <!-- jQuery ScrollTo Plugin -->
-    <script src="//balupton.github.io/jquery-scrollto/lib/jquery-scrollto.js"></script>
-
-
-    <!-- History.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/history.js/1.8/bundled-uncompressed/html4+html5/jquery.history.js"></script>
-
+    <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
 
     <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
 

@@ -22,9 +22,9 @@
     <meta property="og:title"
     content="$Title.ATT" />
     <meta property="og:description"
-    content="$Content.Summary.ATT" />
+    content="Wishing you a joyous holiday season from the University of Iowa" />
     
-    <meta property="og:site_name" content="The University of Iowa Office of the President"/>
+    <meta property="og:site_name" content="The University of Iowa - Office of the President"/>
     <meta property="og:url" content="$AbsoluteLink" />
     <% if $Image %>
     <meta property="og:image" content="{$Image.Fill(1200,630).AbsoluteURL}" />

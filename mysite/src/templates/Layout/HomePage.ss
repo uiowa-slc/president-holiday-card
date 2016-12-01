@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div class="building-grid row expanded small-up-2">
+    <div class="building-grid row expanded medium-up-2">
       <h2 class="heading heading--small heading--centered">View and share our campus this holiday season:</h2>
       <% loop $BuildingPages %>
         <% include BuildingPageColumn %>

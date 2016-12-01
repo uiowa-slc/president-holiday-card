@@ -51,7 +51,7 @@
     <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i" rel="stylesheet">
     <link rel="stylesheet" href="mysite/dist/styles/main.css">
   </head>
-  <body id="body" data-scroll="body" class="{$ClassName}">
+  <body id="body" data-scroll="body" data-resize="body" class="{$ClassName}">
 
 
     $Layout

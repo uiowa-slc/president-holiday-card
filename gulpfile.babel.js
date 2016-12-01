@@ -63,6 +63,7 @@ gulp.task('copy', () =>
     'mysite/src/**/*',
     '!mysite/src/*.html',
     '!mysite/src/templates',
+    '!mysite/src/templates/**/*',
     '!mysite/src/scripts',
     '!mysite/src/scripts/**/*',
     '!mysite/src/styles',

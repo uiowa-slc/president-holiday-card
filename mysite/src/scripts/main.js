@@ -20,40 +20,34 @@ Roots = {
         $(window).scrollTo('#main', 2000);
       });
 
-        $('#body').imagesLoaded( function() {
-          var platform = navigator.platform.toLowerCase();
-          var userAgent = navigator.userAgent.toLowerCase();
-         
-          if ( userAgent.indexOf('ipad') != -1  ||  userAgent.indexOf('iphone') != -1 ) 
-          {
-            snowElement = $('#parallax__container--static');
-            $('#body').on('scrollme.zf.trigger', handleNonParallaxScroll);
-          }
-          
-          else if (platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1)
-          {
-            $('#body').on('scrollme.zf.trigger', handleScroll);
-            useParallax();
-            snowElement = $('#card');
-
-          }else{
-            $('#body').on('scrollme.zf.trigger', handleScroll);
-            useParallax();
-            snowElement = $('#card');
-          }
-          
-          snowInit(snowElement);
-
-        });
-
+      $('#body').imagesLoaded( function() {
+        var platform = navigator.platform.toLowerCase();
+        var userAgent = navigator.userAgent.toLowerCase();
+       
+        if ( userAgent.indexOf('ipad') != -1  ||  userAgent.indexOf('iphone') != -1 ) 
+        {
+          snowElement = $('#parallax__container--static');
+          $('#body').on('scrollme.zf.trigger', handleNonParallaxScroll);
+        }
+        else{
+          $('#body').on('scrollme.zf.trigger', handleScroll);
+          useParallax();
+          snowElement = $('#card');
+        }
+        
+        snowInit(snowElement);
+        $('#body').on('resizeme.zf.trigger', function(){handleResize(snowElement)});
+      });
 
     }
   },
   //Building Page:
   'BuildingPage': {
     init: function(){
+      var snowElement = $("#card");
       $('#body').imagesLoaded( function() {
-        snowInit($("#card"));
+        snowInit(snowElement);
+        $('#body').on('resizeme.zf.trigger', function(){handleResize(snowElement)});
       });
     },
     finalize: function(){ }
@@ -116,6 +110,12 @@ function handleScroll(){
   });
 
 };
+
+
+
+
+
+
 
 /**
 Copyright (c)2010-2011, Seb Lee-Delisle, sebleedelisle.com
@@ -246,11 +246,11 @@ function loop() {
   
 }
 
-function doResize() {
-
-  cardWidth = $("#card").width();
-  cardHeight = $("#card").height();
+function handleResize(element){
   
+  cardWidth = $(element).width();
+  cardHeight = $(element).height();
+  console.log(cardWidth);
   SCREEN_WIDTH = cardWidth;
   SCREEN_HEIGHT = cardHeight;
   
@@ -258,11 +258,23 @@ function doResize() {
   windowHalfY = cardHeight / 2; 
 
   renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
-  
-};
+}
 
-var resizeTimer;
-$(window).resize(function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(doResize, 100);
-});
+
+// function doResize() {
+//   alert(cardWidth);
+//   SCREEN_WIDTH = cardWidth;
+//   SCREEN_HEIGHT = cardHeight;
+  
+//   windowHalfX = cardWidth / 2;
+//   windowHalfY = cardHeight / 2; 
+
+//   renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+  
+// };
+
+// var resizeTimer;
+// $(window).resize(function() {
+//     clearTimeout(resizeTimer);
+//     resizeTimer = setTimeout(doResize, 100);
+// });

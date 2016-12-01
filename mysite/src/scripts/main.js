@@ -6,38 +6,26 @@ Roots = {
   'common': {
     init: function(){
        $(document).foundation();
-       addthisInit();
-      // $('a').click(function() {
-      //   alert('Hello world!');
-      // });
-
+       addthis.init();
     },
     finalize: function(){ }
   },
-
   // Home page
   'HomePage': {
     init: function(){
 
       var snowElement; 
 
-      
-
       $('.scroll-indicator').click(function(){
         $(window).scrollTo('#main', 2000);
       });
 
-
         $('#body').imagesLoaded( function() {
-
           var platform = navigator.platform.toLowerCase();
           var userAgent = navigator.userAgent.toLowerCase();
          
-          // var snowElement;    
-
           if ( userAgent.indexOf('ipad') != -1  ||  userAgent.indexOf('iphone') != -1 ) 
           {
-            
             snowElement = $('#parallax__container--static');
             $('#body').on('scrollme.zf.trigger', handleNonParallaxScroll);
           }
@@ -55,29 +43,18 @@ Roots = {
           }
           
           snowInit(snowElement);
-          // else
-          // {
-          //   castParallax();
-          // }
 
-          
-          // alert('images loaded global');
         });
-      // $('a').click(function() {
-      //   alert('Hello world!');
-      // })
+
 
     }
   },
-
   //Building Page:
   'BuildingPage': {
     init: function(){
-      snowInit($("#card"));
-      // $('a').click(function() {
-      //   alert('Hello world!');
-      // });
-
+      $('#body').imagesLoaded( function() {
+        snowInit($("#card"));
+      });
     },
     finalize: function(){ }
   },
@@ -109,55 +86,36 @@ UTIL = {
 $(document).ready(UTIL.loadEvents);
 
 
- 
-
-
-  function useParallax(){
-    $("#parallax__container--static").css('display','none');
-    $("#parallax__container").css('display','block');
-  }
-
-  function handleNonParallaxScroll(){
-    $('.scroll-indicator').addClass('scroll-indicator--scrolled');
-  }
-
-  function handleScroll(){
-    
-    var top = $('html').scrollTop() || $('body').scrollTop();
-    var layers = $('.parallax__layer');
-
-    var layer;
-    var speed;
-    var yPos;
-
-    $('.scroll-indicator').addClass('scroll-indicator--scrolled');
-
-    layers.each(function(index, element){
-      
-      speed = element.getAttribute('data-speed');
-      yPos = -(top * speed / 100);
-      //console.log(yPos);
-      $( element ).css({
-        'transform' : 'translate3d(0px, ' + yPos + 'px, 0px)'
-      });
-    });
-
-  };
-
-
-
-
-function addthisInit() {
-  var addthis_config = addthis_config||{};
-  addthis_config.pubid = 'ra-52a72bea3c0127e2';
-  addthis_config.data_track_clickback = false;
-  console.log(addthis_config);
-  addthis.init();
-
-
+function useParallax(){
+  $("#parallax__container--static").css('display','none');
+  $("#parallax__container").css('display','block');
 }
 
+function handleNonParallaxScroll(){
+  $('.scroll-indicator').addClass('scroll-indicator--scrolled');
+}
 
+function handleScroll(){
+  var top = $('html').scrollTop() || $('body').scrollTop();
+  var layers = $('.parallax__layer');
+
+  var layer;
+  var speed;
+  var yPos;
+
+  $('.scroll-indicator').addClass('scroll-indicator--scrolled');
+
+  layers.each(function(index, element){
+    
+    speed = element.getAttribute('data-speed');
+    yPos = -(top * speed / 100);
+    //console.log(yPos);
+    $( element ).css({
+      'transform' : 'translate3d(0px, ' + yPos + 'px, 0px)'
+    });
+  });
+
+};
 
 /**
 Copyright (c)2010-2011, Seb Lee-Delisle, sebleedelisle.com
@@ -202,7 +160,7 @@ Redistribution and use in source and binary forms, with or without modification,
 function snowInit(element) {
   
   var container = element;
-  console.log(container);
+  //console.log(container);
   
   cardWidth = container.width();
   cardHeight = container.height();

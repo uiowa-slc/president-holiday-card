@@ -24,15 +24,17 @@
         <% include BuildingPageColumn %>
       <% end_loop %>
     </div>
-    <div class="building-grid row expanded small-12 columns">
-      <a href="{$BaseURL}" class="building-grid__link">
+    <div class="building-grid row expanded">
+      <div class="large-12 columns">
+        <a href="{$BaseURL}" class="building-grid__link">
 
-        <div class="image-screen image-screen--darker">
-          <h2 class="building-grid__header">Our Campus</h2>
-        </div>
-        <img src="mysite/dist/images/card-main-nav.jpg" class="building-grid__image" alt="Sprawling view of our campus" />
+          <div class="image-screen image-screen--darker">
+            <h2 class="building-grid__header">Our Campus</h2>
+          </div>
+          <img src="mysite/dist/images/card-main-nav.jpg" class="building-grid__image" alt="Sprawling view of our campus" />
 
-       </a>
+         </a>
+      </div>
     </div>
 
      

@@ -62,7 +62,11 @@ gulp.task('copy', () =>
     'mysite/src/*',
     'mysite/src/**/*',
     '!mysite/src/*.html',
-    '!mysite/src/templates'
+    '!mysite/src/templates',
+    '!mysite/src/scripts',
+    '!mysite/src/scripts/**/*',
+    '!mysite/src/styles',
+    '!mysite/src/styles/**/*'
     // 'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true
@@ -115,6 +119,8 @@ gulp.task('scripts', () =>
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
       './bower_components/foundation-sites/dist/foundation.js',
+      './bower_components/jquery.scrollTo/jquery.scrollTo.js',
+      './bower_components/imagesloaded/imagesloaded.pkgd.min.js',
       './mysite/src/scripts/snow/ThreeCanvas.js',
       './mysite/src/scripts/snow/Snow.js',
       './mysite/src/scripts/main.js'

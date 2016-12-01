@@ -22,7 +22,7 @@
     <meta property="og:title"
     content="$Title.ATT" />
     <meta property="og:description"
-    content="Wishing you a joyous holiday season from the University of Iowa" />
+    content="$Content.Summary(50).ATT" />
     
     <meta property="og:site_name" content="The University of Iowa - Office of the President"/>
     <meta property="og:url" content="$AbsoluteLink" />
@@ -39,26 +39,15 @@
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
-    <!-- Web Application Manifest -->
-    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="mysite/dist/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="mysite/dist/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="mysite/dist/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="mysite/dist/images/favicons/manifest.json">
+    <link rel="mask-icon" href="mysite/dist/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="mysite/dist/images/favicons/favicon.ico">
+    <meta name="msapplication-config" content="mysite/dist/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Wishing You A Joyous Holiday Season From Bruce And Mary Harreld | The University of Iowa">
-    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#2F3BA2">
-
-    <!-- Color the status bar on mobile devices -->
-    <meta name="theme-color" content="#2F3BA2">
     <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i" rel="stylesheet">
     <link rel="stylesheet" href="mysite/dist/styles/main.css">
   </head>
@@ -75,13 +64,10 @@
     <script type="text/javascript">var addthis_config = {"data_track_clickback":false};</script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2"></script>
 
-    <!-- jQuery ScrollTo Plugin -->
-    <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
-
-    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-
     <!-- build:js mysite/dist/scripts/main.min.js -->
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
+    <script src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="./mysite/src/scripts/snow/ThreeCanvas.js"></script>
     <script src="./mysite/src/scripts/snow/Snow.js"></script>
     <script src="./mysite/dist/scripts/main.min.js"></script>

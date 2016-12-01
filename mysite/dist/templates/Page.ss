@@ -22,7 +22,7 @@
     <meta property="og:title"
     content="$Title.ATT" />
     <meta property="og:description"
-    content="Wishing you a joyous holiday season from the University of Iowa" />
+    content="$Content.Summary(50).ATT" />
     
     <meta property="og:site_name" content="The University of Iowa - Office of the President"/>
     <meta property="og:url" content="$AbsoluteLink" />
@@ -75,13 +75,10 @@
     <script type="text/javascript">var addthis_config = {"data_track_clickback":false};</script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2"></script>
 
-    <!-- jQuery ScrollTo Plugin -->
-    <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
-
-    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-
     <!-- build:js mysite/dist/scripts/main.min.js -->
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
+    <script src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="./mysite/src/scripts/snow/ThreeCanvas.js"></script>
     <script src="./mysite/src/scripts/snow/Snow.js"></script>
     <script src="./mysite/dist/scripts/main.min.js"></script>

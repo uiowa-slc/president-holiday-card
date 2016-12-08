@@ -1,12 +1,17 @@
 .parallax__container, .parallax__layer {
-	// height:  500px;
+	//height hack for rare browsers who don't support vh:
+	height:  500px;
 	height:100vh;
 	@include breakpoint(medium){
-		// height: 700px;
+		//height hack for rare browsers who don't support vh:
+		height: 700px;
+		height:100vh;
 
 	}
 	@include breakpoint(large){
-		// height: 1000px;
+		//height hack for rare browsers who don't support vh:
+		height: 1000px;
+		height:100vh;
 	}
 	@include breakpoint(xxlarge){
 		// height: 1200px;

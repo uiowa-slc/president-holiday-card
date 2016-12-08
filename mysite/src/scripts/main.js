@@ -15,8 +15,7 @@ Roots = {
     init: function(){
 
       var snowElement; 
-      
-
+    
       $('.button--sound').click(function(){
         $('.volume-icon').toggleClass('fa-volume-up');
         $('.volume-icon').toggleClass('fa-volume-off');
@@ -270,13 +269,8 @@ function handleResize(element){
   cardWidth = $(element).width();
   cardHeight = $(element).height();
   
-  SCREEN_WIDTH = cardWidth;
-  SCREEN_HEIGHT = cardHeight;
-  
-  windowHalfX = cardWidth / 2;
-  windowHalfY = cardHeight / 2; 
 
-  renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+  renderer.setSize(cardWidth, cardHeight);
 }
 
 

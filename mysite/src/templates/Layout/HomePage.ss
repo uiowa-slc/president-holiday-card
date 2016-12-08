@@ -54,7 +54,7 @@
         <% include BuildingPageColumn %>
       <% end_loop %>
     </div>
-    <p class="footer__credit">Illustrations by University of Iowa alum Austin Smoldt-Sáenz.</p>
+    <p class="footer__credit">Illustrations by University of Iowa alum Austin Smoldt-Sáenz</p>
     <%-- <% include Footer %> --%>
   </div>
 </article>

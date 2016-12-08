@@ -34,6 +34,8 @@ Roots = {
         {
           snowElement = $('#parallax__container--static');
           $('#body').on('scrollme.zf.trigger', handleNonParallaxScroll);
+          $("#parallax__container--static").css('display','block');
+          $("#parallax__container--static").css('background-image','url("mysite/dist/images/parallax/parallax--static.jpg")');
         }
         else{
           $('#body').on('scrollme.zf.trigger', handleScroll);

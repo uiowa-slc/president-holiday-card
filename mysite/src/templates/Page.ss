@@ -13,10 +13,10 @@
     
     <% base_tag %>
 
-    <meta name="title" content="Wishing You A Joyous Holiday Season From Bruce And Mary Harreld | The University of Iowa"/>
+    <meta name="title" content="Wishing you a joyous holiday season from Bruce and Mary Harreld | The University of Iowa"/>
     <meta name="description" content="$Content.Summary(50).ATT"/>
     <meta name="author" content="The University of Iowa"/>
-    <meta name="copyright" content="The University of Iowa. Copyright (c) 2016"/>
+    <meta name="copyright" content="The University of Iowa. Copyright 2016"/>
 
 
     <meta property="og:title"
@@ -61,7 +61,6 @@
     <!-- Add your site or app content here -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript">var addthis_config = {"data_track_clickback":false};</script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2"></script>
 
     <!-- build:js mysite/dist/scripts/main.min.js -->

@@ -1,4 +1,8 @@
-.parallax__container, .parallax__layer {
+.art{
+
+}
+
+.parallax__container, .parallax__layer,.art {
 	//height hack for rare browsers who don't support vh:
 	height:  500px;
 	height:100vh;
@@ -21,7 +25,7 @@
 }
 
 .parallax__container--static{
-	background-image: url('../images/parallax/parallax--static.jpg');
+	// background-image: url('../images/parallax/parallax--static.jpg');
 	background-size: cover;
 	background-position-x: 50%;
 	background-position-y: 40%;

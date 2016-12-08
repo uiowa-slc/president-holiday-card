@@ -3,8 +3,10 @@
   <source src="mysite/dist/media/song.mp3" type="audio/mpeg">
 </audio>
 <article>
-  <button class="button button--sound"><i class="fa fa-volume-up volume-icon" aria-hidden="true"></i><span class="show-for-sr" id="volume-text">Toggle music</span></button> 
-  <div class="parallax__container parallax__container--static" id="parallax__container--static">
+  <button class="button button--sound"><i class="fa fa-volume-up volume-icon" aria-hidden="true"></i><span class="show-for-sr" id="volume-text">Toggle music</span></button>
+
+  <div class="art"> 
+  <div class="parallax__container parallax__container--static" id="parallax__container--static" style="display: none;">
       <div class="parallax__layer parallax__layer--greeting parallax__layer--static">
         <p>From our neighborhood to yours...</p>
       </div>        
@@ -28,7 +30,7 @@
         <p>From our neighborhood to yours...</p>
       </div>  
   </div>
-
+  </div>
   <div class="main" id="main">
     <div class="main-content__container">
       <div class="main-content main-content--with-padding">

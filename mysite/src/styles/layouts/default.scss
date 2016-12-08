@@ -169,7 +169,9 @@ body.loading{
 		z-index:999;
 		background: none;	
 		font-size: rem-calc(15);
+		display: none;
 		@include breakpoint(large){
+			display: inline-block;
 			font-size: rem-calc(17);
 		}	
 	}

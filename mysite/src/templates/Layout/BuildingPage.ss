@@ -1,11 +1,9 @@
 <article>
   <div class="image-header__container card" id="card" >
-    <a href="{$BaseURL}" class="back-button"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
+    <a href="{$BaseURL}" class="button button--nav"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
     <img src="{$Image.Fill(1520,720).URL}" width="1520" height="720" class="image-header" alt="" role="presentation" />
   </div>
-
   <div class="main">
-
     <div class="main-content__container">
       <article class="main-content main-content--building" role="main">
         <h1 class="main-content__header">$Title</h1>
@@ -27,18 +25,13 @@
     <div class="building-grid row expanded">
       <div class="large-12 columns">
         <a href="{$BaseURL}" class="building-grid__link">
-
           <div class="image-screen image-screen--darker">
             <h2 class="building-grid__header">Our Campus</h2>
           </div>
           <img src="mysite/dist/images/card-main-nav.jpg" class="building-grid__image" alt="Sprawling view of our campus" />
-
          </a>
       </div>
     </div>
-
-     
-    </div>
-    <% include Footer %>
   </div>
+    <% include Footer %>
 </article>

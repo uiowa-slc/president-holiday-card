@@ -8,3 +8,7 @@ vendor
 assets
 .phpintel
 .sass-cache/
+cache
+siteconfig
+staticpublisher
+reports

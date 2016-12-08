@@ -15,6 +15,13 @@ Roots = {
     init: function(){
 
       var snowElement; 
+      
+
+      $('.button--sound').click(function(){
+        $('.volume-icon').toggleClass('fa-volume-up');
+        $('.volume-icon').toggleClass('fa-volume-off');
+        toggleAudio();
+      });
 
       $('.scroll-indicator').click(function(){
         $(window).scrollTo('#main', 2000);
@@ -80,9 +87,21 @@ UTIL = {
 $(document).ready(UTIL.loadEvents);
 
 
+function toggleAudio(){
+  var myAudio = document.getElementsByTagName('audio')[0];
+
+  if (myAudio.paused) {
+   myAudio.play(); 
+  } else {
+   myAudio.pause();
+  }
+
+}
+
 function useParallax(){
   $("#parallax__container--static").css('display','none');
   $("#parallax__container").css('display','block');
+  
 }
 
 function handleNonParallaxScroll(){
@@ -250,7 +269,7 @@ function handleResize(element){
   
   cardWidth = $(element).width();
   cardHeight = $(element).height();
-  console.log(cardWidth);
+  
   SCREEN_WIDTH = cardWidth;
   SCREEN_HEIGHT = cardHeight;
   

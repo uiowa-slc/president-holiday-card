@@ -1,9 +1,9 @@
-    <% if not $isAjax %>
-        <audio autoplay>
-          <source src="mysite/dist/media/song.mp3" type="audio/mpeg">
-        </audio>
-    <% end_if %>
+
+<audio id="audio" autoplay>
+  <source src="mysite/dist/media/song.mp3" type="audio/mpeg">
+</audio>
 <article>
+  <button class="button button--sound"><i class="fa fa-volume-up volume-icon" aria-hidden="true"></i><span class="show-for-sr" id="volume-text">Toggle music</span></button> 
   <div class="parallax__container parallax__container--static" id="parallax__container--static">
       <div class="parallax__layer parallax__layer--greeting parallax__layer--static">
         <p>From our neighborhood to yours...</p>
@@ -43,7 +43,6 @@
       <a href="http://uiowa.edu/"><img class="footer__logo" src="mysite/dist/images/uiowa.png" alt="The University of Iowa" /></a>
       <p class="footer__credit">Illustrations by University of Iowa alum Austin Smoldt-Sáenz.</p>
         <% include AddThis %>
-
       </div>
     </div>
 

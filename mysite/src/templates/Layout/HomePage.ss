@@ -43,7 +43,7 @@
       <%-- <a href="http://uiowa.edu/"><img class="footer__logo" src="mysite/dist/images/uiowa.png" alt="The University of Iowa" /></a>
       <p class="footer__credit">Illustrations by University of Iowa alum Austin Smoldt-Sáenz.</p> --%>
       <a href="http://uiowa.edu/"><img class="footer__logo" src="mysite/dist/images/uiowa.png" alt="The University of Iowa" /></a>
-      <p class="footer__credit">Illustrations by University of Iowa alum Austin Smoldt-Sáenz.</p>
+      
         <% include AddThis %>
       </div>
     </div>
@@ -54,6 +54,7 @@
         <% include BuildingPageColumn %>
       <% end_loop %>
     </div>
+    <p class="footer__credit">Illustrations by University of Iowa alum Austin Smoldt-Sáenz.</p>
     <%-- <% include Footer %> --%>
   </div>
 </article>

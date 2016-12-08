@@ -61,7 +61,7 @@
     <!-- Add your site or app content here -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2"></script>
+    
 
     <!-- build:js mysite/dist/scripts/main.min.js -->
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
@@ -71,7 +71,7 @@
     <script src="./mysite/src/scripts/snow/Snow.js"></script>
     <script src="./mysite/dist/scripts/main.min.js"></script>
     <!-- endbuild -->
-
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2"></script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

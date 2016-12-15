@@ -6,14 +6,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <% if $URLSegment == "home" %>
-        <title>Wishing You A Joyous Holiday Season From Bruce And Mary Harreld | The University of Iowa</title>
+        <title>Wishing you a joyous holiday season, Bruce &amp; Mary Harreld | The University of Iowa</title>
     <% else %>
         <title>$Title | The University of Iowa</title>
     <% end_if %>
     
     <% base_tag %>
 
-    <meta name="title" content="Wishing you a joyous holiday season from Bruce and Mary Harreld | The University of Iowa"/>
+    <meta name="title" content="Wishing you a joyous holiday season, Bruce &amp; Mary Harreld | The University of Iowa"/>
     <meta name="description" content="$Content.Summary(50).ATT"/>
     <meta name="author" content="The University of Iowa"/>
     <meta name="copyright" content="The University of Iowa. Copyright 2016"/>

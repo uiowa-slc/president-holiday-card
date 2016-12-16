@@ -49,7 +49,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i" rel="stylesheet">
-    <link rel="stylesheet" href="mysite/dist/styles/main.css">
+    <link rel="stylesheet" href="mysite/dist/styles/main.css?v=2016.1">
   </head>
   <body id="body" data-scroll="body" data-resize="body" class="{$ClassName}">
 
@@ -57,13 +57,8 @@
     $Layout
 
 
-
-    <!-- Add your site or app content here -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    
-
-    <!-- build:js mysite/dist/scripts/main.min.js -->
+    <!-- build:js mysite/dist/scripts/main.min.js?v=2016.1 -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
     <script src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>

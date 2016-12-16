@@ -119,6 +119,7 @@ gulp.task('scripts', () =>
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
+      './bower_components/jquery/dist/jquery.js',
       './bower_components/foundation-sites/dist/foundation.js',
       './bower_components/jquery.scrollTo/jquery.scrollTo.js',
       './bower_components/imagesloaded/imagesloaded.pkgd.min.js',

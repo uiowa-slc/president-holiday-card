@@ -57,7 +57,7 @@
     $Layout
 
 
-    <!-- build:js mysite/dist/scripts/main.min.js?v=2016.2 -->
+    <!-- build:js mysite/dist/scripts/main.min.js?v=2016.3 -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>

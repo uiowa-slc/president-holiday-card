@@ -6,7 +6,7 @@ Roots = {
   'common': {
     init: function(){
        $(document).foundation();
-       addthis.init();
+       // addthis.init();
     },
     finalize: function(){ }
   },

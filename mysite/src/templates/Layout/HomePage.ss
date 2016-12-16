@@ -5,31 +5,39 @@
 <article>
   <button class="button button--sound"><i class="fa fa-volume-up volume-icon" aria-hidden="true"></i><span class="show-for-sr" id="volume-text">Toggle music</span></button>
 
-  <div class="art"> 
-  <div class="parallax__container parallax__container--static" id="parallax__container--static" style="display: none;">
-      <div class="parallax__layer parallax__layer--greeting parallax__layer--static">
-        <p>From our neighborhood to yours...</p>
-      </div>        
-      <div class="parallax__layer parallax__layer--scroll-indicator parallax" data-speed="99">
-        <span class="scroll-indicator"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+  <div class="art">
+    <noscript>
+      <div class="parallax__container parallax__container--static" id="parallax__container--static" style="background-image: url('mysite/dist/images/parallax/parallax--static.jpg');">
+          <div class="parallax__layer parallax__layer--greeting parallax__layer--static">
+            <p>From our neighborhood to yours...</p>
+          </div>        
       </div>
-  </div>
-  <div class="parallax__container" id="parallax__container" style="display: none;">
-      
-      <div class="parallax__layer parallax__layer--1 parallax" data-speed="2" 
-        data-interchange="[mysite/dist/images/parallax/parallax-1--small.png, small], [mysite/dist/images/parallax/parallax-1--large.png, large], [mysite/dist/images/parallax/parallax-1--2x.png, retina]"></div>  
-      <div class="parallax__layer parallax__layer--2 parallax" data-speed="11" data-interchange="[mysite/dist/images/parallax/parallax-2--small.png, small],  [mysite/dist/images/parallax/parallax-2--large.png, large], [mysite/dist/images/parallax/parallax-2--2x.png, retina]"></div>  
-      <div class="parallax__layer parallax__layer--3 parallax" data-speed="16" data-interchange="[mysite/dist/images/parallax/parallax-3--small.png, small],  [mysite/dist/images/parallax/parallax-3--large.png, large], [mysite/dist/images/parallax/parallax-3--2x.png, retina]"></div> 
-      <div class="parallax__layer parallax__layer--4 parallax" data-speed="26"data-interchange="[mysite/dist/images/parallax/parallax-4--small.png, small],  [mysite/dist/images/parallax/parallax-4--large.png, large], [mysite/dist/images/parallax/parallax-4--2x.png, retina]"></div>   
-      <div class="parallax__layer parallax__layer--5 parallax" data-speed="40" data-interchange="[mysite/dist/images/parallax/parallax-5--small.png, small], [mysite/dist/images/parallax/parallax-5--large.png, large], [mysite/dist/images/parallax/parallax-5--2x.png, retina]"></div> 
-      <div class="parallax__layer parallax__layer--6 parallax card" id="card"  data-speed="65" data-interchange="[mysite/dist/images/parallax/parallax-6--small.png, small], [mysite/dist/images/parallax/parallax-6--large.png, large], [mysite/dist/images/parallax/parallax-6--2x.png, retina]"></div>  
-      <div class="parallax__layer parallax__layer--scroll-indicator parallax" data-speed="99">
-        <span class="scroll-indicator"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
-      </div>
-      <div class="parallax__layer parallax__layer--greeting parallax" data-speed="99">
-        <p>From our neighborhood to yours...</p>
-      </div>  
-  </div>
+
+    </noscript>
+    <div class="parallax__container parallax__container--static" id="parallax__container--static" style="display: none;">
+        <div class="parallax__layer parallax__layer--greeting parallax__layer--static">
+          <p>From our neighborhood to yours...</p>
+        </div>        
+        <div class="parallax__layer parallax__layer--scroll-indicator parallax" data-speed="99">
+          <span class="scroll-indicator"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+        </div>
+    </div>
+    <div class="parallax__container" id="parallax__container" style="display: none;">
+        
+        <div class="parallax__layer parallax__layer--1 parallax" data-speed="2" 
+          data-interchange="[mysite/dist/images/parallax/parallax-1--small.png, small], [mysite/dist/images/parallax/parallax-1--large.png, large], [mysite/dist/images/parallax/parallax-1--2x.png, retina]"></div>  
+        <div class="parallax__layer parallax__layer--2 parallax" data-speed="11" data-interchange="[mysite/dist/images/parallax/parallax-2--small.png, small],  [mysite/dist/images/parallax/parallax-2--large.png, large], [mysite/dist/images/parallax/parallax-2--2x.png, retina]"></div>  
+        <div class="parallax__layer parallax__layer--3 parallax" data-speed="16" data-interchange="[mysite/dist/images/parallax/parallax-3--small.png, small],  [mysite/dist/images/parallax/parallax-3--large.png, large], [mysite/dist/images/parallax/parallax-3--2x.png, retina]"></div> 
+        <div class="parallax__layer parallax__layer--4 parallax" data-speed="26"data-interchange="[mysite/dist/images/parallax/parallax-4--small.png, small],  [mysite/dist/images/parallax/parallax-4--large.png, large], [mysite/dist/images/parallax/parallax-4--2x.png, retina]"></div>   
+        <div class="parallax__layer parallax__layer--5 parallax" data-speed="40" data-interchange="[mysite/dist/images/parallax/parallax-5--small.png, small], [mysite/dist/images/parallax/parallax-5--large.png, large], [mysite/dist/images/parallax/parallax-5--2x.png, retina]"></div> 
+        <div class="parallax__layer parallax__layer--6 parallax card" id="card"  data-speed="65" data-interchange="[mysite/dist/images/parallax/parallax-6--small.png, small], [mysite/dist/images/parallax/parallax-6--large.png, large], [mysite/dist/images/parallax/parallax-6--2x.png, retina]"></div>  
+        <div class="parallax__layer parallax__layer--scroll-indicator parallax" data-speed="99">
+          <span class="scroll-indicator"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+        </div>
+        <div class="parallax__layer parallax__layer--greeting parallax" data-speed="99">
+          <p>From our neighborhood to yours...</p>
+        </div>  
+    </div>
   </div>
   <div class="main" id="main">
     <div class="main-content__container">

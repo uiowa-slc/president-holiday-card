@@ -25,7 +25,7 @@
 }
 
 .parallax__container--static{
-	background-image: url('../images/parallax/parallax--static.jpg');
+	// background-image: url('../images/parallax/parallax--static.jpg');
 	background-size: cover;
 	background-position-x: 50%;
 	background-position-y: 40%;
@@ -57,33 +57,33 @@
 
 //"furthest" layer aka sky/backrop
 .parallax__layer--1 {
-	//background-image: url('../images/parallax/parallax1.png');
+	background-image: url('../images/parallax/parallax-1--large.png');
 	background-color: #fff;
 	//Temporary width adjustment until wide version is available:
 	background-size: cover;
 	background-position: 50% 50%;
 }
 .parallax__layer--2 {
-	//background-image: url('../images/parallax/parallax2.png');
+	background-image: url('../images/parallax/parallax-2--large.png');
 	//Temporary width adjustment until wide version is available:
 	background-size: cover;
 	background-position: 50% 50%;
 }
 .parallax__layer--3 {
-	//background-image: url('../images/parallax/parallax3.png');
+	background-image: url('../images/parallax/parallax-3--large.png');
 	//Temporary width adjustment until wide version is available:
 	background-size: cover;
 	background-position: 50% 50%;
 }
 .parallax__layer--4 {
-	//background-image: url('../images/parallax/parallax4.png');
+	background-image: url('../images/parallax/parallax-4--large.png');
 
 		//Temporary width adjustment until wide version is available:
 	background-size: cover;
 	background-position: 50% 50%;
 }
 .parallax__layer--5 {
-	//background-image: url('../images/parallax/parallax5.png');
+	background-image: url('../images/parallax/parallax-5--large.png');
 		//Temporary width adjustment until wide version is available:
 	background-size: cover;
 	background-position: 50% 50%;
@@ -91,7 +91,7 @@
 
 //closest layer aka Old Cap + Hill:
 .parallax__layer--6 {
-	//background-image: url('../images/parallax/parallax6.png');
+	background-image: url('../images/parallax/parallax-6--large.png');
 	//Temporary width adjustment until wide version is available:
 	background-size: cover;
 

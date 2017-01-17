@@ -152,16 +152,16 @@
         },
         {
             "name": "silverstripe/cms",
-            "version": "3.5.0",
+            "version": "3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "de19c643fb713d0a979c115e229baea3ba1d9a83"
+                "reference": "36287b09d009010172e988a3496be75c97c05fd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/de19c643fb713d0a979c115e229baea3ba1d9a83",
-                "reference": "de19c643fb713d0a979c115e229baea3ba1d9a83",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/36287b09d009010172e988a3496be75c97c05fd0",
+                "reference": "36287b09d009010172e988a3496be75c97c05fd0",
                 "shasum": ""
             },
             "require": {
@@ -202,20 +202,20 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2016-11-28 12:35:17"
+            "time": "2016-12-16 20:49:04"
         },
         {
             "name": "silverstripe/framework",
-            "version": "3.5.0",
+            "version": "3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "179996b5f9ccbaab8882cafbf16c389623521b72"
+                "reference": "9de539fdababce5cd506e1f02661071adeda7a6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/179996b5f9ccbaab8882cafbf16c389623521b72",
-                "reference": "179996b5f9ccbaab8882cafbf16c389623521b72",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/9de539fdababce5cd506e1f02661071adeda7a6a",
+                "reference": "9de539fdababce5cd506e1f02661071adeda7a6a",
                 "shasum": ""
             },
             "require": {
@@ -256,20 +256,20 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2016-11-28 12:35:19"
+            "time": "2016-12-21 21:43:34"
         },
         {
             "name": "silverstripe/reports",
-            "version": "3.5.0",
+            "version": "3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-reports.git",
-                "reference": "9c5974a13be45f2882272eacb7b1eb3b97f35f4b"
+                "reference": "dcb80241588639aaf42bde7577e79e8b4bff0e23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-reports/zipball/9c5974a13be45f2882272eacb7b1eb3b97f35f4b",
-                "reference": "9c5974a13be45f2882272eacb7b1eb3b97f35f4b",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-reports/zipball/dcb80241588639aaf42bde7577e79e8b4bff0e23",
+                "reference": "dcb80241588639aaf42bde7577e79e8b4bff0e23",
                 "shasum": ""
             },
             "require": {
@@ -306,20 +306,20 @@
                 "reports",
                 "silverstripe"
             ],
-            "time": "2016-11-15 12:09:14"
+            "time": "2016-11-28 14:13:29"
         },
         {
             "name": "silverstripe/siteconfig",
-            "version": "3.5.0",
+            "version": "3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-siteconfig.git",
-                "reference": "ccf4d69f78c6f9f6f7434df6a5cafcc2274d14dd"
+                "reference": "ad16aeff7d7a7d2c1a25c1235a4f98233aa878e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-siteconfig/zipball/ccf4d69f78c6f9f6f7434df6a5cafcc2274d14dd",
-                "reference": "ccf4d69f78c6f9f6f7434df6a5cafcc2274d14dd",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-siteconfig/zipball/ad16aeff7d7a7d2c1a25c1235a4f98233aa878e2",
+                "reference": "ad16aeff7d7a7d2c1a25c1235a4f98233aa878e2",
                 "shasum": ""
             },
             "require": {
@@ -349,7 +349,7 @@
                 "silverstripe",
                 "siteconfig"
             ],
-            "time": "2016-11-28 12:35:18"
+            "time": "2016-12-16 20:49:05"
         },
         {
             "name": "silverstripe/staticpublisher",
@@ -758,16 +758,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.14",
+            "version": "v2.8.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "befb26a3713c97af90d25dd12e75621ef14d91ff"
+                "reference": "dbe61fed9cd4a44c5b1d14e5e7b1a8640cfb2bf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/befb26a3713c97af90d25dd12e75621ef14d91ff",
-                "reference": "befb26a3713c97af90d25dd12e75621ef14d91ff",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/dbe61fed9cd4a44c5b1d14e5e7b1a8640cfb2bf2",
+                "reference": "dbe61fed9cd4a44c5b1d14e5e7b1a8640cfb2bf2",
                 "shasum": ""
             },
             "require": {
@@ -803,7 +803,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-14 16:15:57"
+            "time": "2017-01-03 13:49:52"
         }
     ],
     "aliases": [],

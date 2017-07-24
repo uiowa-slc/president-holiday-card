@@ -3,12 +3,13 @@
 	"description": "The SilverStripe Framework Installer",
 	"require": {
 		"php": ">=5.3.3",
-		"silverstripe/cms": "3.5.*@stable",
-		"silverstripe/framework": "3.5.*@stable",
-		"silverstripe/reports": "*",
-		"silverstripe/siteconfig": "*",
+		"silverstripe/cms": "3.6.*@stable",
+		"silverstripe/framework": "3.6.*@stable",
+		"silverstripe/reports": "3.6.*@stable",
+		"silverstripe/siteconfig": "3.6.*@stable",
 		"silverstripe-themes/simple": "*",
-		"silverstripe/staticpublisher" : "*"
+		"silverstripe/staticpublisher" : "*",
+		"silverstripe/activedirectory" : "3.*"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"
@@ -17,5 +18,13 @@
 		"process-timeout": 600
 	},
 	"prefer-stable": true,
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+	
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory"
+
+        }
+    ]
 }

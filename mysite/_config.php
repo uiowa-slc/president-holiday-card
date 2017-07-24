@@ -26,3 +26,5 @@ if(Director::isLive()) {
 }
 
 Object::add_extension("SiteTree", "FilesystemPublisher('cache/', 'php')");
+
+Authenticator::set_default_authenticator('SAMLAuthenticator');

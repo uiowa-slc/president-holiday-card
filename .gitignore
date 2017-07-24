@@ -13,3 +13,6 @@ siteconfig
 staticpublisher
 reports
 debug.log
+activedirectory/
+multivaluefield/
+queuedjobs/

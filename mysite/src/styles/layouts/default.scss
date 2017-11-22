@@ -84,7 +84,7 @@ body.loading{
 	color: white;
 	padding-top: rem-calc(40);
 
-	&__video{
+	&__media{
 		margin-top: rem-calc(40);
 		-webkit-box-shadow: 0px 0px 71px 1px rgba(0,0,0,0.86);
 		-moz-box-shadow: 0px 0px 71px 1px rgba(0,0,0,0.86);
@@ -106,9 +106,13 @@ body.loading{
 	&__header{
 		text-align: center;
 		font-style: italic;
-		font-size: rem-calc(72);
+
+		@include breakpoint(large){
+			font-size: rem-calc(72);
+		}
 		margin-bottom: 0;
 		text-shadow: 0px 0px 40px rgba(20, 20, 20, 1);
+		color: white;
 	}
 
 	&__signature{
@@ -143,11 +147,6 @@ body.loading{
 
 }
 
-.submissions-carousel__card{
-	height: rem-calc(500);
-	width: rem-calc(500);
-	background-size: cover;
-}
 
 
 .recipe{

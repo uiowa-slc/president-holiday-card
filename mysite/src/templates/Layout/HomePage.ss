@@ -4,7 +4,7 @@
   <div class="main" id="main">
     <div class="main-content__screen"></div>
     <div class="main-content__container row column">
-      <div class="main-content__video responsive-embed widescreen">
+      <div class="main-content__media responsive-embed widescreen">
         <iframe width="420" height="315" src="https://www.youtube.com/embed/BandysDHYJg?rel=0&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="main-content">
@@ -56,12 +56,16 @@
   </div><!-- end .main -->
 
 
-<h2 class="submissions-carousel__header">Share your holiday creations with us:</h2>
+<h2 class="submissions-carousel__header">Share your Iowa cookie creations with us:</h2>
   <div class="submissions-carousel__container">
     <div class="submissions-carousel">
+      <div class="submissions-carousel__card" style="background-image: url('mysite/dist/images/chefbarry-herky.jpg');">
+      </div>
       <% loop $Submissions %>
-        <div class="submissions-carousel__card" style="background-image: url('$Photo.Fill(500,500).URL');">
-        </div>
+        <a href="$Link">
+          <div class="submissions-carousel__card" style="background-image: url('$Photo.FocusFill(500,500).URL');">
+          </div>
+        </a>
       <% end_loop %>
     </div>
   </div>

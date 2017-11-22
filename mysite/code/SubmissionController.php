@@ -1,6 +1,6 @@
 <?php
 
-class SubmissionController extends Controller {
+class SubmissionController extends ContentController {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -43,15 +43,27 @@ class SubmissionController extends Controller {
 	}
 
 	public function view(){
-		$member = Member::currentUser();
-
 		$id = $this->getRequest()->param('ID');
+
+		if(!is_numeric($id)){
+			return $this->httpError(404);
+		}
+
 		$submission = Submission::get()->filter(array('ID' => $id))->First();
+
+		if(!$submission){
+			return $this->httpError(404);
+		}
+		$member = Member::currentUser();
 
 		if(!$submission->canView($member)){
 			return Security::permissionFailure($this);
 		}
 
-		return $submission->renderWith(array('Submission', 'Page'));
+		$data = new ArrayData(array(
+			'Title' => 'Wishing you a sweet and joyful holiday season from '.$submission->From.'.'
+		));
+
+		return $submission->customise($data)->renderWith(array('Submission', 'Page'));
 	}
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "34cacaec7175ca6dfedcfb70795c8378",
+    "content-hash": "07f5d56923e7646356c4466432f5b1cd",
     "packages": [
         {
             "name": "asyncphp/doorman",
@@ -205,6 +205,45 @@
                 "tokenizer"
             ],
             "time": "2015-01-10T01:09:28+00:00"
+        },
+        {
+            "name": "jonom/focuspoint",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jonom/silverstripe-focuspoint.git",
+                "reference": "716a44b2d7f72d190121fa1e15da1f0b17ec147c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jonom/silverstripe-focuspoint/zipball/716a44b2d7f72d190121fa1e15da1f0b17ec147c",
+                "reference": "716a44b2d7f72d190121fa1e15da1f0b17ec147c",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "^3.3"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathon Menz",
+                    "homepage": "http://jonathonmenz.com"
+                }
+            ],
+            "description": "Smarter automatic image cropping for SilverStripe",
+            "keywords": [
+                "crop",
+                "cropping",
+                "focus",
+                "focuspoint",
+                "image",
+                "silverstripe"
+            ],
+            "time": "2017-03-22T23:16:19+00:00"
         },
         {
             "name": "md/division-analytics",
@@ -857,16 +896,16 @@
         },
         {
             "name": "symbiote/silverstripe-multivaluefield",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symbiote/silverstripe-multivaluefield.git",
-                "reference": "96f7116fb0ab06c8cd1023c0958b098988baf8c2"
+                "reference": "31655a4f7b53c7d6d496f47ff1b91346fe4e182f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symbiote/silverstripe-multivaluefield/zipball/96f7116fb0ab06c8cd1023c0958b098988baf8c2",
-                "reference": "96f7116fb0ab06c8cd1023c0958b098988baf8c2",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-multivaluefield/zipball/31655a4f7b53c7d6d496f47ff1b91346fe4e182f",
+                "reference": "31655a4f7b53c7d6d496f47ff1b91346fe4e182f",
                 "shasum": ""
             },
             "require": {
@@ -877,10 +916,7 @@
             },
             "type": "silverstripe-module",
             "extra": {
-                "installer-name": "multivaluefield",
-                "branch-alias": {
-                    "3.x-dev": "3.0.x-dev"
-                }
+                "installer-name": "multivaluefield"
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -898,20 +934,20 @@
                 "formfield",
                 "silverstripe"
             ],
-            "time": "2017-08-28T02:52:17+00:00"
+            "time": "2017-11-20T02:12:25+00:00"
         },
         {
             "name": "symbiote/silverstripe-queuedjobs",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symbiote/silverstripe-queuedjobs.git",
-                "reference": "0f5928c925db4174fdd3743deaf3a1a55962b6b8"
+                "reference": "b530c84f2ad39a82021b012b4171612d7c56539d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symbiote/silverstripe-queuedjobs/zipball/0f5928c925db4174fdd3743deaf3a1a55962b6b8",
-                "reference": "0f5928c925db4174fdd3743deaf3a1a55962b6b8",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-queuedjobs/zipball/b530c84f2ad39a82021b012b4171612d7c56539d",
+                "reference": "b530c84f2ad39a82021b012b4171612d7c56539d",
                 "shasum": ""
             },
             "require": {
@@ -924,10 +960,7 @@
             },
             "type": "silverstripe-module",
             "extra": {
-                "installer-name": "queuedjobs",
-                "branch-alias": {
-                    "3.x-dev": "3.0.x-dev"
-                }
+                "installer-name": "queuedjobs"
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -948,7 +981,7 @@
                 "jobs",
                 "silverstripe"
             ],
-            "time": "2017-08-28T03:02:54+00:00"
+            "time": "2017-11-20T02:12:25+00:00"
         },
         {
             "name": "unclecheese/betterbuttons",
@@ -1684,7 +1717,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.29",
+            "version": "v2.8.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",

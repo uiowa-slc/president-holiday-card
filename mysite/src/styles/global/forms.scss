@@ -1,0 +1,11 @@
+input.action{
+	@include button-style;
+	@include button;
+}
+
+.field.file{
+
+	background: #eee;
+	border: #ccc 1px solid;
+	padding: rem-calc(20);
+}

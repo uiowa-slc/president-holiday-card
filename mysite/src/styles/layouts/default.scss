@@ -22,6 +22,22 @@ body.loading{
 }
 
 
+.back-button{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(#fff, 1);
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: rem-calc(10);
+	font-size: rem-calc(13);
+
+	@include breakpoint(large){
+		font-size: rem-calc(16);
+	}
+}
+
 
 .addthis_inline_share_toolbox, .addthis_toolbox{
 	text-align: center;
@@ -59,32 +75,47 @@ body.loading{
 	}
 }
 
+.main{
+	background-image: url('../images/table-bg2.jpg');
+	background-size: cover;
+
+}
 .main-content{
+	color: white;
 	padding-top: rem-calc(40);
-	@include grid-column(12);
-	@include breakpoint(large){
-		@include grid-column(8);
-		@include grid-column-position(center);
+
+	&__video{
+		margin-top: rem-calc(40);
+		-webkit-box-shadow: 0px 0px 71px 1px rgba(0,0,0,0.86);
+		-moz-box-shadow: 0px 0px 71px 1px rgba(0,0,0,0.86);
+		box-shadow: 0px 0px 71px 1px rgba(0,0,0,0.86);
+	}
+	&__container{
+
+		z-index: 99;
+		position: relative;
 	}
 
+	&__screen{
+ 		position: absolute; 
+ 		width: 100%; 
+ 		height: 100%; 
+ 		background: rgba(34, 34, 34, 0.65); 
+ 		z-index: 98;		
+	}
 	&__header{
 		text-align: center;
 		font-style: italic;
-		font-size: rem-calc(36);
+		font-size: rem-calc(72);
 		margin-bottom: 0;
+		text-shadow: 0px 0px 40px rgba(20, 20, 20, 1);
 	}
 
-	&__holiday{
-		text-transform: uppercase;
-		display: block;
-		color: #86c0e6;
-		font-style: normal;
-		font-size: rem-calc(48);
-	}
 	&__signature{
 		font-style: italic;
+		color: #f6d24e;
 		text-align: center;
-		font-size: rem-calc(28);
+		font-size: rem-calc(64);
 		margin-top: rem-calc(40);
 		// margin-bottom: rem-calc(70);
 		@include breakpoint(large){
@@ -92,13 +123,11 @@ body.loading{
 			// margin-bottom: rem-calc(150);
 		}
 	}
-	&__container{
-		@include grid-row;
-	}
 
 	&__body{
 		padding: rem-calc(40) 0;
 		text-align: justify;
+
 	}
 
 
@@ -106,7 +135,6 @@ body.loading{
 		padding: rem-calc(40) rem-calc(10);
 		@include breakpoint(large){
 			// margin-top: rem-calc(-100);
-			background: white;
 			padding: rem-calc(100) rem-calc(40);
 			// padding-top: rem-calc(100);
 			// padding-top: rem-calc(100);
@@ -115,7 +143,60 @@ body.loading{
 
 }
 
+.submissions{
+	@include grid-layout(2, '.submissions__card', 0);
+}
 
+.submissions__card{
+	height: rem-calc(500);
+	background-size: cover;
+}
+
+
+.recipe{
+	margin: rem-calc(60) 0;
+	&__container{
+		// background-image: url('../images/table-bg.jpg');
+		// background: black;
+		// background-size: cover;
+	}
+	background-color: white;
+	background-image: url('../images/card-bg.png');
+	padding: rem-calc(40);
+	position: relative;
+	@include breakpoint(large){
+		// margin-top: rem-calc(-50);
+		z-index: 999;
+	}
+	&__header{
+		//text-decoration: underline;
+		border-bottom: 2px solid #666;
+	}
+	&__ingredients{
+	-moz-column-count: 2;
+	   -moz-column-gap: 20px;
+	   -moz-column-fill: auto;
+	   -webkit-column-count: 2;
+	   -webkit-column-gap: 20px;
+	   -webkit-column-fill: auto;
+	   column-count: 2;
+	   column-gap: 20px;
+	   column-fill: auto;
+	   font-family: $header-font-family;
+	}
+
+	&__body{
+		font-size: rem-calc(19);
+	}
+
+
+}
+
+.submit{
+	&__container{
+		margin: rem-calc(60) 0;
+	}
+}
 
 .image-screen{
 	width: 100%;
@@ -176,5 +257,19 @@ body.loading{
 		}	
 	}
 }
+.back-button{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(#fff, 1);
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: rem-calc(10);
+	font-size: rem-calc(13);
 
+	@include breakpoint(large){
+		font-size: rem-calc(16);
+	}
+}
 

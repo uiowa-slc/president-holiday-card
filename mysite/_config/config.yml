@@ -11,3 +11,9 @@ SSViewer:
   theme: 'simple'
 Debug:
   friendly_error_httpcode: true
+Director:
+  rules:
+    'add//$ID' : 'AddController'
+    'AddController' : 'AddController'
+FormSpamProtectionExtension:
+    default_spam_protector: NocaptchaProtector

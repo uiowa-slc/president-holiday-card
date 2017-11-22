@@ -4,7 +4,7 @@ global $project;
 $project = 'mysite';
 
 global $database;
-$database = 'pres-holiday-2016';
+$database = 'pres-holiday-2017';
  
 // Use _ss_environment.php file for configuration
 require_once("conf/ConfigureFromEnv.php");

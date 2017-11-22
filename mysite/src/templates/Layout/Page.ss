@@ -6,15 +6,10 @@
         <h1>$Title</h1>
         $Content
         $Form
+        $SubmitForm
       </div>
     </div>
 
-    <div class="building-grid row expanded small-up-2">
-      <h2 class="heading heading--small heading--centered">View and share our campus this holiday season:</h2>
-      <% loop $BuildingPages %>
-        <% include BuildingPageColumn %>
-      <% end_loop %>
-    </div>
     <% include Footer %>
   </div>
 </article>

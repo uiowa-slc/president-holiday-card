@@ -9,7 +9,11 @@
 		"silverstripe/siteconfig": "3.6.*@stable",
 		"silverstripe-themes/simple": "*",
 		"silverstripe/staticpublisher" : "*",
-		"silverstripe/activedirectory" : "3.*"
+		"silverstripe/activedirectory" : "3.*",
+		"md/division-analytics" : "*",
+		"unclecheese/betterbuttons" : "1.3.*",
+		"symbiote/silverstripe-gridfieldextensions" : "2.*",
+		"undefinedoffset/silverstripe-nocaptcha" : "*"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"
@@ -24,6 +28,11 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory"
+
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
 
         }
     ]

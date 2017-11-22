@@ -74,12 +74,9 @@ class Page_Controller extends ContentController {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
-	);
-
-	public function BuildingPages(){
-		return BuildingPage::get();
-	}
+    private static $allowed_actions = array(
+        'SubmitForm'
+    );
 
 	public function init() {
 		parent::init();
@@ -87,4 +84,38 @@ class Page_Controller extends ContentController {
 		// See: http://doc.silverstripe.org/framework/en/reference/requirements
 	}
 
+    public function Submissions(){
+        return Submission::get()->filter(array('Approved' => 1));
+    }
+
+
+    public function SubmitForm() {
+        $fields = new FieldList(
+            TextField::create('From', 'Your Name'),
+            EmailField::create('EmailAddress', 'Your Email'),
+            FileField::create('Photo', 'Attach a photo of your cookie or creation')
+        );
+
+        $actions = new FieldList(
+            FormAction::create("doSubmit")->setTitle("Submit")
+        );
+
+        $required = new RequiredFields('Name', 'Email');
+
+        $form = new Form($this, 'SubmitForm', $fields, $actions, $required);
+
+        $form->enableSpamProtection()
+            ->fields()->fieldByName('Captcha')
+            ->setTitle("Please check the box below");
+        return $form;
+    }
+
+    public function doSubmit($data, Form $form) {
+        $form->sessionMessage('Thank you for submitting your photo. We\'ll email you when it\'s been approved.');
+        $submission = new Submission();
+        $form->saveInto($submission);
+        $submission->write();
+
+        return $this->redirectBack();
+    }
 }

@@ -16,3 +16,14 @@ debug.log
 activedirectory/
 multivaluefield/
 queuedjobs/
+division-analytics/
+gridfieldextensions/
+betterbuttons
+bower_components
+nocaptcha.yml
+nocaptcha
+npm-debug.log
+spamprotection/
+.DS_Store
+/mysite/src/fonts
+/mysite/dist/fonts

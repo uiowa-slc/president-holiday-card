@@ -1,1 +1,1 @@
-<article role="main"><div class="row"><div class="large-8 large-centered columns"><p><strong>From:</strong> $From</p>$Photo.SetWidth(1000) <% include Footer %> </div></div></article>
+<article role="main"><div class="row"><div class="large-8 large-centered columns"><p><strong>From:</strong> $From</p>$Photo.SetWidth(1000) <% include AddThis %> <% include Footer %> </div></div></article>

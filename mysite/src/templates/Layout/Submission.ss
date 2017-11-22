@@ -3,7 +3,7 @@
   <div class="large-8 large-centered columns">
       <p><strong>From:</strong> $From</p>
       $Photo.SetWidth(1000)
-      
+      <% include AddThis %>
       <% include Footer %>
   </div>
 </div>

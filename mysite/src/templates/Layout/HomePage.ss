@@ -49,12 +49,11 @@
   </div><!-- end .main -->
 
 
-
-  <div class="submissions__container">
-    <div class="submissions">
+<h2 class="submissions-carousel__header">Share your holiday creations with us:</h2>
+  <div class="submissions-carousel__container">
+    <div class="submissions-carousel">
       <% loop $Submissions %>
-        <div class="submissions__card" style="background-image: url('$Photo.Fill(500,500).URL');">
-  
+        <div class="submissions-carousel__card" style="background-image: url('$Photo.Fill(500,500).URL');">
         </div>
       <% end_loop %>
     </div>
@@ -63,7 +62,7 @@
   <div class="row">
     <div class="large-12 columns">
       <div class="submit__container">
-        <h2>Share your holiday creations with us:</h2>
+       
         $SubmitForm
       </div>
     </div>

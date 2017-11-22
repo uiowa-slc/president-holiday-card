@@ -1,1 +1,1 @@
-<article><div class="main"><div class="main-content__container"><div class="main-content main-content--shift-up"><h1>$Title</h1>$Content $Form $SubmitForm</div></div> <% include Footer %> </div></article>
+<article role="main"><div class="row"><div class="large-8 large-centered columns"><h1>$Title</h1>$Content $Form <% include Footer %> </div></div></article>

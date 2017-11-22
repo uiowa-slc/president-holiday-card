@@ -121,6 +121,7 @@ gulp.task('scripts', () =>
       //       to be correctly concatenated
       './bower_components/jquery/dist/jquery.js',
       './bower_components/foundation-sites/dist/js/foundation.js',
+      './bower_components/flickity/dist/flickity.pkgd.js',
       './bower_components/jquery.scrollTo/jquery.scrollTo.js',
       './bower_components/imagesloaded/imagesloaded.pkgd.min.js',
       // './mysite/src/scripts/snow/ThreeCanvas.js',

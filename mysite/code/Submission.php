@@ -28,7 +28,28 @@ class Submission extends DataObject {
 
 		$f = parent::getCMSFields();
 
+		$f->addFieldToTab('Root.Main', LiteralField::create('Link','<a href="'.$this->Link().'">'.$this->AbsoluteLink().'</a>'));
+
 		return $f;
+	}
+    public function canView($member = null) {
+    	if( Permission::check('CMS_ACCESS_CMSMain', 'any', $member) || $this->Approved){
+    		return true;
+    	}
+        return false;
+    }
+	public function AbsoluteLink(){
+		$url = Director::absoluteBaseURL().'submissions/view/'.$this->ID;
+		return $url;		
+	}
+	public function Link(){
+		$url = Director::baseURL().'submissions/view/'.$this->ID;
+		return $url;		
+	}
+	public function CMSLink(){
+		$url = Director::absoluteBaseURL().'admin/submissions/Submission/EditForm/field/Submission/item/'.$this->ID.'/edit';
+
+		return $url;
 	}
 		
     public function approve() {

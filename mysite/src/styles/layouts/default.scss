@@ -143,12 +143,9 @@ body.loading{
 
 }
 
-.submissions{
-	@include grid-layout(2, '.submissions__card', 0);
-}
-
-.submissions__card{
+.submissions-carousel__card{
 	height: rem-calc(500);
+	width: rem-calc(500);
 	background-size: cover;
 }
 
@@ -255,21 +252,6 @@ body.loading{
 			display: inline-block;
 			font-size: rem-calc(17);
 		}	
-	}
-}
-.back-button{
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: rgba(#fff, 1);
-	text-transform: uppercase;
-	font-weight: bold;
-	padding: rem-calc(10);
-	font-size: rem-calc(13);
-
-	@include breakpoint(large){
-		font-size: rem-calc(16);
 	}
 }
 

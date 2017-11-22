@@ -5,7 +5,13 @@ Roots = {
   // all pages
   'common': {
     init: function(){
-       $(document).foundation();
+      $(document).foundation();
+
+      $('.submissions-carousel').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true
+      });
        // addthis.init();
     },
     finalize: function(){ }

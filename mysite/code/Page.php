@@ -75,8 +75,10 @@ class Page_Controller extends ContentController {
 	 * @var array
 	 */
     private static $allowed_actions = array(
-        'SubmitForm'
+        'SubmitForm',
+        
     );
+
 
 	public function init() {
 		parent::init();
@@ -87,7 +89,6 @@ class Page_Controller extends ContentController {
     public function Submissions(){
         return Submission::get()->filter(array('Approved' => 1));
     }
-
 
     public function SubmitForm() {
         $fields = new FieldList(
@@ -104,18 +105,44 @@ class Page_Controller extends ContentController {
 
         $form = new Form($this, 'SubmitForm', $fields, $actions, $required);
 
-        $form->enableSpamProtection()
-            ->fields()->fieldByName('Captcha')
-            ->setTitle("Please check the box below");
+        // $form->enableSpamProtection()
+        //     ->fields()->fieldByName('Captcha')
+        //     ->setTitle("Please check the box below");
         return $form;
     }
 
+
     public function doSubmit($data, Form $form) {
-        $form->sessionMessage('Thank you for submitting your photo. We\'ll email you when it\'s been approved.');
+        $form->sessionMessage('Thank you for submitting your photo. We\'ll email you when it\'s been approved.', 'good');
         $submission = new Submission();
         $form->saveInto($submission);
         $submission->write();
+        //write admin email
 
-        return $this->redirectBack();
+        $this->sendAdminApprovalNotification($submission);
+
+        //return $this->redirectBack();
+    }
+
+    private function sendAdminApprovalNotification($submission){
+        $adminEmailAddress = Config::inst()->get('email', 'admin_email');
+
+        $email = new Email();
+        $subject = 'Holiday Card Photo Submitted';
+
+        $email
+            ->setFrom($adminEmailAddress)
+            ->setTo($adminEmailAddress)
+            ->setSubject($subject)
+            ->setTemplate('AdminApprovalNotification')
+            ->populateTemplate($submission);
+
+            // Debug::show($email);
+            //print_r($email);
+        $email->send(); 
+
+        // if ((SS_ENVIRONMENT_TYPE == "live")) {
+        //     $email->send(); 
+        // }
     }
 }

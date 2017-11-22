@@ -28,8 +28,8 @@
     <meta property="og:url" content="$AbsoluteLink" />
     <% if $Thumbnail %>
     <meta property="og:image" content="{$Thumbnail.Fill(1200,630).AbsoluteURL}" />
-    <% else_if $Image %>
-    <meta property="og:image" content="{$Image.Fill(1200,630).AbsoluteURL}" />
+    <% else_if $Photo %>
+    <meta property="og:image" content="{$Photo.Fill(1200,630).AbsoluteURL}" />
     <% else %>
     <meta property="og:image" content="{$absoluteBaseURL}mysite/dist/images/og--default.jpg" />
     <% end_if %>
@@ -48,24 +48,15 @@
     <meta name="msapplication-config" content="mysite/dist/images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i" rel="stylesheet">
-    <link rel="stylesheet" href="mysite/dist/styles/main.css?v=2016.1">
+    <link rel="stylesheet" href="mysite/dist/styles/main.css">
   </head>
   <body id="body" data-scroll="body" data-resize="body" class="{$ClassName}">
 
 
     $Layout
 
-
-    <!-- build:js mysite/dist/scripts/main.min.js?v=2016.3 -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
-    <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
-    <script src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<!--    <script src="./mysite/src/scripts/snow/ThreeCanvas.js"></script>
-    <script src="./mysite/src/scripts/snow/Snow.js"></script>-->
     <script src="./mysite/dist/scripts/main.min.js"></script>
-    <!-- endbuild -->
+
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2"></script>
     $Analytics
   </body>

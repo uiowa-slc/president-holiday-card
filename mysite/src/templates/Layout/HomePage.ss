@@ -16,8 +16,11 @@
       <div class="recipe__container">
         <div class="recipe">
           <div class="row">
-
-            <div class="large-8 columns">
+            <div class="medium-4 medium-push-8 columns hc-sticky">
+                <img class="recipe__img" src="mysite/dist/images/iowa.png" alt="Delicious cookies spelling the word 'Iowa'" />
+                <p class="recipe__sidebar"><a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download a PDF Version of this recipe</a></p>
+            </div>
+            <div class="medium-8 medium-pull-4 columns">
                 <h2 class="recipe__header">Chef Barry's Sugar Cookie Recipe</h2>
                 <ul class="recipe__ingredients">
                   <li>2 sticks Unsalted Butter</li>
@@ -44,9 +47,7 @@
                 </div>
             </div>
 
-            <div class="large-4 columns">
-                <img class="recipe__img" src="mysite/dist/images/iowa.png" alt="Delicious cookies spelling the word 'Iowa'" />
-            </div>
+
 
 
             </div>
@@ -55,7 +56,7 @@
     </div><!-- end .main-content__container-->
   </div><!-- end .main -->
 
-
+<div class="row column">
 <h2 class="submissions-carousel__header">Share your Iowa cookie creations with us:</h2>
   <div class="submissions-carousel__container">
     <div class="submissions-carousel">
@@ -71,13 +72,16 @@
   </div>
 
   <div class="row">
-    <div class="large-12 columns">
+    <div class="medium-8 medium-centered columns">
       <div class="submit__container">
        
         $SubmitForm
       </div>
     </div>
   </div>
+
+</div>
+
 
 
   <% include Footer %>

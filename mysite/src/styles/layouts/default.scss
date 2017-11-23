@@ -7,7 +7,12 @@ body.loading{
 }
 
 
-
+.hc-sticky{
+	@include breakpoint(large){
+		position: -webkit-sticky;
+		top: 0;
+	}
+}
 .unstyled-list{
 	list-style-type: none;
 	margin: 0;
@@ -119,10 +124,16 @@ body.loading{
 		font-style: italic;
 		color: #f6d24e;
 		text-align: center;
-		font-size: rem-calc(64);
+		font-size: rem-calc(28);
 		margin-top: rem-calc(40);
 		// margin-bottom: rem-calc(70);
+
+		@include breakpoint(medium){
+			font-size: rem-calc(48);
+
+		}
 		@include breakpoint(large){
+			font-size: rem-calc(64);
 			margin-top: rem-calc(80);
 			// margin-bottom: rem-calc(150);
 		}
@@ -185,6 +196,13 @@ body.loading{
 		font-size: rem-calc(19);
 	}
 
+	&__sidebar{
+		margin: rem-calc(20) 0;
+		text-align: center;
+		i{
+			margin-right: rem-calc(2);
+		}
+	}
 
 }
 

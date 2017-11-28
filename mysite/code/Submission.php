@@ -27,7 +27,7 @@ class Submission extends DataObject {
 	public function getCMSFields(){
 
 		$f = parent::getCMSFields();
-
+		$f->removeByName('Approved');
 		$f->addFieldToTab('Root.Main', LiteralField::create('Link','<a href="'.$this->Link().'">'.$this->AbsoluteLink().'</a>'));
 
 		return $f;
@@ -58,10 +58,35 @@ class Submission extends DataObject {
 		
     public function approve() {
         $this->Approved = true;
-        //$this->sendApprovalEmail();
+        $this->sendUserApprovalNotification($this);
         $this->write();
     }
 
+    public function ApprovalEmailBody(){
+    	$config = SiteConfig::current_site_config(); 
+    	return $config->EmailApprovalText;
+    }
+
+    private function sendUserApprovalNotification($submission){
+        $adminEmailAddress = Config::inst()->get('email', 'admin_email');
+        $siteConfig = SiteConfig::current_site_config(); 
+
+        $email = new Email();
+        $subject = $siteConfig->EmailApprovalSubject;
+
+        $email
+            ->setFrom($adminEmailAddress)
+            ->setTo($submission->EmailAddress)
+            ->setSubject($subject)
+            ->setTemplate('UserApprovalNotification')
+            ->populateTemplate($submission);
+
+        // if ((SS_ENVIRONMENT_TYPE == "live")) {
+        //     $email->send(); 
+        // }
+
+        $email->send(); 
+    }
     public function deny() {
         $this->Approved = false;
         $this->write();

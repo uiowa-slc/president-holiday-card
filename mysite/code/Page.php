@@ -93,12 +93,12 @@ class Page_Controller extends ContentController {
     public function SubmitForm() {
         $fields = new FieldList(
             TextField::create('From', 'Your Name'),
-            EmailField::create('EmailAddress', 'Your Email'),
+            EmailField::create('EmailAddress', 'Your Email Address'),
             FileField::create('Photo', 'Attach a photo of your cookie or creation')
         );
 
         $actions = new FieldList(
-            FormAction::create("doSubmit")->setTitle("Submit")
+            FormAction::create("doSubmit")->setTitle('Create your card')->addExtraClass('button')->setTemplate('StepFormAction')
         );
 
         $required = new RequiredFields('Name', 'Email');

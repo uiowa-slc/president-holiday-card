@@ -1,6 +1,7 @@
 input.action{
 	@include button-style;
 	@include button;
+	//font-size: rem-calc(43);
 }
 
 .field.file{
@@ -8,4 +9,5 @@ input.action{
 	background: #eee;
 	border: #ccc 1px solid;
 	padding: rem-calc(20);
+	margin-bottom: rem-calc(20);
 }

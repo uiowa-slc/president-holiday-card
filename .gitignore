@@ -28,3 +28,7 @@ spamprotection/
 /mysite/src/fonts
 /mysite/dist/fonts
 focuspoint
+blog/
+gridfield-bulk-editing-tools/
+lumberjack/
+tagfield

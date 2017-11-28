@@ -51,6 +51,10 @@ class Submission extends DataObject {
 
 		return $url;
 	}
+
+	public function isApproved(){
+		return $this->Approved;
+	}
 		
     public function approve() {
         $this->Approved = true;

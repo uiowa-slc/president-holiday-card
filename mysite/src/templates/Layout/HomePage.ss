@@ -8,7 +8,7 @@
       <div class="main-content">
         $Form
         <h1 class="main-content__header">Wishing you a sweet and joyful holiday season</h1>
-        <p class="main-content__signature">Bruce &amp; Mary Harreld</p>
+        <p class="main-content__signature">Mary &amp; Bruce Harreld</p>
         <% include AddThis %>
       </div>
       <div class="recipe__container">
@@ -56,7 +56,7 @@
   </div><!-- end .main -->
 
 <div class="row column">
-    <h1 class="submissions-carousel__header">Share your Iowa creations:</h1>
+    <h1 class="submissions-carousel__header">Share your Iowa cookie creations:</h1>
     <div class="submissions-carousel__container">
       <div class="flexslider" id="slider" >
         <ul class="slides">

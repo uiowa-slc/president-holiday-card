@@ -101,7 +101,7 @@ class Page_Controller extends ContentController {
     public function SubmitForm() {
         $fields = new FieldList(
             TextField::create('From', 'Your name'),
-            EmailField::create('EmailAddress', 'Your email address'),
+            EmailField::create('EmailAddress', 'Your email address (will not be visible online-- we\'ll send the card to this address)'),
             FileField::create('Photo', 'Attach a photo of your cookie or creation')
         );
 

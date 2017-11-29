@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <% if $URLSegment == "home" %>
-        <title>Wishing you a joyous holiday season, Bruce &amp; Mary Harreld | The University of Iowa</title>
+        <title>>Wishing you a sweet and joyful holiday season, Bruce &amp; Mary Harreld | The University of Iowa</title>
     <% else %>
         <title>$Title | The University of Iowa</title>
     <% end_if %>
@@ -56,7 +56,6 @@
     $Layout
 
     <script src="./mysite/dist/scripts/main.min.js"></script>
-
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2"></script>
     $Analytics
   </body>

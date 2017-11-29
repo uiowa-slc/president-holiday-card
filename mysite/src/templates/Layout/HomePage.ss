@@ -83,7 +83,7 @@
     <div class="medium-8 medium-centered columns">
       
       <div class="submit__container">
-        <h2 class="submissions-carousel__header">Step 1: Upload a Photo</h2>
+        <h2 class="submissions-carousel__header">Step 1: Upload a photo</h2>
         $SubmitForm
 
         <h2 class="submissions-carousel__header">Step 2:</h2>

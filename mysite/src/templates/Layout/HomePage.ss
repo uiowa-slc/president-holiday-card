@@ -1,11 +1,9 @@
 <article>
-
-
-  <div class="main" id="main">
+  <div class="main" id="main" role="main">
     <div class="main-content__screen"></div>
     <div class="main-content__container row column">
       <div class="main-content__media responsive-embed widescreen">
-        <iframe width="420" height="315" src="https://www.youtube.com/embed/BandysDHYJg?rel=0&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+        <iframe width="420" height="315" class="lazy" data-src="https://www.youtube.com/embed/ra8mKdZvGvY?rel=0&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="main-content">
         $Form
@@ -16,11 +14,11 @@
       <div class="recipe__container">
         <div class="recipe">
           <div class="row">
-            <div class="medium-4 medium-push-8 columns hc-sticky">
-                <img class="recipe__img" src="mysite/dist/images/iowa.png" alt="Delicious cookies spelling the word 'Iowa'" />
-                <p class="recipe__sidebar"><a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download a PDF Version of this recipe</a></p>
+            <div class="medium-12 large-4 large-push-8 columns hc-sticky">
+                <img class="recipe__img lazy" data-src="mysite/dist/images/iowa.jpg" alt="Delicious cookies spelling the word 'Iowa'" />
+                <p class="recipe__sidebar"><a href="mysite/pdf/chef-barry_s-sugar-cookie-recipe.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download a PDF Version of this recipe</a></p>
             </div>
-            <div class="medium-8 medium-pull-4 columns">
+            <div class="medium-12 large-8 large-pull-4 columns">
                 <h2 class="recipe__header">Chef Barry's Sugar Cookie Recipe</h2>
                 <ul class="recipe__ingredients">
                   <li>2 sticks Unsalted Butter</li>
@@ -31,6 +29,7 @@
                   <li>1 Tbl Pure Vanilla extract</li>
                   <li>2<sup>1/4</sup> cups All Purpose Flour</li>
                 </ul>
+                <p class="recipe__body">This is my traditional sugar cookie recipe that we use in our bakery. This version makes a scoop and bake type of cookie that is rolled in sugar to give it texture. To make decorated cookies, roll the dough on a lightly floured surface to your desired thickness and chill the dough 20 mins. before cutting and baking.</p>
                 <div class="accordion" data-accordion data-allow-all-closed="true">
                   <div class="accordion-item" data-accordion-item>
                      <a href="#" class="accordion-title">See full recipe</a>
@@ -57,25 +56,38 @@
   </div><!-- end .main -->
 
 <div class="row column">
-<h2 class="submissions-carousel__header">Share your Iowa cookie creations with us:</h2>
-  <div class="submissions-carousel__container">
-    <div class="submissions-carousel">
-      <div class="submissions-carousel__card" style="background-image: url('mysite/dist/images/chefbarry-herky.jpg');">
+    <h1 class="submissions-carousel__header">Share your Iowa creations:</h1>
+    <div class="submissions-carousel__container">
+      <div class="flexslider" id="slider" >
+        <ul class="slides">
+          <% loop $Submissions %>
+            <li>
+              <a href="$Link"><img data-src="$Photo.PaddedImage(1162,654, 222222).URL" class="lazy submissions-carousel__img" /></a>
+            </li>
+          <% end_loop %>
+        </ul>
       </div>
-      <% loop $Submissions %>
-        <a href="$Link">
-          <div class="submissions-carousel__card" style="background-image: url('$Photo.FocusFill(500,500).URL');">
-          </div>
-        </a>
-      <% end_loop %>
+      <div id="carousel" class="flexslider">
+        <ul class="slides">
+          <% loop $Submissions %>
+          <li>
+            <img data-src="$Photo.PaddedImage(210,118, 333333).URL" class="lazy submissions-carousel__img" />
+          </li>
+          <% end_loop %>
+        </ul>
+      </div>
     </div>
-  </div>
+
 
   <div class="row">
     <div class="medium-8 medium-centered columns">
+      
       <div class="submit__container">
-       
+        <h2 class="submissions-carousel__header">Step 1: Upload a Photo</h2>
         $SubmitForm
+
+        <h2 class="submissions-carousel__header">Step 2:</h2>
+        <p class="text-center recipe__body">We'll send you a link that you can share with family and friends this holiday season.</p>
       </div>
     </div>
   </div>

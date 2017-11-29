@@ -7,12 +7,34 @@ Roots = {
     init: function(){
       $(document).foundation();
 
-      $('.submissions-carousel').flickity({
-        // options
-        cellAlign: 'left',
-        contain: true
+      // $('.submissions-carousel').flickity({
+      //   // options
+      //   cellAlign: 'left',
+      //   contain: true
+      // });
+      //  // addthis.init();
+
+    $('#carousel').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth: 210,
+        itemMargin: 5,
+        asNavFor: '#slider'
       });
-       // addthis.init();
+     
+      $('#slider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        sync: "#carousel"
+      });
+      
+      var myLazyLoad = new LazyLoad({
+          elements_selector: ".lazy"
+      });
     },
     finalize: function(){ }
   },

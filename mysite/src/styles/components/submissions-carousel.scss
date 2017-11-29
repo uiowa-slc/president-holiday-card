@@ -1,9 +1,17 @@
 .submissions-carousel{
 
 
+	&__img{
+		border-radius: 10px;
+	}
+
 	&__header{
 		text-align: center;
 		margin: rem-calc(20) 0;
+
+		&--print{
+			font-size: rem-calc(24);
+		}
 	}
 
 	&__card{
@@ -11,8 +19,10 @@
 		width: rem-calc(570);
 		background-size: cover;
 		margin-right: rem-calc(20);
-		border-radius: 5px;
+		
 	}
+
+
 
 
 }

@@ -7,6 +7,7 @@
 // Libraries
 @import "lib/fa/font-awesome";
 @import "lib/flickity";
+@import "lib/flexslider";
 @import "foundation";
 @import "motion-ui";
 
@@ -66,4 +67,5 @@
 // Layouts
 
 @import "layouts/default";
+@import "layouts/print";
 @import "layouts/footer";

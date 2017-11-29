@@ -37,7 +37,7 @@ body.loading{
 	font-weight: bold;
 	padding: rem-calc(10);
 	font-size: rem-calc(13);
-
+	z-index: 99;
 	@include breakpoint(large){
 		font-size: rem-calc(16);
 	}
@@ -83,21 +83,25 @@ body.loading{
 .main{
 	background-image: url('../images/table-bg2.jpg');
 	background-size: cover;
-
+	background-color: #222;
 }
 .main-content{
 	color: white;
-	padding-top: rem-calc(40);
+	padding: rem-calc(40) 0;
 
 	&__media{
 		margin-top: rem-calc(40);
 		-webkit-box-shadow: 0px 0px 71px 1px rgba(0,0,0,0.86);
 		-moz-box-shadow: 0px 0px 71px 1px rgba(0,0,0,0.86);
 		box-shadow: 0px 0px 71px 1px rgba(0,0,0,0.86);
+
+		img{
+			width: 100%;
+		}
 	}
 	&__container{
 
-		z-index: 99;
+		z-index: 98;
 		position: relative;
 	}
 
@@ -106,7 +110,7 @@ body.loading{
  		width: 100%; 
  		height: 100%; 
  		background: rgba(34, 34, 34, 0.65); 
- 		z-index: 98;		
+ 		z-index: 97;		
 	}
 	&__header{
 		text-align: center;
@@ -178,6 +182,10 @@ body.loading{
 	&__header{
 		//text-decoration: underline;
 		border-bottom: 2px solid #666;
+
+		&--print{
+			font-size: rem-calc(32);
+		}
 	}
 	&__ingredients{
 	-moz-column-count: 2;
@@ -190,6 +198,10 @@ body.loading{
 	   column-gap: 20px;
 	   column-fill: auto;
 	   font-family: $header-font-family;
+
+	   &--print{
+	   	font-size: rem-calc(12);
+	   }
 	}
 
 	&__body{
@@ -254,7 +266,7 @@ body.loading{
 		position: absolute;
 		top: 0;
 		left: 0;
-
+		z-index: 99;
 	}
 
 	&--sound{

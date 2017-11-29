@@ -76,7 +76,11 @@ class Page_Controller extends ContentController {
 	 */
     private static $allowed_actions = array(
         'SubmitForm',
-        
+        'recipe'
+    );
+
+    private static $url_handlers = array(
+        'view//' => 'recipe'
     );
 
 
@@ -90,10 +94,14 @@ class Page_Controller extends ContentController {
         return Submission::get()->filter(array('Approved' => 1));
     }
 
+    public function recipe(){
+        return $this->renderwith(array('Recipe', 'Page'));
+    }
+
     public function SubmitForm() {
         $fields = new FieldList(
-            TextField::create('From', 'Your Name'),
-            EmailField::create('EmailAddress', 'Your Email Address'),
+            TextField::create('From', 'Your name'),
+            EmailField::create('EmailAddress', 'Your email address'),
             FileField::create('Photo', 'Attach a photo of your cookie or creation')
         );
 
@@ -113,7 +121,7 @@ class Page_Controller extends ContentController {
 
 
     public function doSubmit($data, Form $form) {
-        $form->sessionMessage('Thank you for submitting your photo. We\'ll email you when it\'s been approved.', 'good');
+        $form->sessionMessage('Thank you for submitting your photo. We\'ll email you when it\'s ready.', 'good');
         $submission = new Submission();
         $form->saveInto($submission);
         $submission->write();
@@ -121,7 +129,7 @@ class Page_Controller extends ContentController {
 
         $this->sendAdminApprovalNotification($submission);
 
-        //return $this->redirectBack();
+        return $this->redirectBack();
     }
 
     private function sendAdminApprovalNotification($submission){

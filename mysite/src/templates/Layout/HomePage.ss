@@ -16,7 +16,7 @@
           <div class="row">
             <div class="medium-12 large-4 large-push-8 columns hc-sticky">
                 <img class="recipe__img lazy" data-src="mysite/dist/images/iowa.jpg" alt="Delicious cookies spelling the word 'Iowa'" />
-                <p class="recipe__sidebar"><a href="mysite/pdf/chef-barry_s-sugar-cookie-recipe.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download a PDF Version of this recipe</a></p>
+                <p class="recipe__sidebar"><a href="mysite/pdf/chef-barry_s-sugar-cookie-recipe.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download a PDF version of this recipe</a></p>
             </div>
             <div class="medium-12 large-8 large-pull-4 columns">
                 <h2 class="recipe__header">Chef Barry's Sugar Cookie Recipe</h2>
@@ -45,11 +45,7 @@
                   </div>
                 </div>
             </div>
-
-
-
-
-            </div>
+          </div>
         </div>
       </div><!-- end .recipe__container-->
     </div><!-- end .main-content__container-->
@@ -77,8 +73,6 @@
         </ul>
       </div>
     </div>
-
-
   <div class="row">
     <div class="medium-8 medium-centered columns">
       
@@ -93,9 +87,5 @@
   </div>
 
 </div>
-
-
-
-  <% include Footer %>
-
+<% include Footer %>
 </article>

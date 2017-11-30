@@ -17,7 +17,7 @@
 
 
     <meta property="og:title"
-    content="$Title.ATT" />
+    content="Wishing you a sweet and joyful holiday season" />
     <meta property="og:description"
     content="$Content.Summary(50).ATT" />
     

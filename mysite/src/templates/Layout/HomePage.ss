@@ -7,7 +7,7 @@
       </div>
       <div class="main-content">
         $Form
-        <h1 class="main-content__header">Wishing you a sweet and joyful holiday season</h1>
+        <h1 class="main-content__header">Wishing you a sweet and joyful holiday season.</h1>
         <p class="main-content__signature">Mary &amp; Bruce Harreld</p>
         <% if not $FeaturedSubmission %>
           <% include AddThis %>

@@ -3,7 +3,7 @@
     <div class="main-content__screen"></div>
     <div class="main-content__container row column">
       <div class="main-content__media responsive-embed widescreen">
-        <iframe width="420" height="315" class="lazy" data-src="https://www.youtube.com/embed/DyE62WYWhss?rel=0&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+        <iframe width="420" height="315" class="lazy" data-src="https://www.youtube.com/embed/DyE62WYWhss?rel=0" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="main-content">
         $Form

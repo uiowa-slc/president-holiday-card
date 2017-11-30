@@ -92,7 +92,6 @@ h1,h2,h3,h4,h5,h6{
 .main-content{
 	color: white;
 	padding: rem-calc(40) 0;
-
 	&__media{
 		margin-top: rem-calc(40);
 		-webkit-box-shadow: 0px 0px 71px 1px rgba(0,0,0,0.86);
@@ -169,7 +168,7 @@ h1,h2,h3,h4,h5,h6{
 
 
 .recipe{
-	margin: rem-calc(60) 0;
+
 	&__container{
 		// background-image: url('../images/table-bg.jpg');
 		// background: black;
@@ -179,6 +178,9 @@ h1,h2,h3,h4,h5,h6{
 	background-image: url('../images/card-bg.png');
 	padding: rem-calc(40);
 	position: relative;
+	@include breakpoint(medium){
+		margin: rem-calc(60) 0;
+	}
 	@include breakpoint(large){
 		// margin-top: rem-calc(-50);
 		z-index: 999;
@@ -192,20 +194,25 @@ h1,h2,h3,h4,h5,h6{
 		}
 	}
 	&__ingredients{
-	-moz-column-count: 2;
-	   -moz-column-gap: 20px;
-	   -moz-column-fill: auto;
-	   -webkit-column-count: 2;
-	   -webkit-column-gap: 20px;
-	   -webkit-column-fill: auto;
-	   column-count: 2;
-	   column-gap: 20px;
-	   column-fill: auto;
+
 	   font-family: $header-font-family;
 
 	   &--print{
 	   	font-size: rem-calc(12);
 	   }
+
+		@include breakpoint(medium){
+		   -moz-column-count: 2;
+		   -moz-column-gap: 20px;
+		   -moz-column-fill: auto;
+		   -webkit-column-count: 2;
+		   -webkit-column-gap: 20px;
+		   -webkit-column-fill: auto;
+		   column-count: 2;
+		   column-gap: 20px;
+		   column-fill: auto;
+		}
+
 	}
 
 	&__body{

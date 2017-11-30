@@ -9,7 +9,9 @@
         $Form
         <h1 class="main-content__header">Wishing you a sweet and joyful holiday season</h1>
         <p class="main-content__signature">Mary &amp; Bruce Harreld</p>
-        <% include AddThis %>
+        <% if not $FeaturedSubmission %>
+          <% include AddThis %>
+        <% end_if %>
       </div>
       <div class="recipe__container">
         <div class="recipe">
@@ -81,7 +83,10 @@
         $SubmitForm
 
         <h2 class="submissions-carousel__header">Step 2:</h2>
-        <p class="text-center recipe__body">We'll send you a personalized link that you can share with family and friends this holiday season.</p>
+        <p class="text-center recipe__body">Check your email: we'll send you a personalized link with your photo front-and-center.</p>
+        <h2 class="submissions-carousel__header">Step 3:</h2>
+          <p class="recipe__body text-center">Share your Iowa cookie creation with friends and family and friends.</p>
+          <% include AddThis %>
       </div>
     </div>
   </div>

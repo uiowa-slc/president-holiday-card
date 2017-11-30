@@ -76,7 +76,8 @@ class Page_Controller extends ContentController {
 	 */
     private static $allowed_actions = array(
         'SubmitForm',
-        'recipe'
+        'recipe',
+        'start'
     );
 
     private static $url_handlers = array(
@@ -90,8 +91,28 @@ class Page_Controller extends ContentController {
 		// See: http://doc.silverstripe.org/framework/en/reference/requirements
 	}
 
+    public function FeaturedSubmission(){
+        $startID = intval($this->getRequest()->param('ID'));
+        if($startID){
+            return Submission::get()->filter(array('ID' => $startID, 'Approved' => 1))->First();
+        }
+    }
+
     public function Submissions(){
-        return Submission::get()->filter(array('Approved' => 1));
+        $submissions = Submission::get()->filter(array('Approved' => 1))->toArray();
+        $featuredSubmission = $this->FeaturedSubmission();
+
+        if($featuredSubmission){
+           array_unshift($submissions, $featuredSubmission);
+        }
+
+        $submissionsArrayList = new ArrayList($submissions);
+
+        return $submissionsArrayList;
+    }
+
+    public function start(){
+        return $this->renderWith(array('HomePage', 'Page'));
     }
 
     public function recipe(){
@@ -100,16 +121,16 @@ class Page_Controller extends ContentController {
 
     public function SubmitForm() {
         $fields = new FieldList(
-            TextField::create('From', 'Your name'),
-            EmailField::create('EmailAddress', 'Your email address (will not be visible online-- we\'ll send the card to this address)'),
-            FileField::create('Photo', 'Attach a photo of your cookie or creation')
+            FileField::create('Photo', 'Attach a photo of your cookie or creation'),
+            EmailField::create('EmailAddress', 'Your email address (will not be visible online-- we\'ll send a link to this address)')
+            
         );
 
         $actions = new FieldList(
-            FormAction::create("doSubmit")->setTitle('Create your card')->addExtraClass('button')->setTemplate('StepFormAction')
+            FormAction::create("doSubmit")->setTitle('Submit your photo')->addExtraClass('button')->setTemplate('StepFormAction')
         );
 
-        $required = new RequiredFields('Name', 'Email');
+        $required = new RequiredFields('EmailAddress', 'Photo');
 
         $form = new Form($this, 'SubmitForm', $fields, $actions, $required);
 
@@ -121,7 +142,7 @@ class Page_Controller extends ContentController {
 
 
     public function doSubmit($data, Form $form) {
-        $form->sessionMessage('Thank you for submitting your photo. We\'ll email you when it\'s ready.', 'good');
+        $form->sessionMessage('Thank you for submitting your photo. We\'ll email you a link when it\'s ready.', 'good');
         $submission = new Submission();
         $form->saveInto($submission);
         $submission->write();
@@ -136,7 +157,7 @@ class Page_Controller extends ContentController {
         $adminEmailAddress = Config::inst()->get('email', 'admin_email');
 
         $email = new Email();
-        $subject = 'Holiday Card Photo Submitted';
+        $subject = 'Holiday Photo Submitted';
 
         $email
             ->setFrom($adminEmailAddress)

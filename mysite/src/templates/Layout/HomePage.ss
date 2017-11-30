@@ -3,7 +3,7 @@
     <div class="main-content__screen"></div>
     <div class="main-content__container row column">
       <div class="main-content__media responsive-embed widescreen">
-        <iframe width="420" height="315" class="lazy" data-src="https://www.youtube.com/embed/ra8mKdZvGvY?rel=0&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+        <iframe width="420" height="315" class="lazy" data-src="https://www.youtube.com/embed/DyE62WYWhss?rel=0&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="main-content">
         $Form
@@ -81,7 +81,7 @@
         $SubmitForm
 
         <h2 class="submissions-carousel__header">Step 2:</h2>
-        <p class="text-center recipe__body">We'll send you a link that you can share with family and friends this holiday season.</p>
+        <p class="text-center recipe__body">We'll send you a personalized link that you can share with family and friends this holiday season.</p>
       </div>
     </div>
   </div>

@@ -3,7 +3,6 @@
 class Submission extends DataObject {
 
 	private static $db = array(
-		'From' => 'Varchar(254)',
 		'EmailAddress' => 'Varchar(254)',
 		'Approved' => 'Boolean'
 	); 
@@ -13,7 +12,6 @@ class Submission extends DataObject {
 	);
 
 	private static $summary_fields = array(
-		'From',
 		'EmailAddress',
 		'Photo.CMSThumbnail',
 		'Created'
@@ -43,7 +41,7 @@ class Submission extends DataObject {
 		return $url;		
 	}
 	public function Link(){
-		$url = Director::baseURL().'submissions/view/'.$this->ID;
+		$url = Director::baseURL().'home/start/'.$this->ID;
 		return $url;		
 	}
 	public function CMSLink(){

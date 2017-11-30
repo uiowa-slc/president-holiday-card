@@ -5,15 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <% if $URLSegment == "home" %>
-        <title>>Wishing you a sweet and joyful holiday season, Bruce &amp; Mary Harreld | The University of Iowa</title>
-    <% else %>
-        <title>$Title | The University of Iowa</title>
-    <% end_if %>
-    
+
+    <title>Wishing you a sweet and joyful holiday season, Mary &amp; Bruce Harreld | The University of Iowa</title>
+
     <% base_tag %>
 
-    <meta name="title" content="Wishing you a joyous holiday season, Bruce &amp; Mary Harreld | The University of Iowa"/>
+    <meta name="title" content="Wishing you a sweet and joyful holiday season, Mary &amp; Bruce Harreld | The University of Iowa"/>
     <meta name="description" content="$Content.Summary(50).ATT"/>
     <meta name="author" content="The University of Iowa"/>
     <meta name="copyright" content="The University of Iowa. Copyright {$Now.Year}"/>
@@ -26,10 +23,10 @@
     
     <meta property="og:site_name" content="The University of Iowa - Office of the President"/>
     <meta property="og:url" content="$AbsoluteLink" />
-    <% if $Thumbnail %>
-    <meta property="og:image" content="{$Thumbnail.Fill(1200,630).AbsoluteURL}" />
+    <% if $FeaturedSubmission %>
+    <meta property="og:image" content="{$FeaturedSubmission.Photo.FocusFill(1200,630).AbsoluteURL}" />
     <% else_if $Photo %>
-    <meta property="og:image" content="{$Photo.Fill(1200,630).AbsoluteURL}" />
+    <meta property="og:image" content="{$Photo.FocusFill(1200,630).AbsoluteURL}" />
     <% else %>
     <meta property="og:image" content="{$absoluteBaseURL}mysite/dist/images/og--default.jpg" />
     <% end_if %>
@@ -50,11 +47,8 @@
 
     <link rel="stylesheet" href="mysite/dist/styles/main.css">
   </head>
-  <body id="body" data-scroll="body" data-resize="body" class="{$ClassName}">
-
-
+  <body id="body" class="{$ClassName}">
     $Layout
-
     <script src="./mysite/dist/scripts/main.min.js"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a72bea3c0127e2"></script>
     $Analytics

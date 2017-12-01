@@ -1,3 +1,4 @@
+<% if not $SubmitForm.getMessageFromSession %>
 <article>
   <div class="main" id="main" role="main">
     <div class="main-content__screen"></div>
@@ -75,19 +76,24 @@
         </ul>
       </div>
     </div>
+<% end_if %>
   <div class="row">
     <div class="medium-8 medium-centered columns">
-      
-      <div class="submit__container">
-        <h2 class="submissions-carousel__header">Step 1: Upload a photo</h2>
-        $SubmitForm
+      <% if $SubmitForm.getMessageFromSession %>
+        <p class="submit-message text-center">$SubmitForm.getMessageFromSession</p>
+        $SubmitForm.clearMessage
+      <% else %>
+        <div class="submit__container">
+          <h2 class="submissions-carousel__header">Step 1: Upload a photo</h2>
+          $SubmitForm
 
-        <h2 class="submissions-carousel__header">Step 2:</h2>
-        <p class="text-center recipe__body">Check your email: we'll send you a personalized link with your photo front-and-center.</p>
-        <h2 class="submissions-carousel__header">Step 3:</h2>
-          <p class="recipe__body text-center">Share your Iowa cookie creation with family and friends.</p>
-          <% include AddThis %>
-      </div>
+          <h2 class="submissions-carousel__header">Step 2:</h2>
+          <p class="text-center recipe__body">Check your email: we'll send you a personalized link with your photo front-and-center.</p>
+          <h2 class="submissions-carousel__header">Step 3:</h2>
+            <p class="recipe__body text-center">Share your Iowa cookie creation with family and friends.</p>
+            <% include AddThis %>
+        </div>
+      <% end_if %>
     </div>
   </div>
 

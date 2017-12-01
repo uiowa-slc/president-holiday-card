@@ -120,11 +120,17 @@ class Page_Controller extends ContentController {
     }
 
     public function SubmitForm() {
+
+        $folderName = uniqid();
+
         $fields = new FieldList(
-            FileField::create('Photo', 'Attach a photo of your cookie or creation'),
+            $uploadField = FileField::create('Photo', 'Attach a photo of your cookie or creation'),
             EmailField::create('EmailAddress', 'Your email address (will not be visible online-- we\'ll send a link to this address)')
             
         );
+
+        $uploadField->setAllowedFileCategories('image');
+        $uploadField->setFolderName($folderName);
 
         $actions = new FieldList(
             FormAction::create("doSubmit")->setTitle('Submit your photo')->addExtraClass('button')->setTemplate('StepFormAction')
@@ -133,16 +139,17 @@ class Page_Controller extends ContentController {
         $required = new RequiredFields('EmailAddress', 'Photo');
 
         $form = new Form($this, 'SubmitForm', $fields, $actions, $required);
-
-        // $form->enableSpamProtection()
-        //     ->fields()->fieldByName('Captcha')
-        //     ->setTitle("Please check the box below");
+        if( ! ($member = Member::currentUser()) ) {
+         $form->enableSpamProtection()
+             ->fields()->fieldByName('Captcha')
+             ->setTitle("Please check the box below");
+        }
         return $form;
     }
 
 
     public function doSubmit($data, Form $form) {
-        $form->sessionMessage('Thank you for submitting your photo. We\'ll email you a link when it\'s ready.', 'good');
+        $form->sessionMessage('Thank you for submitting your photo. We\'ll email you a link when it\'s been posted.', 'good');
         $submission = new Submission();
         $form->saveInto($submission);
         $submission->write();

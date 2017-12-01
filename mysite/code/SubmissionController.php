@@ -18,8 +18,8 @@ class SubmissionController extends ContentController {
 	 * @var array
 	 */
     private static $allowed_actions = array(
-        'previewEmail',
-        'view'
+        'previewEmail'
+       // 'view'
     );
 
     private static $url_handlers = array(

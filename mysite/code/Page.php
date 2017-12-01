@@ -101,8 +101,10 @@ class Page_Controller extends ContentController {
     }
 
     public function Submissions(){
-        $submissions = Submission::get()->filter(array('Approved' => 1))->toArray();
         $featuredSubmission = $this->FeaturedSubmission();
+
+        $submissions = Submission::get()->filter(array('Approved' => 1, 'ID:not' => $featuredSubmission->ID))->toArray();
+        
 
         if($featuredSubmission){
            array_unshift($submissions, $featuredSubmission);

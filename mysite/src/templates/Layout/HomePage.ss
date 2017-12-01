@@ -66,7 +66,7 @@
           <% end_loop %>
         </ul>
       </div>
-      <div id="carousel" class="flexslider">
+      <div id="carousel" class="carousel flexslider">
         <ul class="slides">
           <% loop $Submissions %>
           <li>

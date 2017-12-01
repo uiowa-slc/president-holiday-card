@@ -1,6 +1,5 @@
 .submissions-carousel{
 
-
 	&__img{
 		border-radius: 10px;
 	}
@@ -22,7 +21,12 @@
 		
 	}
 
+}
 
 
-
+#carousel{
+	display: none;
+	@include breakpoint(medium){
+		display: block;
+	}
 }

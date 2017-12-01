@@ -95,6 +95,8 @@ class Page_Controller extends ContentController {
         $startID = intval($this->getRequest()->param('ID'));
         if($startID){
             return Submission::get()->filter(array('ID' => $startID, 'Approved' => 1))->First();
+        }else{
+            return Submission::get()->filter(array('ID' => 1, 'Approved' => 1))->First();
         }
     }
 

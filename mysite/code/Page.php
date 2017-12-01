@@ -163,7 +163,7 @@ class Page_Controller extends ContentController {
     }
 
     private function sendAdminApprovalNotification($submission){
-        $adminEmailAddress = Config::inst()->get('email', 'admin_email');
+        $adminEmailAddress = Config::inst()->get('Email', 'admin_email');
 
         $email = new Email();
         $subject = 'Holiday Photo Submitted';

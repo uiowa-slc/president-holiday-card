@@ -17,3 +17,6 @@ Director:
     'AddController' : 'AddController'
 FormSpamProtectionExtension:
     default_spam_protector: NocaptchaProtector
+LeftAndMain:
+  extra_requirements_css:
+    - mysite/css/cms.css

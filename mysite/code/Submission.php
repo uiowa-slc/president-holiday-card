@@ -104,10 +104,10 @@ class Submission extends DataObject {
     public function getBetterButtonsActions() {
         $fields = parent::getBetterButtonsActions();
         if($this->Approved) {
-            $fields->push(BetterButtonCustomAction::create('deny', 'Deny'));
+            $fields->push(BetterButtonCustomAction::create('deny', 'Deny')->addExtraClass('submission-action submission-action--deny'));
         }
         else {
-            $fields->push(BetterButtonCustomAction::create('approve', 'Approve'));
+            $fields->push(BetterButtonCustomAction::create('approve', 'Approve')->addExtraClass('submission-action submission-action--approve'));
         }
         return $fields;
     }

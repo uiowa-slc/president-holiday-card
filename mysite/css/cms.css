@@ -1,0 +1,15 @@
+.cms .ss-ui-button.submission-action{
+	color: white;
+	text-shadow: none;
+	font-size: 1.1em;
+}
+
+.cms .ss-ui-button.submission-action--deny{
+	background: #DD0048;
+
+}
+
+.cms .ss-ui-button.submission-action--approve{
+	background: rgb(37, 174, 31);
+}
+

@@ -85,7 +85,7 @@
         <h2 class="submissions-carousel__header">Step 2:</h2>
         <p class="text-center recipe__body">Check your email: we'll send you a personalized link with your photo front-and-center.</p>
         <h2 class="submissions-carousel__header">Step 3:</h2>
-          <p class="recipe__body text-center">Share your Iowa cookie creation with friends and family and friends.</p>
+          <p class="recipe__body text-center">Share your Iowa cookie creation with family and friends.</p>
           <% include AddThis %>
       </div>
     </div>

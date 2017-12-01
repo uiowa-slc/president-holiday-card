@@ -25,8 +25,15 @@ class Submission extends DataObject {
 	public function getCMSFields(){
 
 		$f = parent::getCMSFields();
+        if($this->Approved) {
+            $f->addFieldToTab("Root.Main", new LiteralField("ApprovedMessage",
+                "<p class=\"message good\">This post has been approved, <a href='".$this->AbsoluteLink()."' target='_blank'>view it here &rarr;</a></p>"), "EmailAddress");
+        }else{
+            $f->addFieldToTab("Root.Main", new LiteralField("DeniedMessage",
+                "<p class=\"message bad\">This post has NOT been approved,  <a href='".$this->EmailPreviewLink()."' target='_blank'>preview the email sent to the user when it's approved here &rarr;</a></p>"), "EmailAddress");            
+        }
 		$f->removeByName('Approved');
-		$f->addFieldToTab('Root.Main', LiteralField::create('Link','<a href="'.$this->Link().'">'.$this->AbsoluteLink().'</a>'));
+		$f->addFieldToTab('Root.Main', LiteralField::create('FullSizedImageLink','<a href="'.$this->obj('Photo')->URL.'" target="_blank">View full sized image &rarr;</a>'));
 
 		return $f;
 	}
@@ -37,7 +44,7 @@ class Submission extends DataObject {
         return false;
     }
 	public function AbsoluteLink(){
-		$url = Director::absoluteBaseURL().'submissions/view/'.$this->ID;
+		$url = Director::absoluteBaseURL().'home/start/'.$this->ID;
 		return $url;		
 	}
 	public function Link(){
@@ -49,6 +56,11 @@ class Submission extends DataObject {
 
 		return $url;
 	}
+
+    public function EmailPreviewLink(){
+        $url = Director::baseURL().'submissions/previewEmail/UserApprovalNotification/'.$this->ID;
+        return $url;              
+    }
 
 	public function isApproved(){
 		return $this->Approved;

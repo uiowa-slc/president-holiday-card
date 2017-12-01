@@ -174,8 +174,7 @@ h1,h2,h3,h4,h5,h6{
 		// background: black;
 		// background-size: cover;
 	}
-	background-color: white;
-	background-image: url('../images/card-bg.png');
+	background-color: #eee;
 	padding: rem-calc(40);
 	position: relative;
 	@include breakpoint(medium){

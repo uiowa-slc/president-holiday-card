@@ -2,6 +2,7 @@
 <article>
   <div class="main" id="main" role="main">
     <div class="main-content__screen"></div>
+
     <div class="main-content__container row column">
       <div class="main-content__media responsive-embed widescreen">
         <iframe width="420" height="315" class="lazy" data-src="https://www.youtube.com/embed/DyE62WYWhss?rel=0" frameborder="0" allowfullscreen></iframe>
@@ -10,11 +11,12 @@
         $Form
         <h1 class="main-content__header">Wishing you a sweet and joyful holiday season.</h1>
         <p class="main-content__signature">Mary &amp; Bruce Harreld</p>
+        <p class="text-center"><span class="scroll-indicator"><i class="fa fa-chevron-down" aria-hidden="true"></i></span></p>
         <% if not $FeaturedSubmission %>
           <% include AddThis %>
         <% end_if %>
       </div>
-      <div class="recipe__container">
+      <div class="recipe__container" id="recipe__container">
         <div class="recipe">
           <div class="row">
             <div class="medium-12 large-4 large-push-8 columns hc-sticky">
@@ -70,7 +72,7 @@
         <ul class="slides">
           <% loop $Submissions %>
           <li>
-            <img data-src="$Photo.PaddedImage(210,118, 333333).URL" class="lazy submissions-carousel__img" />
+            <img data-src="$Photo.PaddedImage(210,118, 222222).URL" class="lazy submissions-carousel__img" />
           </li>
           <% end_loop %>
         </ul>

@@ -41,7 +41,11 @@ Roots = {
   // Home page
   'HomePage': {
     init: function(){
-
+      $('.scroll-indicator').click(function(){
+        $(window).scrollTo('#recipe__container', 1000);
+       
+      });
+      
     }
   },
 };
@@ -70,3 +74,8 @@ UTIL = {
 
 // kick it all off here
 $(document).ready(UTIL.loadEvents);
+
+
+function handleScroll(){
+  $('.scroll-indicator').addClass('scroll-indicator--scrolled');
+}

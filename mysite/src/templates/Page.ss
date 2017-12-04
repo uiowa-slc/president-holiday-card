@@ -22,14 +22,16 @@
     content="$Content.Summary(50).ATT" />
     
     <meta property="og:site_name" content="The University of Iowa - Office of the President"/>
-    <meta property="og:url" content="$AbsoluteLink" />
+    
     <% if $FeaturedSubmission %>
     <!--using featured submission -->
+    <meta property="og:url" content="$FeaturedSubmission.AbsoluteLink" />
     <meta property="og:image" content="{$FeaturedSubmission.Photo.FocusFill(1200,630).AbsoluteURL}" />
     <% else_if $Photo %>
     <!-- using photo -->
     <meta property="og:image" content="{$Photo.FocusFill(1200,630).AbsoluteURL}" />
     <% else %>
+    <meta property="og:url" content="$AbsoluteLink" />
     <!-- using default image -->
     <meta property="og:image" content="{$absoluteBaseURL}mysite/dist/images/og--default.jpg" />
     <% end_if %>

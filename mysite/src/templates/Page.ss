@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
+    <meta name="description" content="Download Chef Barry's recipe and share your Iowa cookie creations with us this season!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Wishing you a sweet and joyful holiday season, Mary &amp; Bruce Harreld | The University of Iowa</title>
@@ -16,7 +16,7 @@
     <meta property="og:title"
     content="Wishing you a sweet and joyful holiday season" />
     <meta property="og:description"
-    content="" />
+    content="Download Chef Barry's recipe and share your Iowa cookie creations with us this season!" />
     <meta property="og:type"   content="website" />
     <meta property="fb:app_id" content="127918570561161" />    
     <meta property="og:site_name" content="The University of Iowa - Office of the President"/>

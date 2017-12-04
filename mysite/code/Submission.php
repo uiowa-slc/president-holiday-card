@@ -83,13 +83,20 @@ class Submission extends DataObject {
     private function sendUserApprovalNotification($submission){
         $adminEmailAddress = Config::inst()->get('email', 'admin_email');
         $siteConfig = SiteConfig::current_site_config(); 
+        $userEmailAddress = $submission->EmailAddress;
 
+
+        if(!$userEmailAddress){
+        	return;
+        }
         $email = new Email();
         $subject = $siteConfig->EmailApprovalSubject;
 
+
+
         $email
             ->setFrom($adminEmailAddress)
-            ->setTo($submission->EmailAddress)
+            ->setTo($userEmailAddress)
             ->setSubject($subject)
             ->setTemplate('UserApprovalNotification')
             ->populateTemplate($submission);

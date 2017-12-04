@@ -19,10 +19,10 @@
     <meta property="og:title"
     content="Wishing you a sweet and joyful holiday season" />
     <meta property="og:description"
-    content="$Content.Summary(50).ATT" />
-    
+    content="" />
+    <meta property="og:type"   content="website" />
+    <meta property="fb:app_id" content="127918570561161" />    
     <meta property="og:site_name" content="The University of Iowa - Office of the President"/>
-    
     <% if $FeaturedSubmission %>
     <!--using featured submission -->
     <meta property="og:url" content="$FeaturedSubmission.AbsoluteLink" />

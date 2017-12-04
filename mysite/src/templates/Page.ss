@@ -11,11 +11,8 @@
     <% base_tag %>
 
     <meta name="title" content="Wishing you a sweet and joyful holiday season, Mary &amp; Bruce Harreld | The University of Iowa"/>
-    <meta name="description" content="$Content.Summary(50).ATT"/>
     <meta name="author" content="The University of Iowa"/>
     <meta name="copyright" content="The University of Iowa. Copyright {$Now.Year}"/>
-
-
     <meta property="og:title"
     content="Wishing you a sweet and joyful holiday season" />
     <meta property="og:description"

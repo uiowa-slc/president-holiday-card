@@ -36,6 +36,8 @@ class SubmissionAdmin extends ModelAdmin {
 
         $gridField->getConfig()->addComponent(new GridFieldBulkUpload());
         $gridField->getConfig()->addComponent(new GridFieldSubmissionState());
+        $gridField->getConfig()->addComponent($sortable=new GridFieldSortableRows('Sort'));
+        // $gridField->getConfig()->addComponent(new GridFieldOrderableRows());
 
         return $form;
     }

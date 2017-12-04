@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c69700412ebd9118dc8d0a9f945783b7",
+    "content-hash": "4649a960304f2fdf3b8346ee6136093f",
     "packages": [
         {
             "name": "asyncphp/doorman",
@@ -1229,6 +1229,46 @@
                 "spamprotection"
             ],
             "time": "2017-11-09T16:24:38+00:00"
+        },
+        {
+            "name": "undefinedoffset/sortablegridfield",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UndefinedOffset/SortableGridField.git",
+                "reference": "0571a60875673812733d9cb409473c0fa161f40f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/0571a60875673812733d9cb409473c0fa161f40f",
+                "reference": "0571a60875673812733d9cb409473c0fa161f40f",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "silverstripe/framework": ">=3.0.1 <4.0.0"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "sortablegridfield"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ed Chipman",
+                    "homepage": "http://www.edchipman.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adds drag and drop functionality to SilverStripe 3.0's GridField",
+            "keywords": [
+                "gridfield",
+                "silverstripe"
+            ],
+            "time": "2017-10-27T19:14:27+00:00"
         },
         {
             "name": "zendframework/zend-authentication",

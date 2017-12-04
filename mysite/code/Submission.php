@@ -4,7 +4,8 @@ class Submission extends DataObject {
 
 	private static $db = array(
 		'EmailAddress' => 'Varchar(254)',
-		'Approved' => 'Boolean'
+		'Approved' => 'Boolean',
+		'Sort' => 'Int'
 	); 
 
 	private static $has_one = array(
@@ -21,6 +22,8 @@ class Submission extends DataObject {
         'approve',
         'deny'
     );
+
+    private static $default_sort = 'Sort';
 
 	public function getCMSFields(){
 

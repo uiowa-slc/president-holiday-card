@@ -14,7 +14,7 @@
     <meta name="author" content="The University of Iowa"/>
     <meta name="copyright" content="The University of Iowa. Copyright {$Now.Year}"/>
     <meta property="og:title"
-    content="Wishing you a sweet and joyful holiday season" />
+    content="Wishing you a sweet and joyful holiday season." />
     <meta property="og:description"
     content="Download Chef Barry's recipe and share your Iowa cookie creations with us this season!" />
     <meta property="og:type"   content="website" />

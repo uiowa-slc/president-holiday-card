@@ -24,10 +24,13 @@
     <meta property="og:site_name" content="The University of Iowa - Office of the President"/>
     <meta property="og:url" content="$AbsoluteLink" />
     <% if $FeaturedSubmission %>
+    <!--using featured submission -->
     <meta property="og:image" content="{$FeaturedSubmission.Photo.FocusFill(1200,630).AbsoluteURL}" />
     <% else_if $Photo %>
+    <!-- using photo -->
     <meta property="og:image" content="{$Photo.FocusFill(1200,630).AbsoluteURL}" />
     <% else %>
+    <!-- using default image -->
     <meta property="og:image" content="{$absoluteBaseURL}mysite/dist/images/og--default.jpg" />
     <% end_if %>
     <meta property="og:image:width" content="1200" />

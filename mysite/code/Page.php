@@ -146,7 +146,7 @@ class Page_Controller extends ContentController {
         if( ! ($member = Member::currentUser()) ) {
          $form->enableSpamProtection()
              ->fields()->fieldByName('Captcha')
-             ->setTitle("Please check the box below");
+             ->setTitle("Please check the box below:");
         }
         return $form;
     }

@@ -114,8 +114,8 @@ h1,h2,h3,h4,h5,h6{
  		height: 100%; 
  		background: rgba(34, 34, 34, 0.65); 
  		z-index: 97;
-    -webkit-animation: 1s ease 0s normal forwards 1 fadein;
-    animation: 1s ease 0s normal forwards 1 fadein;	
+	    // -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+	    // animation: 1s ease 0s normal forwards 1 fadein;	
 	}
 	@keyframes fadein{
 	    0% { opacity:0; }

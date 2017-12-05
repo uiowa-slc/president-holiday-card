@@ -85,12 +85,12 @@ h1,h2,h3,h4,h5,h6{
 }
 .scroll-indicator{
 	display: inline-block;
-	background: rgba(#fff, 1);
+	background: none;
 	padding: rem-calc(10) rem-calc(20);
 	font-size: rem-calc(32);	
 	border-radius: 200px;
 	
-	color: #053e55;
+	color: white;
 	transition: all 0.3s linear;
 	z-index:999;
 	margin: auto;

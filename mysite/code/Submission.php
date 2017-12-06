@@ -101,11 +101,9 @@ class Submission extends DataObject {
             ->setTemplate('UserApprovalNotification')
             ->populateTemplate($submission);
 
-        // if ((SS_ENVIRONMENT_TYPE == "live")) {
-        //     $email->send(); 
-        // }
-
-        $email->send(); 
+        if ((SS_ENVIRONMENT_TYPE == "live")) {
+            $email->send(); 
+        }
     }
     public function deny() {
         $this->Approved = false;

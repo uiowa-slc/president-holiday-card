@@ -43,6 +43,9 @@ ErrorDocument 500 /assets/error-500.html
   RewriteRule ^html$ - [L]
   RewriteRule ^html/.* - [L]
 
+RewriteRule ^2016$ - [L]
+RewriteRule ^2016/.* - [L]
+
   # Enable HTTP Basic authentication workaround for PHP running in CGI mode
   RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
   

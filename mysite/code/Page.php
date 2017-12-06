@@ -94,25 +94,26 @@ class Page_Controller extends ContentController {
     public function FeaturedSubmission(){
         $startID = intval($this->getRequest()->param('ID'));
         if($startID){
-            return Submission::get()->filter(array('ID' => $startID, 'Approved' => 1))->First();
-        }else{
-            return Submission::get()->filter(array('ID' => 1, 'Approved' => 1))->First();
+            $featured = Submission::get()->filter(array('ID' => $startID, 'Approved' => 1))->First();
+            return $featured;
         }
+        return false;
     }
 
     public function Submissions(){
         $featuredSubmission = $this->FeaturedSubmission();
 
-        $submissions = Submission::get()->filter(array('Approved' => 1, 'ID:not' => $featuredSubmission->ID))->toArray();
-        
-
         if($featuredSubmission){
-           array_unshift($submissions, $featuredSubmission);
+            $submissions = Submission::get()->filter(array('Approved' => 1, 'ID:not' => $featuredSubmission->ID))->toArray();
+            array_unshift($submissions, $featuredSubmission);
+            $submissionsArrayList = new ArrayList($submissions);
+            return $submissionsArrayList;
+        }else{
+            $submissions = Submission::get();
+            return $submissions;
         }
 
-        $submissionsArrayList = new ArrayList($submissions);
 
-        return $submissionsArrayList;
     }
 
     public function start(){
@@ -177,12 +178,8 @@ class Page_Controller extends ContentController {
             ->setTemplate('AdminApprovalNotification')
             ->populateTemplate($submission);
 
-            // Debug::show($email);
-            //print_r($email);
-        $email->send(); 
-
-        // if ((SS_ENVIRONMENT_TYPE == "live")) {
-        //     $email->send(); 
-        // }
+        if ((SS_ENVIRONMENT_TYPE == "live")) {
+            $email->send(); 
+        }
     }
 }

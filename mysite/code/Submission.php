@@ -23,7 +23,7 @@ class Submission extends DataObject {
         'deny'
     );
 
-    private static $default_sort = 'Sort';
+    private static $default_sort = 'Created DESC';
 
 	public function getCMSFields(){
 

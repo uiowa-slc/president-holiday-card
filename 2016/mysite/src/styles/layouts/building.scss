@@ -1,0 +1,44 @@
+.building-links{
+	&__list {
+		list-style-type: none;
+		text-align: center;
+		margin: 0;
+	}
+
+	&__item {
+		display: inline-block;
+		padding: rem-calc(10) rem-calc(20);
+	}
+}
+
+.back-button{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(#fff, 1);
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: rem-calc(10);
+	font-size: rem-calc(13);
+
+	@include breakpoint(large){
+		font-size: rem-calc(16);
+	}
+}
+
+
+.main-content{
+	&--building{
+		ul{
+			@extend .unstyled-list;
+			@extend .building-links__list;
+			li{
+				@extend .building-links__item;
+				a{
+					@extend .caret-link
+				}
+			}
+		}
+	}
+}

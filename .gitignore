@@ -5,7 +5,7 @@ cms
 framework
 _ss_environment.php
 vendor
-assets
+/assets
 .phpintel
 .sass-cache/
 cache

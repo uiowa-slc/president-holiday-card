@@ -63,7 +63,7 @@
         <ul class="slides">
           <% loop $Submissions %>
             <li>
-              <a href="$Link"><img data-src="$Photo.PaddedImage(1162,654, 222222).URL" class="lazy submissions-carousel__img" /></a>
+              <img data-src="$Photo.PaddedImage(1162,654, 222222).URL" class="lazy submissions-carousel__img" />
             </li>
           <% end_loop %>
         </ul>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Download Chef Barry's recipe and share your Iowa cookie creations with us this season!">
+    <meta name="description" content="Download Chef Barry's sugar cookie recipe and share your Iowa cookie creations with us this season!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Wishing you a sweet and joyful holiday season, Mary &amp; Bruce Harreld | The University of Iowa</title>

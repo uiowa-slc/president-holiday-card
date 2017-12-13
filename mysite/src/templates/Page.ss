@@ -16,7 +16,7 @@
     <meta property="og:title"
     content="Wishing you a sweet and joyful holiday season." />
     <meta property="og:description"
-    content="Download Chef Barry's recipe and share your Iowa cookie creations with us this season!" />
+    content="Download Chef Barry's sugar cookie recipe and share your Iowa cookie creations with us this season!" />
     <meta property="og:type"   content="website" />
     <meta property="fb:app_id" content="127918570561161" />    
     <meta property="og:site_name" content="The University of Iowa - Office of the President"/>

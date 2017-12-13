@@ -30,7 +30,7 @@
     <% else %>
     <meta property="og:url" content="$AbsoluteLink" />
     <!-- using default image -->
-    <meta property="og:image" content="{$absoluteBaseURL}mysite/dist/images/og--default.jpg" />
+    <meta property="og:image" content="{$absoluteBaseURL}mysite/dist/images/iowa.jpg" />
     <% end_if %>
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />

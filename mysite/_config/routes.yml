@@ -1,8 +1,0 @@
----
-Name: mysiteroutes
-After: framework/routes#coreroutes
----
-Director:
-  rules:
-    'submissions//$Action': 'SubmissionController'
-    'recipe//$Action' : 'Page_Controller'

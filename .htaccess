@@ -42,13 +42,13 @@ Options All -Indexes
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
-RewriteRule ^assets/* - [R=403]
-RewriteRule ^build/* - [R=403]
-RewriteRule ^config/* - [R=403]
-RewriteRule ^src/* - [R=403]
-RewriteRule ^test/* - [R=403]
-RewriteRule ^static/* - [R=403]
-RewriteRule ^node_modules/* - [R=403]
+# RewriteRule ^assets/* - [R=403]
+# RewriteRule ^build/* - [R=403]
+# RewriteRule ^config/* - [R=403]
+# RewriteRule ^src/* - [R=403]
+# RewriteRule ^test/* - [R=403]
+# RewriteRule ^static/* - [R=403]
+# RewriteRule ^node_modules/* - [R=403]
 RewriteRule ^vendor(/|$) - [F]
 RewriteRule ^(^\.|\/\.) /index.html [R=404]
 RewriteCond %{REQUEST_FILENAME} !-f

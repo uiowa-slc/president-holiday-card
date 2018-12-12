@@ -89,11 +89,10 @@ img {
     font-size: 18px;
     margin: 0 auto;
     max-width: 600px;
-    padding: 2em 1em 0 1em;
+    padding: 0 1em;
     text-align: center;
     @media (min-width: 576px) {
         font-size: 22px;
-        padding-top: 4em;
     }
 }
 .vanallen {

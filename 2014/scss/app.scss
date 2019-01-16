@@ -1,0 +1,16 @@
+@import "imports/settings";
+
+@import "normalize";
+@import "foundation/components/grid";
+
+
+$include-html-type-classes: $include-html-classes;
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;}
+
+.video-container{
+	background-image: url('../images/thumbnail.png');
+	background-size: cover;
+}
+.video-js{
+	background: #312F31;
+}

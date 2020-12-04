@@ -1,2 +1,11 @@
+RewriteRule ^2014$ - [L]
+RewriteRule ^2014/.* - [L]
+RewriteRule ^2015$ - [L]
+RewriteRule ^2015/.* - [L]
+RewriteRule ^2016$ - [L]
+RewriteRule ^2016/.* - [L]
+RewriteRule ^2017$ - [L]
+RewriteRule ^2017/.* - [L]
+
 RewriteEngine On
 RewriteRule ^(.*)$ public/$1

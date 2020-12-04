@@ -1,4 +1,4 @@
-<% include Header %>
+
 
 <main class="container-xl my-5">
 	<div class="row">

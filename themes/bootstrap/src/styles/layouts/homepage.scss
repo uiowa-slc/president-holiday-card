@@ -1,62 +1,84 @@
-.homepage-hero {
-
-    color: #1a1919;
-
-    &__intro {}
-
-    &__subtitle {
-        font-family: "antoniobold", sans-serif;
-        border-top: 5px solid $black;
-        letter-spacing: .05em;
+@-webkit-keyframes bg-slide {
+    from {
+        transform: translateX(0);
     }
 
-    &__calendar-icon {
-        width: 100px;
+    to {
+        transform: translateX(-50%);
     }
+}
 
-    h1 {
-        font-family: "antoniobold", sans-serif;
-        text-transform: uppercase;
-    }
+.homepage-background-container {
+    position: relative;
+    //height: 75vh;
+    width: 100%;
+    overflow: hidden;
+}
 
-    ul {
-        list-style: none;
-    }
+.content {
+    position: relative;
+    text-align: center;
+    font-size: 26px;
+    color: #000;
+}
 
-    ul li {
-        position: relative;
-        margin-bottom: 20px;
-    }
-
-    ul li:before {
-        content: '';
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        background-image: url(../../../../vendor/md/bootstrap-project/client/images/brand-icons/arrow.svg);
-        background-size: cover;
-        background-position: center;
-        left: -40px;
-    }
-
-    ul li ul li {
-        list-style-type: square;
-
-    }
-
-    ul li ul li:before {
-        background: none;
-        list-style-type: square;
-        left: auto;
-        width: auto;
-        height: auto;
-        position: static;
+.homepage-background {
+    width: 200%;
+    background: url(../images/bg2.jpg) repeat-x;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    animation: bg-slide 60s linear infinite;
+    background-size: contain;
+}
 
 
-    }
 
-    strong {
-        background-color: lighten($gold, 30%);
-    }
+
+.homepage-iowa {
+    width: 200px;
+}
+
+
+
+.homepage-content-container {
+    background: $gold;
+}
+
+.homepage-content {
+    padding: 50px 0;
+    font-size: rem-calc(32);
+    font-weight: lighter;
+}
+
+.homepage-sec-content {
+    font-weight: lighter;
+    font-size: rem-calc(22);
+    padding: 40px;
+}
+
+.footer-content {
+    font-size: rem-calc(16);
+    font-weight: lighter;
+    font-style: italic;
+    padding: 10px 0;
+}
+
+.push-up {
+    margin-top: -100px;
+    background: white;
+}
+
+.hope {
+    color: white;
+    font-size: rem-calc(36);
+    font-family: 'Lora';
+    font-weight: 700;
+    font-style: italic;
+}
+
+.signature {
+    font-style: italic;
 
 }

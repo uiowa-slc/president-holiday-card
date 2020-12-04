@@ -24,7 +24,7 @@
 <div class="homepage-content-container">
     <div class="container-xl">
         <div class="row justify-content-center">
-            <div class="col-lg-9">
+            <div class="col-lg-8">
                 <div class="homepage-content text-center">
                     <p>In this turbulent year we are overwhelmed with gratitude for our Hawkeye family.</p>
                     <p>Your perseverance, optimism, encouragement, and support have kept us moving forward.</p>

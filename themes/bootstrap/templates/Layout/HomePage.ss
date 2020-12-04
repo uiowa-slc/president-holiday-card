@@ -6,15 +6,13 @@
 
     </div>
 </div> --%>
-<div class="homepage-background-container">
-    <div class="homepage-background-static">
+<div class="homepage-background-container" style="background: black;">
 
-    </div>
     <div class="container-xl py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">
             <div class="embed-responsive embed-responsive-16by9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/LruK3lxcr3E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1qEj9vcgDoQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@
     </div>
 </div> --%>
 <div class="homepage-background-container">
-    <div class="homepage-background">
+    <div class="homepage-background-static">
 
     </div>
     <div class="container-xl py-5">

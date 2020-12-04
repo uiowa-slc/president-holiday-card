@@ -7,7 +7,9 @@
     </div>
 </div> --%>
 <div class="homepage-background-container" style="background: black;">
+<%--     <div class="homepage-background-static">
 
+    </div> --%>
     <div class="container-xl py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">

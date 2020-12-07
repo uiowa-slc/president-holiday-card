@@ -26,11 +26,11 @@
 
     <a class="sr-only sr-only-focusable" href="{$Link}#content">Skip to main content</a>
 
-    <% if $SiteConfig.EnableUidsIowaBar %>
+<%--     <% if $SiteConfig.EnableUidsIowaBar %>
         <% include IowaBar %>
     <% else %>
         <% include UiowaBar %>
-    <% end_if %>
+    <% end_if %> --%>
     $Layout
 
 

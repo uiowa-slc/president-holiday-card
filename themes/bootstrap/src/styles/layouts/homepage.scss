@@ -59,7 +59,7 @@
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 60s linear infinite;
+    animation: bg-slide 100s linear infinite;
     background-size: contain;
 }
 
@@ -114,10 +114,14 @@
 
 .hope {
     color: white;
-    font-size: rem-calc(36);
+    font-size: rem-calc(28);
     font-family: 'Lora';
     font-weight: 700;
     font-style: italic;
+
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(36);
+    }
 }
 
 .signature {

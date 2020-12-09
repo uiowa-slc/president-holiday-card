@@ -34,8 +34,6 @@
     $Layout
 
 
-    $BetterNavigator
-
     <% include FooterScripts %>
     <% require javascript("themes/bootstrap/dist/scripts/main.min.js") %>
 

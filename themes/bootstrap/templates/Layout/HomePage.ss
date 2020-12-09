@@ -35,7 +35,7 @@
         </div>
     </div>
 </div>
-<div class="homepage-background-container" style="height: 600px">
+<div class="homepage-background-container">
     <div class="homepage-background">
 
     </div>

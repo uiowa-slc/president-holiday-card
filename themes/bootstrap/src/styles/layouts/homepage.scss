@@ -13,12 +13,20 @@
     //height: 75vh;
     width: 100%;
     overflow: hidden;
+    height: 300px;
+
+    @include media-breakpoint-up(md) {
+        height: 600px;
+    }
+
 }
 
 .content {
     position: relative;
     text-align: center;
-    font-size: 26px;
+    font-size: rem-calc(26);
+
+
     color: #000;
 }
 
@@ -62,8 +70,13 @@
 
 .homepage-content {
     padding: 50px 0;
-    font-size: rem-calc(32);
+
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(32);
+    }
+
     font-weight: lighter;
+
 }
 
 .homepage-sec-content {

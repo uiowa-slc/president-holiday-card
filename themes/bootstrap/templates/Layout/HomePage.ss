@@ -28,7 +28,7 @@
                 <div class="homepage-content text-center">
                     <p>In this turbulent year we are overwhelmed with gratitude for our Hawkeye family.</p>
                     <p>Your perseverance, optimism, encouragement, and support have kept us moving forward.</p>
-                    <p class="hope py-5">Wishing you hope this holiday season.</p>
+                    <p class="hope py-md-5">Wishing you hope this holiday season.</p>
                     <p class="signature py-2 m-0">Mary and Bruce Harreld</p>
                 </div>
             </div>

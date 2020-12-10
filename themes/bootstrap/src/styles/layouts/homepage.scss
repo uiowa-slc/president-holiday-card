@@ -4,9 +4,67 @@
     }
 
     to {
-        transform: translateX(-50%);
+        background-position: -1243px 0;
+
+        @include media-breakpoint-up(md) {
+            background-position: -2486px 0;
+        }
+
+
+    }
+
+    // to {
+    //     transform: translateX(-50%);
+    // }
+}
+
+
+@-webkit-keyframes animatedBackground {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -1243px 0;
+
+        @include media-breakpoint-up(md) {
+            background-position: -2486px 0;
+        }
+
+
     }
 }
+
+
+.homepage-background-black {
+    background: black;
+}
+
+.homepage-background-static {
+    width: 100%;
+    background: url(../images/bg3.jpg) no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+}
+
+.homepage-background {
+    width: 200%;
+    background: url(../images/bg-5.jpg) repeat-x;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    //animation: bg-slide 10s linear infinite;
+
+    animation: animatedBackground 40s linear infinite;
+
+    background-size: contain;
+}
+
+
 
 .homepage-background-container {
     position: relative;
@@ -36,31 +94,6 @@
 
 
     color: #000;
-}
-
-.homepage-background-black {
-    background: black;
-}
-
-.homepage-background-static {
-    width: 100%;
-    background: url(../images/bg3.jpg) no-repeat;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background-size: cover;
-}
-
-.homepage-background {
-    width: 200%;
-    background: url(../images/bg-5.jpg) repeat-x;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    animation: bg-slide 100s linear infinite;
-    background-size: contain;
 }
 
 

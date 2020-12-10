@@ -61,6 +61,10 @@
 
     animation: animatedBackground 40s linear infinite;
 
+    @media (prefers-reduced-motion) {
+        animation: none;
+    }
+
     background-size: contain;
 }
 

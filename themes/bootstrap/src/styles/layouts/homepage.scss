@@ -57,9 +57,9 @@
     top: 0;
     bottom: 0;
     left: 0;
-    //animation: bg-slide 10s linear infinite;
+    animation: bg-slide 90s linear infinite;
 
-    animation: animatedBackground 40s linear infinite;
+    // animation: animatedBackground 40s linear infinite;
 
     @media (prefers-reduced-motion) {
         animation: none;

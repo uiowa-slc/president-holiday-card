@@ -3,3 +3,8 @@ Name: myproject
 ---
 SilverStripe\Core\Manifest\ModuleManifest:
   project: mysite
+SiteTree:
+  extensions:
+    - SilverStripe\StaticPublishQueue\Extension\Publishable\PublishableSiteTree
+SilverStripe\Assets\InterventionBackend:
+  flush_enabled: false

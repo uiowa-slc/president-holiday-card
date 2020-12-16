@@ -46,7 +46,7 @@
             <div class="col-lg-8">
                 <div class="homepage-sec-content push-up text-center">
 <p>Learn more about the history of the University of Iowa by visiting the Library Digital Archives:</p>
-<p><a href="" class="btn btn-clear my-2">digital.lib.uiowa.edu</a></p>
+<p><a href="https://digital.lib.uiowa.edu" class="btn btn-clear my-2" target="_blank" rel="noopener">digital.lib.uiowa.edu</a></p>
 
 <p>The Iowa Digital Library features more than a million digital objects created from the holdings of the University of Iowa Libraries and its campus partners. Included are illuminated manuscripts, historic maps, fine art, historic newspapers, scholarly works, and more.</p>
 

@@ -1,20 +1,10 @@
-<%--
-<div class="homepage-background-container">
-    <div class="homepage-background">
-
-
-
-    </div>
-</div> --%>
 <div class="homepage-video-background-container" style="background: black;">
-<%--     <div class="homepage-background-static">
 
-    </div> --%>
     <div class="container-xl py-5">
     <div class="row justify-content-center">
         <div class="col-lg-9">
             <div class="embed-responsive embed-responsive-16by9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/19ExwhxGmSY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4LDABBc3tTw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>

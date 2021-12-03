@@ -1,0 +1,16 @@
+body{
+    background-image: url('../images/bg2.jpg');
+    background-repeat: repeat;
+}
+.caption{
+    font-family: 'Zilla Slab';
+    text-transform: uppercase;
+    font-size: rem-calc(16);
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.caption-left{
+    text-align: left;
+}

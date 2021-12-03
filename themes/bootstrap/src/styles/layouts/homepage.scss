@@ -1,167 +1,19 @@
-@-webkit-keyframes bg-slide {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        background-position: -1243px 0;
-
-        @include media-breakpoint-up(md) {
-            background-position: -2486px 0;
-        }
-
-
-    }
-
-    // to {
-    //     transform: translateX(-50%);
-    // }
+.handwritten-note{
+    font-family: 'Journal';
+    font-size: rem-calc(52);
+    letter-spacing: 3px;
+    color: #565656;
+    line-height: 1.1;
 }
 
-
-@-webkit-keyframes animatedBackground {
-    0% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: -1243px 0;
-
-        @include media-breakpoint-up(md) {
-            background-position: -2486px 0;
-        }
-
-
-    }
-}
-
-
-.homepage-background-black {
-    background: black;
-}
-
-.homepage-background-static {
-    width: 100%;
-    background: url(../images/bg3.jpg) no-repeat;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background-size: cover;
-}
-
-.homepage-background {
-    width: 200%;
-    background: url(../images/bg-5.jpg) repeat-x;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    animation: bg-slide 90s linear infinite;
-
-    // animation: animatedBackground 40s linear infinite;
-
-    @media (prefers-reduced-motion) {
-        animation: none;
-    }
-
-    background-size: contain;
-}
-
-
-
-.homepage-background-container {
-    position: relative;
-    //height: 75vh;
-    width: 100%;
-    overflow: hidden;
-    height: 300px;
-
-    @include media-breakpoint-up(md) {
-        height: 600px;
-    }
-
-}
-
-.homepage-video-background-container {
-    position: relative;
-    //height: 75vh;
-    width: 100%;
-    overflow: hidden;
-
-}
-
-.content {
-    position: relative;
-    text-align: center;
-    font-size: rem-calc(26);
-
-
-    color: #000;
-}
-
-
-
-
-.homepage-iowa {
-    width: 200px;
-}
-
-
-
-.homepage-content-container {
-    background: $gold;
-}
-
-.homepage-content {
-
-    padding: 20px 0;
-
-    @include media-breakpoint-up(md) {
-        padding: 50px 0;
-        font-size: rem-calc(32);
-    }
-
+.signature-text{
+    font-size: rem-calc(24);
+    color: #565656;
     font-weight: lighter;
-
+    letter-spacing: 1px;
 }
 
-.homepage-sec-content {
-    font-weight: lighter;
-    font-size: rem-calc(18);
-    padding: 20px;
 
-    @include media-breakpoint-up(md) {
-        font-size: rem-calc(22);
-        padding: 40px;
-    }
-}
-
-.footer-content {
-    font-size: rem-calc(16);
-    font-weight: lighter;
-    font-style: italic;
-    padding: 10px 0;
-}
-
-.push-up {
-    margin-top: -100px;
-    background: white;
-}
-
-.hope {
-    color: white;
-    font-size: rem-calc(28);
-    font-family: 'Lora';
-    font-weight: 700;
-    font-style: italic;
-
-    @include media-breakpoint-up(md) {
-        font-size: rem-calc(36);
-    }
-}
-
-.signature {
-    font-style: italic;
-
+.border-right-green{
+    border-right: 2px solid #4a6b53;
 }

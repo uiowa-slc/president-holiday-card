@@ -12,5 +12,20 @@ body{
 }
 
 .caption-left{
-    text-align: left;
+
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+    }
+}
+.caption-right{
+
+    @include media-breakpoint-up(lg) {
+        text-align: right;
+    }
+}
+
+.caption-center{
+    @include media-breakpoint-up(lg) {
+        text-align: center;
+    }
 }

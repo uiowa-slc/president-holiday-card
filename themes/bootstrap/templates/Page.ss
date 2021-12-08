@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         $GlobalAnalytics
-        <% base_tag %>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         $MetaTags(false)
@@ -20,7 +20,7 @@
         $TypeKitScript
 
         <% require css("themes/bootstrap/dist/styles/main.css") %>
-
+        <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
     </head>
     <body class="{$ClassName}">
 

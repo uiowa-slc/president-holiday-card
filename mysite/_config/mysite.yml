@@ -8,3 +8,5 @@ SiteTree:
     - SilverStripe\StaticPublishQueue\Extension\Publishable\PublishableSiteTree
 SilverStripe\Assets\InterventionBackend:
   flush_enabled: false
+SilverStripe\View\SSViewer:
+  rewrite_hash_links: false

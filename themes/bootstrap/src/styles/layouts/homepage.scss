@@ -13,6 +13,9 @@
     letter-spacing: 1px;
 }
 
+.card-inner-text{
+    font-size: rem-calc(16);
+}
 
 .tap-toggle-text{
     position: absolute;
@@ -32,6 +35,10 @@
     perspective: 1000px;
     height: 100vh;
 
+    &:hover{
+        cursor: pointer;
+    }
+
 }
   /* flip the pane when has the backed */
 .flip-container.backed .flipper {
@@ -48,12 +55,16 @@
 /* hide back of pane during swap */
 .flipper .front, .flipper .back {
     backface-visibility: hidden;
-    position: absolute;
+    // position: absolute;
     top: 0;
     left: 0;
-    height: 1000px;
+    // height: 1000px;
     padding: 1.5em;
 
+}
+
+.flipper .front.loaded, .flipper .back.loaded{
+    position: absolute;
 }
 
 /* front pane, placed above back */
@@ -91,4 +102,67 @@
 .flip-icon-container-right{
     right: 0;
     bottom: 0;
+}
+.masonry-grid-sizer,
+.masonry-grid-item {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-up(sm) {
+        width: calc(50% - 10px);
+    }
+
+    @include media-breakpoint-up(md) {
+        width: calc(50% - 10px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        width: calc(33.3% - 13.33px);
+    }
+
+    @include media-breakpoint-up(xl) {
+        width: calc(25% - 15px);
+    }
+
+}
+
+.masonry-gutter-sizer {
+    width: 20px;
+}
+
+.masonry-grid-item {
+
+
+    // width:  100%;
+    // margin-top: 10px;
+    // margin-bottom: 10px;
+    // @include media-breakpoint-up(sm) {
+    //     width: 50%;
+    // }
+    // @include media-breakpoint-up(md) {
+    //     width: 50%;
+    // }
+    // @include media-breakpoint-up(lg) {
+    //     width: 33.3%;
+    // }
+    // @include media-breakpoint-up(xl) {
+    //     width: 25%;
+    // }
+}
+#progress {
+    background:#89c595;
+    height:100%;
+    width:0;
+    text-align:right;
+    font:bold 12px arial;
+    line-height:5px;
+    color:#444;
+    -webkit-transition:width 5s linear; /* For Safari 3.1 to 6.0 */
+    transition:width 5s linear;
+}
+#progressContainer {
+    width:90%;
+    margin:0 auto;
+    height:5px;
 }

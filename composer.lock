@@ -1406,12 +1406,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/bootstrap-project.git",
-                "reference": "6c624d90e4594af05994d0ed523d9a29621be451"
+                "reference": "684e2f936ae94ebd157659a0755a7cd95e5bd7ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/bootstrap-project/zipball/6c624d90e4594af05994d0ed523d9a29621be451",
-                "reference": "6c624d90e4594af05994d0ed523d9a29621be451",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/bootstrap-project/zipball/684e2f936ae94ebd157659a0755a7cd95e5bd7ba",
+                "reference": "684e2f936ae94ebd157659a0755a7cd95e5bd7ba",
                 "shasum": ""
             },
             "require": {
@@ -1442,7 +1442,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/bootstrap-project/tree/main",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/bootstrap-project/issues"
             },
-            "time": "2021-12-09T18:50:04+00:00"
+            "time": "2021-12-10T22:30:35+00:00"
         },
         {
             "name": "md/division-analytics",

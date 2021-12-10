@@ -1,51 +1,51 @@
-$(document).ready(function () {
-
-
-
-    if($( ".masonry-grid" ).length){
+$(document).ready(function() {
+    if ($(".masonry-grid").length) {
         $('.masonry-grid').isotope({
             "percentPosition": true,
             "layoutMode": "masonry",
             "itemSelector": ".masonry-grid-item",
-            "getSortData": { "name": ".name", "category": "[data-category]" },
+            "getSortData": {
+                "name": ".name",
+                "category": "[data-category]"
+            },
             "masonry": {
-                "gutter" : 20
+                "gutter": 20
             }
-         });
+        });
     }
-    $('.modal').each(function () {
+    $('.modal').each(function() {
         var modalId = "#".concat($(this).attr('id'));
 
         if (window.location.href.indexOf(modalId) !== -1) {
-          $(modalId).modal('show');
+            $(modalId).modal('show');
         }
 
-        $("#".concat($(this).attr('id'))).on('hide.bs.modal', function () {
-          history.replaceState(null, null, ' ');
+        $("#".concat($(this).attr('id'))).on('hide.bs.modal', function() {
+            history.replaceState(null, null, ' ');
         });
     });
-
-    $('.card-link').click(function () {
+    $('.card-link').click(function() {
         // Clear the hash in the URL
         location.hash = $(this).attr('href');
     });
-
 });
 
-document.addEventListener('lazyloaded', function(e){
-    if(e.target.id == "home-card"){
-        var timer = setTimeout(function(){ document.getElementById('flip-container').swapClasses('fronted,backed'); }, 5000);
+document.addEventListener('lazyloaded', function(e) {
+    if (e.target.id == "home-card") {
+        var timer = setTimeout(function() {
+            document.getElementById('flip-container').swapClasses('fronted,backed');
+        }, 5000);
         var progress = document.getElementById('progress');
         var front = document.getElementById('front');
         var back = document.getElementById('back');
-        var progressContainer = document.getElementById('progressContainer');
-        progress.style.width='100%';
+        var progressContainer = document.getElementById('progress-container');
+        progress.style.width = '100%';
 
         front.classList.add('loaded');
         back.classList.add('loaded');
 
-        HTMLElement.prototype.swapClasses = function (dosclasses) {
-            progressContainer.style.display='none';
+        HTMLElement.prototype.swapClasses = function(dosclasses) {
+            progressContainer.style.display = 'none';
             clearTimeout(timer);
             var clases = dosclasses.split(/\s*\,\s*/);
             var entra = clases[0];
@@ -60,29 +60,28 @@ document.addEventListener('lazyloaded', function(e){
             return this;
         };
     }
-
+    $frontWidth = $('.flipper .back').outerWidth();
+    $frontHeight = $('.flipper .back').outerHeight();
+    $('.flip-container').css('height', $frontWidth + 'px');
+    $('.flip-container').css('height', $frontHeight + 'px');
 });
 
 //resize grid when images are loaded
-$(document).on('lazyloaded', function(e){
-    if($( ".masonry-grid" ).length){
+$(document).on('lazyloaded', function(e) {
+    if ($(".masonry-grid").length) {
         $('.masonry-grid').isotope('layout');
     }
 });
 
-$frontWidth = $('.flipper .back').outerWidth();
-$frontHeight = $('.flipper .back').outerHeight();
-$('.flip-container').css('height', $frontWidth + 'px');
-$('.flip-container').css('height', $frontHeight + 'px');
 
 $(window).resize(function() {
-    if(window.innerWidth > 768){
-    $frontWidthResize = $('.flipper .back').outerWidth();
-    $frontHeightResize = $('.flipper .back').outerHeight();
-    $('.flip-container').css('height', $frontWidthResize + 'px');
-    $('.flip-container').css('height', $frontHeightResize + 'px');
+    if (window.innerWidth > 992) {
+        $frontWidthResize = $('.flipper .back').outerWidth();
+        $frontHeightResize = $('.flipper .back').outerHeight();
+        $('.flip-container').css('height', $frontWidthResize + 'px');
+        $('.flip-container').css('height', $frontHeightResize + 'px');
 
-    }else{
+    } else {
         $('.flip-container').css('height', '');
         $('.flip-container').css('height', '');
     }

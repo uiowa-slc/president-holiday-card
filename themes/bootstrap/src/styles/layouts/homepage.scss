@@ -1,9 +1,13 @@
 .handwritten-note{
     font-family: 'Journal';
-    font-size: rem-calc(52);
+    font-size: rem-calc(48);
     letter-spacing: 3px;
     color: #565656;
     line-height: 1.1;
+
+    @include media-breakpoint-up(lg) {
+        font-size: rem-calc(52);
+    }
 }
 
 .signature-text{
@@ -13,8 +17,39 @@
     letter-spacing: 1px;
 }
 
+.signatures{
+    width: 400px;
+    max-width: 100%;
+    display: inline-block;
+    @include media-breakpoint-up(lg) {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
 .card-inner-text{
     font-size: rem-calc(16);
+}
+
+.card-inner-text-alt{
+    font-size: rem-calc(24);
+    font-family: 'Zilla Slab', serif;
+    font-style: italic;
+    font-weight: light;
+    // letter-spacing: 2px;
+}
+
+.card-inner-text-small{
+    font-size: rem-calc(24);
+    font-family: 'Zilla Slab', serif;
+    font-style: italic;
+}
+
+.card-inner-text-link{
+    font-weight: bold;
+    font-family: 'Zilla Slab', serif;
+    color: #000;
 }
 
 .tap-toggle-text{
@@ -27,7 +62,7 @@
     border-right: 2px solid #89c595;
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
 /* based on David Walsh Flipper */
 .flip-container {
 
@@ -59,7 +94,7 @@
     top: 0;
     left: 0;
     // height: 1000px;
-    padding: 1.5em;
+    // padding: 1.5em;
 
 }
 
@@ -131,25 +166,6 @@
     width: 20px;
 }
 
-.masonry-grid-item {
-
-
-    // width:  100%;
-    // margin-top: 10px;
-    // margin-bottom: 10px;
-    // @include media-breakpoint-up(sm) {
-    //     width: 50%;
-    // }
-    // @include media-breakpoint-up(md) {
-    //     width: 50%;
-    // }
-    // @include media-breakpoint-up(lg) {
-    //     width: 33.3%;
-    // }
-    // @include media-breakpoint-up(xl) {
-    //     width: 25%;
-    // }
-}
 #progress {
     background:#89c595;
     height:100%;
@@ -161,8 +177,12 @@
     -webkit-transition:width 5s linear; /* For Safari 3.1 to 6.0 */
     transition:width 5s linear;
 }
-#progressContainer {
+#progress-container {
     width:90%;
     margin:0 auto;
     height:5px;
+    display: none;
+    @include media-breakpoint-up(lg) {
+        display: block;
+    }
 }

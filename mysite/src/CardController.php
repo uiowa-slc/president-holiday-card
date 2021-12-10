@@ -2,8 +2,6 @@
 
 namespace {
 
-
-
     class CardController extends \SilverStripe\Control\Controller
     {
         private static $url_handlers = [

@@ -30,17 +30,21 @@ namespace {
 		}
 
 
-        public function Cards($numCards = 20){
+        // public function Cards($numCards = 20){
 
-            $list = new ArrayList();
+        //     $list = new ArrayList();
 
-            for($i = 0; $i <= $numCards; $i++){
-                $card = new DataObject();
-                $list->push($card);
-            }
+        //     for($i = 0; $i <= $numCards; $i++){
+        //         $card = new DataObject();
+        //         $list->push($card);
+        //     }
 
-            return $list;
+        //     return $list;
 
+        // }
+
+        public function Cards(){
+            return Card::get();
         }
 
 	}

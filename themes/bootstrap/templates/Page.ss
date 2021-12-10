@@ -8,7 +8,7 @@
         $MetaTags(false)
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <% if $URLSegment = 'home' %>
-          <title>$SiteConfig.Title | The University of Iowa</title>
+          <title>Wishing you warmth and holiday cheer as we reflect on the past, present, and future at Iowa, celebrating 175 years. | The University of Iowa</title>
         <% else %>
           <title>$Title - $SiteConfig.Title | The University of Iowa</title>
         <% end_if %>
@@ -20,17 +20,11 @@
         $TypeKitScript
 
         <% require css("themes/bootstrap/dist/styles/main.css") %>
-        <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
     </head>
     <body class="{$ClassName}">
 
     <a class="sr-only sr-only-focusable" href="{$Link}#content">Skip to main content</a>
 
-<%--     <% if $SiteConfig.EnableUidsIowaBar %>
-        <% include IowaBar %>
-    <% else %>
-        <% include UiowaBar %>
-    <% end_if %> --%>
     $Layout
 
 

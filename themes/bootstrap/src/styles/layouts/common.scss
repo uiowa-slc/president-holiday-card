@@ -1,6 +1,6 @@
 body{
     background-color: rgb(241,225,191);
-    background-image: url('../images/bg2.jpg');
+    background-image: url('../images/bg3.jpg');
     background-repeat: repeat;
     scroll-behavior: smooth;
 }
@@ -30,4 +30,8 @@ body{
     @include media-breakpoint-up(lg) {
         text-align: center;
     }
+}
+
+.container-xl{
+    max-width: 1280px;
 }

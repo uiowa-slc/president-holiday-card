@@ -5,5 +5,4 @@ gorriecoe\Webfonts\View\Webfonts:
   GoogleFonts:
     - 'Roboto Condensed:regular,bold'
     - 'Roboto:light,regular,bold,italic,lightitalic'
-    - 'Zilla Slab'
-    - 'Lora:bolditalic'
+    - 'Zilla Slab:light,regular,semibold,bold,italic,lightitalic'

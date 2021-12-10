@@ -29,7 +29,9 @@
 }
 
 .card-inner-text{
-    font-size: rem-calc(16);
+    font-size: rem-calc(18);
+    font-family: 'Roboto Condensed', sans;
+    line-height: 1.1;
 }
 
 .card-inner-text-alt{
@@ -37,19 +39,21 @@
     font-family: 'Zilla Slab', serif;
     font-style: italic;
     font-weight: light;
-    // letter-spacing: 2px;
+    line-height: 1.1;
 }
 
 .card-inner-text-small{
     font-size: rem-calc(24);
     font-family: 'Zilla Slab', serif;
     font-style: italic;
+    line-height: 1.1;
 }
 
 .card-inner-text-link{
     font-weight: bold;
     font-family: 'Zilla Slab', serif;
     color: #000;
+    line-height: 1.1;
 }
 
 .tap-toggle-text{
@@ -62,11 +66,33 @@
     border-right: 2px solid #89c595;
 }
 
+.space-for-messages{
+    max-width: 400px;
+    display: inline-block;
+
+    @include media-breakpoint-up(lg) {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
+
+.stamp-area{
+    max-width: 400px;
+    display: inline-block;
+
+    @include media-breakpoint-up(lg) {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
+
 @include media-breakpoint-up(lg) {
 /* based on David Walsh Flipper */
 .flip-container {
-
-
     perspective: 1000px;
     height: 100vh;
 

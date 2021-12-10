@@ -59,22 +59,13 @@ document.addEventListener('lazyloaded', function(e) {
             }
             return this;
         };
+        matchFrontBackHeights();
     }
-    $frontWidth = $('.flipper .back').outerWidth();
-    $frontHeight = $('.flipper .back').outerHeight();
-    $('.flip-container').css('height', $frontWidth + 'px');
-    $('.flip-container').css('height', $frontHeight + 'px');
+
+
 });
 
-//resize grid when images are loaded
-$(document).on('lazyloaded', function(e) {
-    if ($(".masonry-grid").length) {
-        $('.masonry-grid').isotope('layout');
-    }
-});
-
-
-$(window).resize(function() {
+function matchFrontBackHeights(){
     if (window.innerWidth > 992) {
         $frontWidthResize = $('.flipper .back').outerWidth();
         $frontHeightResize = $('.flipper .back').outerHeight();
@@ -85,5 +76,16 @@ $(window).resize(function() {
         $('.flip-container').css('height', '');
         $('.flip-container').css('height', '');
     }
+}
 
+//resize grid when images are loaded
+$(document).on('lazyloaded', function(e) {
+    if ($(".masonry-grid").length) {
+        $('.masonry-grid').isotope('layout');
+    }
+});
+
+
+$(window).resize(function() {
+    matchFrontBackHeights();
 });

@@ -47,7 +47,7 @@
                         <p class="signature-text">Barbara J. Wilson and John C. Lammers</p>
                     </div>
                     <div class="col-lg-6 text-center px-5 position-relative">
-                        <img loading="lazy" src="{$ThemeDir}/dist/images/stamp-area3.png" alt="Graphic of a stamp and the text 'Place stamp here'" role="presentation" class="stamp-area" />
+                        <img loading="lazy" src="{$ThemeDir}/dist/images/stamp-area4.png" alt="Graphic of a stamp and the text 'Place stamp here'" role="presentation" class="stamp-area" />
                         <p class="mt-4 card-inner-text">Snowy west facade of Old Capitol and terrace, the University of Iowa,
             December 1953. University of Iowa Libraries Digital Archives.</p>
 
@@ -55,7 +55,7 @@
 
                         <p class="card-inner-text-alt mt-5">Celebrate the season! <br /> Share a digital vintage Iowa greeting:</p>
                         <p><a href="#send" class="btn btn-outline-dark">Browse greetings <i class="far fa-images"></i></a></p>
-                        <p class="card-inner-text-small mt-5 mb-0">Visit the University of Iowa Digital Library Archives to view additional historic images:</p>
+                        <p class="card-inner-text-small mt-5 mb-2">While not every individual's experience is recounted in these images, we hope you'll visit the digital archive site to find photographs that speak to your unique experience on campus: </p>
                         <p><a href="https://digital.lib.uiowa.edu" target="_blank" rel="noopener" class="card-inner-text-link">digital.lib.uiowa.edu</a></p>
                         <div class="flip-icon-container d-none d-lg-block flip-icon-container-right"><i class="fas fa-reply"></i></div>
                     </div>
@@ -84,7 +84,7 @@
 
 
     <div class="send text-center" id="send">
-        <h1 class="mt-4 text-center">Send your own vintage Iowa greeting:</h1>
+        <h1 class="mt-4 text-center send-heading">Send your own vintage Iowa greeting:</h1>
         <div class="masonry-grid">
             <% loop $Cards %>
             <div class="masonry-grid-item">
@@ -100,7 +100,6 @@
             <div class="col-lg-7 mb-4">
 
                 <div class="footer-content text-center">
-                    <p>While not every individual's experience is recounted in these images, we hope you'll visit the digital archive site to find something that speaks to their own time on campus – whether during this past year, or generations ago.</p>
                     <a href="https://www.uiowa.edu" target="_blank" rel="noopener">
                         <svg xmlns="http://www.w3.org/2000/svg" class="footer-logo-icon" aria-labelledby="logo-footer" role="img" viewBox="0 0 330 75">
                         <path class="st10" d="M258.7,16.3l-1.9-3.2l12.2-9h3.2v29.6c0,0.5,0,1,0,1.4c0,0.5,0,0.9,0,1.3c0,0.4,0,0.8-0.1,1.2
@@ -162,7 +161,7 @@
 
 <% loop $Cards %>
 <div class="modal fade" id="card{$Pos}" tabindex="-1" aria-labelledby="card{$Pos}Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog $Image.Orientation <% if $Image.Orientation == "1" %>modal-lg<% else %>modal-xl<% end_if %>">
     <div class="modal-content">
       <div class="modal-body">
         <p class="text-right">

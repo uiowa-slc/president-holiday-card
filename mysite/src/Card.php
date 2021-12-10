@@ -6,7 +6,7 @@ namespace {
     use SilverStripe\Forms\FieldList;
     use SilverStripe\Forms\TextField;
     use SilverStripe\AssetAdmin\Forms\UploadField;
-
+    use SilverStripe\Control\Director;
     class Card extends DataObject
     {
         private static $db = [
@@ -31,7 +31,8 @@ namespace {
             'Image'
         ];
 
-        public function getCMSFields(){
+        public function getCMSFields()
+        {
             $fields = new FieldList();
 
             $fields->push(new TextField('Title'));
@@ -39,6 +40,17 @@ namespace {
             $fields->push(new UploadField('Image'));
 
             return $fields;
+        }
+
+        public function getLink(){
+            $protocol = Director::protocol();
+            $base = Director::absoluteBaseURL();
+            $id = $this->ID;
+            $link = $base.'#'.$id;
+
+            return $link;
+
+
         }
 
         public function getGridThumbnail()

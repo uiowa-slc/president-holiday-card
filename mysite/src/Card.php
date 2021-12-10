@@ -42,12 +42,14 @@ namespace {
             return $fields;
         }
 
-        public function getLink(){
+        public function Link($encode = false){
             $protocol = Director::protocol();
             $base = Director::absoluteBaseURL();
             $id = $this->ID;
             $link = $base.'#'.$id;
-
+            if($encode == true){
+                $link = urlencode($link);
+            }
             return $link;
 
 

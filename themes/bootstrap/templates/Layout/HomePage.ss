@@ -174,7 +174,7 @@
        <div class="modal-share py-2">
             <p class="text-center">Share:
                 <a class="btn btn-primary social-media-btn" href="https://www.facebook.com/sharer/sharer.php?u={$Link}"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-primary social-media-btn" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-primary social-media-btn" href="https://twitter.com/intent/tweet?url={$Link(true)}"><i class="fab fa-twitter"></i></a>
                 <a class="btn btn-primary social-media-btn" href="{$Image.URL}"><i class="fas fa-download"></i> Download image</a>
 
             </p>

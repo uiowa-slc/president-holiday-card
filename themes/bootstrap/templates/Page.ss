@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         $GlobalAnalytics
-
+        <% base_tag %>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         $MetaTags(false)

@@ -46,7 +46,7 @@ namespace {
             $protocol = Director::protocol();
             $base = Director::absoluteBaseURL();
             $id = $this->ID;
-            $link = $base.'#'.$id;
+            $link = $base.'#card'.$id;
             if($encode == true){
                 $link = urlencode($link);
             }

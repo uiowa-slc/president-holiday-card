@@ -88,7 +88,7 @@
         <div class="masonry-grid">
             <% loop $Cards %>
             <div class="masonry-grid-item">
-                <a href="#card{$Pos}" data-toggle="modal" data-target="#card{$Pos}" class="d-block card-link"><img class="lazyload d-block w-100 home-card" data-src="{$Image.ScaleWidth(300).URL}" data-aspectratio="$Image.Ratio" /></a>
+                <a href="#card{$ID}" data-toggle="modal" data-target="#card{$ID}" class="d-block card-link"><img class="lazyload d-block w-100 home-card" data-src="{$Image.ScaleWidth(300).URL}" data-aspectratio="$Image.Ratio" /></a>
             </div>
 
             <% end_loop %>
@@ -160,7 +160,7 @@
 </div>
 
 <% loop $Cards %>
-<div class="modal fade" id="card{$Pos}" tabindex="-1" aria-labelledby="card{$Pos}Label" aria-hidden="true">
+<div class="modal fade" id="card{$ID}" tabindex="-1" aria-labelledby="#card{$ID}" aria-hidden="true">
   <div class="modal-dialog $Image.Orientation <% if $Image.Orientation == "1" %>modal-lg<% else %>modal-xl<% end_if %>">
     <div class="modal-content">
       <div class="modal-body">
@@ -178,8 +178,7 @@
                 <a class="btn btn-primary social-media-btn" href="{$Image.URL}"><i class="fas fa-download"></i> Download image</a>
 
             </p>
-            <div class="text-center"><label for="card{$Pos}url">Link:</label></div>
-            <div><input id="card{$Pos}url" type="text" class="w-100 text-center bg-gray" value="{$Link}" readonly></input></div>
+            <p class="text-center">Link: <a href="{$Link}">{$Link}</a> </p>
        </div>
       </div>
 

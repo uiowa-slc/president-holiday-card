@@ -1,5 +1,5 @@
 <div class="modal fade" id="card{$ID}" tabindex="-1" aria-labelledby="#card{$ID}" aria-hidden="true">
-  <div class="modal-dialog $Image.Orientation <% if $Image.Orientation == "1" %>modal-lg<% else %>modal-xl<% end_if %>">
+  <div class="modal-dialog $Image.Orientation <% if $Image.Orientation == "1" %>modal-md<% else %>modal-lg<% end_if %>">
     <div class="modal-content">
 <%--       <div class="modal-header bg-white">
         <h3 class="modal-title">$Title</h3>

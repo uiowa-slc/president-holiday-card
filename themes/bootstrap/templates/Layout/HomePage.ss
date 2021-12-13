@@ -25,7 +25,6 @@
 
                         </div>
                         <div class="col-lg-4 d-none d-lg-block">
-                            <!-- <p class="caption caption-center">Tap or click the postcard above to flip it over</p> -->
                             <p class="text-center mt-3"><a href="#" class="btn btn-outline-dark"><i class="fas fa-share"></i> Flip postcard</a></p>
 
                         </div>
@@ -34,7 +33,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <h1 class="mt-4 text-center d-none d-lg-block">Send your own vintage Iowa greeting:</h1> -->
             </div>
 
             <div class="back py-lg-5" id="back">
@@ -72,7 +70,6 @@
 
                     </div>
                     <div class="col-lg-4 d-none d-lg-block">
-                        <!-- <p class="caption caption-center">Tap or click the postcard above to flip it over</p> -->
                         <p class="text-center"><a href="#" class="btn btn-lg btn-outline-dark">Flip postcard <i class="fas fa-reply"></i></a></p>
 
                     </div>
@@ -81,8 +78,6 @@
                     </div>
                 </div>
             </div>
-
-                <!-- <h1 class="mt-4 text-center">Send your own vintage Iowa greeting:</h1> -->
             </div>
         </div>
 
@@ -109,7 +104,4 @@
 <% loop $Cards %>
     <% include CardModal %>
 <% end_loop %>
-<script>
 
-
-</script>

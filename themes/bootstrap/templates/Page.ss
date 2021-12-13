@@ -9,8 +9,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <% if $URLSegment = 'home' %>
           <title>Wishing you warmth and holiday cheer as we reflect on the past, present, and future at Iowa, celebrating 175 years. | The University of Iowa</title>
+        <% else_if $Title %>
+            <title>$Title - $SiteConfig.Title | The University of Iowa</title>
         <% else %>
-          <title>$Title - $SiteConfig.Title | The University of Iowa</title>
+            <title>Vintage Iowa Greeting | The University of Iowa</title>
         <% end_if %>
         $OpenGraph
         <!-- Disable tap highlight on IE -->

@@ -64,6 +64,15 @@
     line-height: 1.1;
 }
 
+.home-card-credit{
+    font-weight: 400;
+    font-family: 'Zilla Slab', serif;
+    color: #565756;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: rem-calc(17);
+}
+
 .tap-toggle-text{
     position: absolute;
     top: 50px;
@@ -184,7 +193,7 @@
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-
+    // border: 10px solid #fff;
     @include media-breakpoint-up(sm) {
         width: calc(50% - 10px);
     }

@@ -3,11 +3,16 @@ html{
 }
 
 body{
+    background: #fff;
+
+}
+
+.card-body{
     background-color: rgb(241,225,191);
     background-image: url('../images/bg4.jpg');
     background-repeat: repeat;
-
 }
+
 .caption{
     font-family: 'Zilla Slab';
     text-transform: uppercase;
@@ -48,4 +53,8 @@ a{
 .btn{
     font-family: 'Zilla Slab';
     font-weight: 600;
+}
+
+.card-single-img{
+    border: 10px solid #fff;
 }

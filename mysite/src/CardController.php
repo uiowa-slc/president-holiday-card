@@ -1,6 +1,7 @@
 <?php
 
 namespace {
+    use SilverStripe\Control\Director;
 
     class CardController extends \SilverStripe\Control\Controller
     {
@@ -13,12 +14,23 @@ namespace {
         ];
 
         public function index(){
-            $this->redirect('/');
+            $this->redirect(Director::absoluteBaseURL());
         }
 
         public function show($request)
         {
-            print_r($this->getRequest()->param('ID'));
+            // print_r($this->getRequest()->param('ID'));
+
+            $card = Card::get()->filter(array('ID' => $this->getRequest()->param('ID')))->First();
+
+            if($card){
+                return $card->RenderWith(array('Card', 'Page'));
+            }else{
+                return $this->httpError('404');
+            }
         }
+
+
+
     }
 }

@@ -7,6 +7,7 @@ namespace {
     use SilverStripe\Forms\TextField;
     use SilverStripe\AssetAdmin\Forms\UploadField;
     use SilverStripe\Control\Director;
+
     class Card extends DataObject
     {
         private static $db = [
@@ -42,11 +43,22 @@ namespace {
             return $fields;
         }
 
+        // public function Link($encode = false){
+        //     $protocol = Director::protocol();
+        //     $base = Director::absoluteBaseURL();
+        //     $id = $this->ID;
+        //     $link = $base.'#card'.$id;
+        //     if($encode == true){
+        //         $link = urlencode($link);
+        //     }
+        //     return $link;
+
+
+        // }
         public function Link($encode = false){
-            $protocol = Director::protocol();
             $base = Director::absoluteBaseURL();
             $id = $this->ID;
-            $link = $base.'#card'.$id;
+            $link = $base.'cards/show/'.$id;
             if($encode == true){
                 $link = urlencode($link);
             }
@@ -54,7 +66,6 @@ namespace {
 
 
         }
-
         public function getGridThumbnail()
         {
             if($this->Image()->exists()) {
@@ -62,6 +73,9 @@ namespace {
             }
 
             return "(no image)";
+        }
+        public function Cards(){
+            return Card::get();
         }
     }
 }

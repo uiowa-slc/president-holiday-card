@@ -35,8 +35,8 @@
                 </div>
             </div>
 
-            <div class="back py-lg-5" id="back">
-                <div class="py-lg-5">
+            <div class="back py-lg-4" id="back">
+                <div class="py-lg-4">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 text-center border-right-green p-lg-5 pt-3">
                         <img loading="lazy" src="{$ThemeDir}/dist/images/space-for-messages.png"  alt="" role="presentation" class=" space-for-messages" />
@@ -64,7 +64,7 @@
                         <p class="text-center mt-4 home-card-credit">Cover art designed by Natalie David - Student Life Communications - Junior - B.F.A. Graphic Design</p>
                     </div>
                 </div>
-                <div class="row pt-4">
+                <div class="row mt-4">
                     <div class="col-lg-4">
 
 

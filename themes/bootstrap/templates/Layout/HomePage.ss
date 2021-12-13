@@ -169,7 +169,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
         </p>
-       <img data-src="$Image.ScaleWidth(900).URL" class="d-block w-100 lazyload" data-aspectratio="$Image.Ratio" />
+       <img data-src="$Image.ScaleWidth(900).URL" alt="$AltText" class="d-block w-100 lazyload" data-aspectratio="$Image.Ratio" />
 
        <div class="modal-share py-2">
             <p class="text-center">Share:

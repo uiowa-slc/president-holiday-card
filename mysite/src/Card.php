@@ -7,6 +7,8 @@ namespace {
     use SilverStripe\Forms\TextField;
     use SilverStripe\AssetAdmin\Forms\UploadField;
     use SilverStripe\Control\Director;
+    use SilverStripe\Forms\LiteralField;
+    use SilverStripe\Forms\LabelField;
 
     class Card extends DataObject
     {
@@ -39,6 +41,8 @@ namespace {
             $fields->push(new TextField('Title'));
             $fields->push(new TextField('AltText'));
             $fields->push(new UploadField('Image'));
+            $fields->push(new LabelField('ImagePreviewLabel', 'Preview:'));
+            $fields->push(new LiteralField('ImagePreview', '<div><img src="'.$this->Image()->URL.'" class="img-fluid w-50"></div>'));
 
             return $fields;
         }

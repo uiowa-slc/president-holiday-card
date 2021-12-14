@@ -6,12 +6,11 @@
     line-height: 1.1;
 
     @include media-breakpoint-up(lg) {
-        font-size: rem-calc(36);
+        font-size: rem-calc(42);
     }
 
     @include media-breakpoint-up(xl) {
-
-        font-size: rem-calc(52);
+        font-size: rem-calc(48);
     }
 }
 
@@ -102,7 +101,8 @@
     color: #565756;
     text-transform: uppercase;
     line-height: 1;
-    font-size: rem-calc(17);
+    font-size: rem-calc(14);
+    color: #4c865e;
 }
 
 .tap-toggle-text{
@@ -113,7 +113,7 @@
 
 .border-right-green{
     @include media-breakpoint-up(lg) {
-        border-right: 2px solid #89c595;
+        border-right: 2px solid #5c9d71;
     }
 }
 
@@ -207,7 +207,7 @@
     font-size: 48px;
     opacity: 0.8;
     i{
-        color: #5c9d71;
+        color: #4c865e;
     }
 }
 

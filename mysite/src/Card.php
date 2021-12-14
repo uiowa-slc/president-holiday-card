@@ -63,9 +63,12 @@ namespace {
                 $link = urlencode($link);
             }
             return $link;
-
-
         }
+
+        public function getAbsoluteLink(){
+            return $this->Link();
+        }
+
         public function getGridThumbnail()
         {
             if($this->Image()->exists()) {

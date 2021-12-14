@@ -39,13 +39,13 @@
                 <div class="py-lg-4">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 text-center border-right-green p-lg-5 pt-3">
-                        <img loading="lazy" src="{$ThemeDir}/dist/images/space-for-messages.png"  alt="" role="presentation" class=" space-for-messages" />
+                        <img loading="lazy" src="{$ThemeDir}/dist/images/space-for-messages.png"  alt="" role="presentation" class=" space-for-messages d-inline-block d-xl-block w-100" />
                         <p class="handwritten-note my-5">Wishing you warmth and holiday cheer as we reflect on the past, present, and future at Iowa, celebrating 175 years.</p>
                         <p><img loading="lazy" src="{$ThemeDir}/dist/images/signatures.png" alt="Barbra J. Wilson and John C. Lammers' signatures" class="signatures" /></p>
                         <p class="signature-text">Barbara J. Wilson and John C. Lammers</p>
                     </div>
                     <div class="col-lg-6 text-center px-5 position-relative">
-                        <img loading="lazy" src="{$ThemeDir}/dist/images/stamp-area4.png" alt="Graphic of a stamp and the text 'Place stamp here'" role="presentation" class="stamp-area" />
+                        <img loading="lazy" src="{$ThemeDir}/dist/images/stamp-area4.png" alt="Graphic of a stamp and the text 'Place stamp here'" role="presentation" class="stamp-area d-inline-block d-xl-block w-100" />
                         <p class="mt-4 card-inner-text">Snowy west facade of Old Capitol and terrace, the University of Iowa,
             December 1953. University of Iowa Libraries Digital Archives.</p>
 

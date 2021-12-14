@@ -10,7 +10,7 @@
         <% if $URLSegment = 'home' %>
           <title>Wishing you warmth and holiday cheer as we reflect on the past, present, and future at Iowa, celebrating 175 years. | The University of Iowa</title>
         <% else_if $Title %>
-            <title>$Title - $SiteConfig.Title | The University of Iowa</title>
+            <title>$Title | The University of Iowa</title>
         <% else %>
             <title>Vintage Iowa Greeting | The University of Iowa</title>
         <% end_if %>

@@ -1,30 +1,36 @@
 .handwritten-note{
     font-family: 'Journal';
-    font-size: rem-calc(48);
+    // font-size: rem-calc(48);
+    font-size: 48px;
     letter-spacing: 3px;
     color: #565656;
     line-height: 1.1;
 
     @include media-breakpoint-up(lg) {
-        font-size: rem-calc(42);
+        // font-size: rem-calc(42);
+        font-size: 42px;
     }
 
     @include media-breakpoint-up(xl) {
-        font-size: rem-calc(48);
+        // font-size: rem-calc(48);
+        font-size: 48px;
     }
 }
 
 .signature-text{
-    font-size: rem-calc(24);
+    // font-size: rem-calc(24);
+    font-size: 24px;
     color: #565656;
     font-weight: lighter;
     letter-spacing: 1px;
 
     @include media-breakpoint-up(lg) {
-        font-size: rem-calc(18);
+        font-size: 18px;
+        // font-size: rem-calc(18);
     }
     @include media-breakpoint-up(xl) {
-        font-size: rem-calc(24);
+        font-size: 24px;
+        // font-size: rem-calc(24);
     }
 
 }
@@ -47,52 +53,60 @@
 }
 
 .card-inner-text{
-    font-size: rem-calc(18);
+    // font-size: rem-calc(18);
     font-family: 'Roboto Condensed', sans;
     line-height: 1.1;
     color: #565756;
+    font-size: 18px;
 
     @include media-breakpoint-up(lg) {
-        font-size: rem-calc(16);
+        // font-size: rem-calc(16);
+        font-size: 16px;
     }
 
     @include media-breakpoint-up(xl) {
-
-        font-size: rem-calc(18);
+        // font-size: rem-calc(18);
+        font-size: 18px;
     }
 
 }
 
 .card-inner-text-alt{
-    font-size: rem-calc(24);
+    // font-size: rem-calc(24);
+    font-size: 24px;
     font-family: 'Zilla Slab', serif;
     font-style: italic;
     font-weight: light;
     line-height: 1.2;
     letter-spacing: 1px;
     @include media-breakpoint-up(lg) {
-        font-size: rem-calc(20);
+        // font-size: rem-calc(20);
+        font-size: 20px;
     }
 
     @include media-breakpoint-up(xl) {
 
-        font-size: rem-calc(24);
+        // font-size: rem-calc(24);
+        font-size: 24px;
     }
 }
 
 .card-inner-text-small{
-    font-size: rem-calc(20);
+    // font-size: rem-calc(20);
+    font-size: 20px;
     font-family: 'Zilla Slab', serif;
     font-style: italic;
     line-height: 1.1;
 
     @include media-breakpoint-up(lg) {
-        font-size: rem-calc(16);
+        // font-size: rem-calc(16);
+        font-size: 16px;
     }
 
     @include media-breakpoint-up(xl) {
 
-        font-size: rem-calc(20);
+        // font-size: rem-calc(20);
+        font-size: 20px;
     }
 }
 
@@ -109,7 +123,8 @@
     color: #565756;
     text-transform: uppercase;
     line-height: 1;
-    font-size: rem-calc(14);
+    // font-size: rem-calc(14);
+    font-size: 14px;
     color: #4c865e;
 }
 

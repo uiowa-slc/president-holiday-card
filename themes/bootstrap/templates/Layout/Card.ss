@@ -4,7 +4,7 @@
         <div class="row pt-3 justify-content-center">
             <div class="col-lg-8">
 
-                    <img src="$Image.URL" alt="$AltText" class="card-single-img d-block w-100" />
+                    <img src="$Image.URL" alt="$AltText.ATT" class="card-single-img d-block w-100" />
                     <p class="text-center py-5">
                     <a href="https://www.uiowa.edu" target="_blank" rel="noopener">
                         <svg xmlns="http://www.w3.org/2000/svg" class="footer-logo-icon d-inline-block" aria-labelledby="logo-footer" role="img" viewBox="0 0 330 75">

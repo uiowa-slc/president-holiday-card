@@ -19,6 +19,14 @@
     color: #565656;
     font-weight: lighter;
     letter-spacing: 1px;
+
+    @include media-breakpoint-up(lg) {
+        font-size: rem-calc(18);
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: rem-calc(24);
+    }
+
 }
 
 .signatures{

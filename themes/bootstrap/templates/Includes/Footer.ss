@@ -4,7 +4,7 @@
 
                 <div class="footer-content text-center">
                     <a href="https://www.uiowa.edu" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="footer-logo-icon" aria-labelledby="logo-footer" role="img" viewBox="0 0 330 75">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="footer-logo-icon mb-3" aria-labelledby="logo-footer" role="img" viewBox="0 0 330 75">
                         <path class="st10" d="M258.7,16.3l-1.9-3.2l12.2-9h3.2v29.6c0,0.5,0,1,0,1.4c0,0.5,0,0.9,0,1.3c0,0.4,0,0.8-0.1,1.2
                         s-0.1,0.6-0.1,0.9l4-0.2v4.1h-15.4V39c0.6,0,1.1-0.1,1.6-0.2c0.5-0.1,0.9-0.3,1.2-0.6c0.3-0.3,0.6-0.8,0.7-1.4
                         c0.2-0.6,0.3-1.5,0.3-2.5V12.9L258.7,16.3z"></path>

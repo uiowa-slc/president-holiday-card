@@ -13,28 +13,6 @@ if ($(".masonry-grid").length) {
     });
 }
 
-
-$(document).ready(function() {
-    matchFrontBackHeights();
-    $('.modal').each(function() {
-        var modalId = "#".concat($(this).attr('id'));
-
-        if (window.location.href.indexOf(modalId) !== -1) {
-            $(modalId).modal('show');
-        }
-
-        $("#".concat($(this).attr('id'))).on('hide.bs.modal', function() {
-            history.replaceState(null, null, ' ');
-        });
-    });
-    $('.card-link').click(function() {
-        // Clear the hash in the URL
-        location.hash = $(this).attr('href');
-    });
-
-
-});
-
 document.addEventListener('lazyloaded', function(e) {
     if (e.target.id == "home-card") {
         var timer = setTimeout(function() {
@@ -90,6 +68,9 @@ $(document).on('lazyloaded', function(e) {
     }
 });
 
+$(document).ready(function() {
+    matchFrontBackHeights();
+});
 
 $(window).resize(function() {
     matchFrontBackHeights();

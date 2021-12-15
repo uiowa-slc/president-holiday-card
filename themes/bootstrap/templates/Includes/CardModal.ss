@@ -12,12 +12,12 @@
 
        <div class="modal-share pt-3">
             <p class="text-center">Share:
-                <a class="btn btn-primary social-media-btn" href="https://www.facebook.com/sharer/sharer.php?u={$Link}"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-primary social-media-btn" href="https://twitter.com/intent/tweet?url={$Link}"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-primary social-media-btn" href="https://www.facebook.com/sharer/sharer.php?u={$AbsoluteLink}"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-primary social-media-btn" href="https://twitter.com/intent/tweet?url={$AbsoluteLink}"><i class="fab fa-twitter"></i></a>
                 <a class="btn btn-primary social-media-btn" href="{$Image.URL}"><i class="fas fa-download"></i> Download image</a>
 
             </p>
-            <p class="text-center mb-0"><i class="fas fa-link"></i> <a href="{$Link}" target="_blank" rel="noopener">{$Link}</a> </p>
+            <p class="text-center mb-0"><i class="fas fa-link"></i> <a href="{$AbsoluteLink}" target="_blank" rel="noopener">{$AbsoluteLink}</a> </p>
        </div>
       </div>
       <div class="modal-footer">

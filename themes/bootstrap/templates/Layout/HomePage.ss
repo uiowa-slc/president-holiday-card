@@ -86,7 +86,6 @@
 </div>
 <div class="container-xl">
     <% include CardGallery %>
-
     <% include Footer %>
 
 </div>

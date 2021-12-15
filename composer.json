@@ -5,7 +5,7 @@
     "require": {
         "php": ">=7.2.0",
         "md/bootstrap-project": "dev-main",
-        "silverstripe/staticpublishqueue": "*",
+        "silverstripe/staticpublishqueue": "dev-master",
         "colymba/gridfield-bulk-editing-tools": "^3.0"
     },
     "require-dev": {
@@ -65,6 +65,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-maintenance-mode"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-staticpublishqueue"
         }
     ]
 }

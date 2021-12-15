@@ -6,6 +6,7 @@
 /_resources/
 /public/_resources/
 /public/assets/
+/public/cache
 /node_modules
 /.tmp
 .DS_Store

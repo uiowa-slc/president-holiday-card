@@ -52,7 +52,7 @@
                       <image src="/themes/custom/uids_base/uids/assets/images/uiowa-primary.png">
                         <title id="logo-footer">University of Iowa 175th Anniversary</title>
                       </image>
-                        </svg>
+                    </svg>
                     </a>
                     <p class="mt-3">Card design by <a href="https://slc.studentlife.uiowa.edu/" target="_blank" rel="noopener">Student Life Communications</a><br />Photo credit: <a href="https://digital.lib.uiowa.edu">University of Iowa Libraries Digital Archives</a></p>
                     </div>

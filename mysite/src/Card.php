@@ -60,17 +60,19 @@ namespace {
 
         // }
         public function Link($encode = false){
-            $base = Director::absoluteBaseURL();
+            $base = Director::baseURL();
             $id = $this->ID;
             $link = $base.'cards/show/'.$id;
-            if($encode == true){
-                $link = urlencode($link);
-            }
+
             return $link;
         }
 
-        public function getAbsoluteLink(){
-            return $this->Link();
+        public function AbsoluteLink(){
+            $base = Director::absoluteBaseURL();
+            $id = $this->ID;
+            $link = $base.'cards/show/'.$id;
+
+            return $link;
         }
 
         public function getGridThumbnail()

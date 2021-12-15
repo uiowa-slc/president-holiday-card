@@ -9,6 +9,8 @@ namespace {
     use SilverStripe\Assets\Image;
     use SilverStripe\AssetAdmin\Forms\UploadField;
     use SilverStripe\Forms\GridField\GridFieldPaginator;
+    use SilverStripe\Control\Director;
+
     class HomePage extends Page
     {
         private static $db = [
@@ -41,6 +43,26 @@ namespace {
             $fields->addFieldToTab('Root.Cards', $gridField);
 
             return $fields;
+        }
+
+        public function urlsToCache() {
+
+
+
+            $abs = Director::absoluteBaseURL();
+            $urls = array();
+
+            $cards = Card::get();
+
+
+            $urls[$this->AbsoluteLink()] = 0;
+
+            foreach ($cards as $card) {
+                $urls[$card->AbsoluteLink()] = 0;
+            }
+
+            return $urls;
+
         }
     }
 }

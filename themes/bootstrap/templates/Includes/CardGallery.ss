@@ -1,5 +1,5 @@
     <div class="send text-center" id="send">
-        <h1 class="my-5 text-center send-heading">Share your own vintage Iowa greeting:</h1>
+        <h1 class="py-5 mb-0 text-center send-heading">Share your own vintage Iowa greeting:</h1>
         <div class="masonry-grid">
             <% loop $Cards %>
             <div class="masonry-grid-item">

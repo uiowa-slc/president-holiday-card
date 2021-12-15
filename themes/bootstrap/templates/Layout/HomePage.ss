@@ -1,4 +1,4 @@
-<div class="card-body">
+<div class="">
 <div class="container-xl">
   <div class="row py-3 ">
         <div class="col-lg-12">
@@ -84,10 +84,12 @@
     </div>
 </div>
 </div>
+<div class="bg-white mt-4">
 <div class="container-xl">
     <% include CardGallery %>
     <% include Footer %>
 
+</div>
 </div>
 
 <% loop $Cards %>

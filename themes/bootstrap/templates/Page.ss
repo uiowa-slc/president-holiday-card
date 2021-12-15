@@ -23,7 +23,7 @@
 
         <% require css("themes/bootstrap/dist/styles/main.css") %>
     </head>
-    <body class="{$ClassName}">
+    <body class="{$ClassName} card-body">
 
     <a class="sr-only sr-only-focusable" href="{$Link}#content">Skip to main content</a>
 

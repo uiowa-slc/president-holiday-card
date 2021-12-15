@@ -64,6 +64,7 @@
 
     </div>
 </div>
+<div class="bg-white">
 <div class="container-xl">
 
         <% include CardGallery %>
@@ -72,7 +73,7 @@
 
     </div>
 </div>
-
+</div>
 <% loop $Cards %>
     <% include CardModal %>
 <% end_loop %>

@@ -7,8 +7,8 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div> --%>
-      <div class="modal-body p-0">
-       <a href="$Link" class="d-block"><img data-src="$Image.ScaleWidth(900).URL" alt="$AltText" class="d-block w-100 lazyload" data-aspectratio="$Image.Ratio" /></a>
+      <div class="modal-body">
+       <a href="$Link" class="d-block"><img data-src="$Image.ScaleWidth(900).URL" alt="$AltText" class="d-block w-100 lazyload card-shadow modal-card" data-aspectratio="$Image.Ratio" /></a>
 
        <div class="modal-share pt-3">
             <p class="text-center">Share:

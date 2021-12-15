@@ -4,7 +4,7 @@
         <div class="row pt-3 justify-content-center">
             <div class="col-lg-8">
 
-                    <img src="$Image.URL" alt="$AltText.ATT" class="card-single-img d-block w-100" />
+                    <img src="$Image.URL" alt="$AltText.ATT" class="card-single-img d-block w-100 card-shadow" />
             <div class="card-share my-3">
             <p class="text-center">Share:
                 <a class="btn btn-primary social-media-btn" href="https://www.facebook.com/sharer/sharer.php?u={$AbsoluteLink}"><i class="fab fa-facebook-f"></i></a>

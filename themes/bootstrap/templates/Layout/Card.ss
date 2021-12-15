@@ -5,6 +5,15 @@
             <div class="col-lg-8">
 
                     <img src="$Image.URL" alt="$AltText.ATT" class="card-single-img d-block w-100" />
+            <div class="card-share my-3">
+            <p class="text-center">Share:
+                <a class="btn btn-primary social-media-btn" href="https://www.facebook.com/sharer/sharer.php?u={$AbsoluteLink}"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-primary social-media-btn" href="https://twitter.com/intent/tweet?url={$AbsoluteLink}"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-primary social-media-btn" href="{$Image.URL}"><i class="fas fa-download"></i> Download image</a>
+
+            </p>
+            </div>
+            <p class="text-center mb-0"><i class="fas fa-link"></i> <a href="{$AbsoluteLink}" target="_blank" rel="noopener">{$AbsoluteLink}</a> </p>
                     <p class="text-center py-5">
                     <a href="https://www.uiowa.edu" target="_blank" rel="noopener">
                         <svg xmlns="http://www.w3.org/2000/svg" class="card-logo-icon d-inline-block" aria-labelledby="logo-footer" role="img" viewBox="0 0 330 75">

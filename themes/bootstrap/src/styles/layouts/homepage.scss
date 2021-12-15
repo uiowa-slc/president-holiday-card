@@ -29,14 +29,25 @@
 
 }
 
+// .signatures{
+//     width: 400px;
+//     max-width: 100%;
+//     display: inline-block;
+//     @include media-breakpoint-up(lg) {
+//         display: block;
+//         max-width: 100%;
+//         width: 100%;
+//     }
+// }
+
 .signatures{
-    width: 400px;
+    width: 250px;
     max-width: 100%;
     display: inline-block;
     @include media-breakpoint-up(lg) {
-        display: block;
-        max-width: 100%;
-        width: 100%;
+        // display: block;
+        // max-width: 100%;
+        // width: 300px;
     }
 }
 

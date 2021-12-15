@@ -17,7 +17,7 @@
                 <a class="btn btn-primary social-media-btn mb-1 mb-sm-0" href="{$Image.URL}"><i class="fas fa-download"></i> Download image</a>
 
             </p>
-            <p class="text-center mb-0 card-share-link"><i class="fas fa-link"></i> <a href="{$AbsoluteLink}" class="" target="_blank" rel="noopener">{$AbsoluteLink}</a> </p>
+            <p class="text-center mb-0 card-share-link"><i class="fas fa-link"></i> <a href="{$AbsoluteLink}">{$AbsoluteLink}</a> </p>
        </div>
       </div>
       <div class="modal-footer">

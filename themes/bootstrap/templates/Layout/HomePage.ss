@@ -54,7 +54,7 @@
                         <p class="card-inner-text-alt mt-5">Celebrate the season! <br /> Share a digital vintage Iowa greeting:</p>
                         <p><a href="#send" class="btn btn-outline-dark">Browse greetings <i class="far fa-images"></i></a></p>
                         <p class="card-inner-text-small mt-5 mb-2">While not every individual's experience is recounted in these images, we hope you'll visit the digital archive site to find photographs that speak to your unique experience on campus: </p>
-                        <p><a href="https://digital.lib.uiowa.edu" target="_blank" rel="noopener" class="card-inner-text-link">digital.lib.uiowa.edu</a></p>
+                        <p><a href="https://digital.lib.uiowa.edu" class="card-inner-text-link">digital.lib.uiowa.edu</a></p>
                         <div class="flip-icon-container d-none d-lg-block flip-icon-container-right"><i class="fas fa-reply"></i></div>
                     </div>
                 </div>

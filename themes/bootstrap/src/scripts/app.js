@@ -1,18 +1,21 @@
+if ($(".masonry-grid").length) {
+    $('.masonry-grid').isotope({
+        "percentPosition": true,
+        "layoutMode": "masonry",
+        "itemSelector": ".masonry-grid-item",
+        "getSortData": {
+            "name": ".name",
+            "category": "[data-category]"
+        },
+        "masonry": {
+            "gutter": 20
+        }
+    });
+}
+
+
 $(document).ready(function() {
-    if ($(".masonry-grid").length) {
-        $('.masonry-grid').isotope({
-            "percentPosition": true,
-            "layoutMode": "masonry",
-            "itemSelector": ".masonry-grid-item",
-            "getSortData": {
-                "name": ".name",
-                "category": "[data-category]"
-            },
-            "masonry": {
-                "gutter": 20
-            }
-        });
-    }
+
     $('.modal').each(function() {
         var modalId = "#".concat($(this).attr('id'));
 

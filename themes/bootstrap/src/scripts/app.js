@@ -15,7 +15,7 @@ if ($(".masonry-grid").length) {
 
 
 $(document).ready(function() {
-
+    matchFrontBackHeights();
     $('.modal').each(function() {
         var modalId = "#".concat($(this).attr('id'));
 
@@ -31,6 +31,8 @@ $(document).ready(function() {
         // Clear the hash in the URL
         location.hash = $(this).attr('href');
     });
+
+
 });
 
 document.addEventListener('lazyloaded', function(e) {

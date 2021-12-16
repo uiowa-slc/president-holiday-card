@@ -6,3 +6,4 @@ After:
 Card:
   extensions:
     - OpenGraphExtension
+    - DivisionAnalyticsPageControllerExtension

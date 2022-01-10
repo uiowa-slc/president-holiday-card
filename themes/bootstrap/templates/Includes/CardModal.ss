@@ -21,6 +21,7 @@
        </div>
       </div>
       <div class="modal-footer">
+        <p>Photo credit: University of Iowa Libraries Digital Archives</p>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>

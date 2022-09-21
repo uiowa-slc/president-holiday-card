@@ -1,9 +1,0 @@
----
-Name: approutes
-After:
-  - '#rootroutes'
-  - '#coreroutes'
----
-SilverStripe\Control\Director:
-  rules:
-    'cards//$Action/$ID': 'CardController'

@@ -1,9 +1,0 @@
----
-Name: myextensions
-After:
-    - '*'
----
-Card:
-  extensions:
-    - OpenGraphExtension
-    - DivisionAnalyticsPageControllerExtension

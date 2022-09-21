@@ -13,4 +13,7 @@ RewriteRule ^2020/.* - [L]
 RewriteRule ^2021$ - [L]
 RewriteRule ^2021/.* - [L]
 RewriteEngine On
-RewriteRule ^(.*)$ public/$1
+#Old SilverStripe redirect
+#RewriteRule ^(.*)$ public/$1
+#Redirect root to 2021 for now, update in 2022
+RewriteRule ^$ ./2021 [L]

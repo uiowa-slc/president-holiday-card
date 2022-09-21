@@ -10,5 +10,7 @@ RewriteRule ^2019$ - [L]
 RewriteRule ^2019/.* - [L]
 RewriteRule ^2020$ - [L]
 RewriteRule ^2020/.* - [L]
+RewriteRule ^2021$ - [L]
+RewriteRule ^2021/.* - [L]
 RewriteEngine On
 RewriteRule ^(.*)$ public/$1

@@ -1,0 +1,3 @@
+.flip-container{perspective:1000px;height:100vh}.flip-container:hover{cursor:pointer}.flip-container.backed .flipper{transform:rotateY(180deg)}.flipper{transition:.4s;transform-style:preserve-3d;position:relative}.flipper .front,.flipper .back{backface-visibility:hidden;top:0;left:0}.flipper .front,.flipper .back{position:absolute}.flipper .front{z-index:2;top:0;transform:rotateY(0deg)}.flipper .back{transform:rotateY(180deg)}.flexinl{display:inline-flex;flex-wrap:wrap;justify-content:flex-start}.flexinl>div{padding:0.2em}
+
+/*# sourceMappingURL=flipper.css.map */

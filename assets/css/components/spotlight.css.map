@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "spotlight.css",
+	"sources": [
+		"../../../scss/components/spotlight.scss"
+	],
+	"sourcesContent": [
+		"#spotlight {\n  position: fixed;\n  opacity: 0.3;\n  width: 100vw;\n  height: 100vh;\n  top: 0;\n  left: 0;\n  pointer-events: none;\n  z-index: 99;\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,UAAU,AAAC,CACT,QAAQ,CAAE,KAAK,CACf,OAAO,CAAE,GAAG,CACZ,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,CACP,cAAc,CAAE,IAAI,CACpB,OAAO,CAAE,EAAE,CACZ"
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/starter.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto Condensed:regular,bold|Roboto:light,regular,bold,italic,lightitalic|Zilla Slab:light,regular,semibold,bold,italic,lightitalic" />
+  <title></title>
+</head>
+
+<body>
+  <div id="spotlight"></div>
+  <div class="col-sm-12 col-md-6 py-5 px-3 mx-auto">
+    <div class="flip-container" id="flip-container" onclick="this.swapClasses('fronted,backed')">
+      <div class="flipper">
+        <div class="front" id="front">
+          <video src="assets/images/front.mp4"width="920" height="1302" class="main-image" autoplay loop />
+       <!--    <img src="assets/images/main.gif" width="920" height="1302" class="main-image" /> -->
+      
+        </div>
+        <div class="back" id="back">
+          <img src="assets/images/back.jpg" width="920" height="1302" class="main-image" />
+        </div>
+      </div>
+    </div>
+    <p class="text-center"><button class="btn btn-outline-dark">Flip Card</button></p>
+  </div>
+  <script type="module" src="assets/js/starter.js"></script>
+</body>
+
+</html>

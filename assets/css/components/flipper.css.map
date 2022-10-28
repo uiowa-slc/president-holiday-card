@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "flipper.css",
+	"sources": [
+		"../../../scss/components/flipper.scss"
+	],
+	"sourcesContent": [
+		"/* based on David Walsh Flipper */\n.flip-container {\n    perspective: 1000px;\n    height: 100vh;\n\n    &:hover{\n        cursor: pointer;\n    }\n\n}\n  /* flip the pane when has the backed */\n.flip-container.backed .flipper {\n    transform: rotateY(180deg);\n}\n\n/* flip speed goes here */\n.flipper {\n    transition: .4s;\n    transform-style: preserve-3d;\n    position: relative;\n}\n\n/* hide back of pane during swap */\n.flipper .front, .flipper .back {\n    backface-visibility: hidden;\n    // position: absolute;\n    top: 0;\n    left: 0;\n    // height: 1000px;\n    // padding: 1.5em;\n\n}\n\n.flipper .front, .flipper .back{\n    position: absolute;\n}\n\n/* front pane, placed above back */\n.flipper .front {\n    z-index: 2;\n    top: 0;\n    /* for firefox 31 */\n    transform: rotateY(0deg);\n}\n\n/* back, initially hidden pane */\n.flipper .back {\n    transform: rotateY(180deg);\n}\n\n/* some flex stuff */\n.flexinl {\n    display: inline-flex;\n    flex-wrap: wrap;\n    justify-content: flex-start;\n}\n.flexinl > div {padding:0.2em}\n"
+	],
+	"names": [],
+	"mappings": "AACA,AAAA,eAAe,AAAC,CACZ,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,KAAK,CAMhB,AARD,AAII,eAJW,AAIV,MAAM,AAAA,CACH,MAAM,CAAE,OAAO,CAClB,AAIL,AAAA,eAAe,AAAA,OAAO,CAAC,QAAQ,AAAC,CAC5B,SAAS,CAAE,eAAe,CAC7B,AAGD,AAAA,QAAQ,AAAC,CACL,UAAU,CAAE,GAAG,CACf,eAAe,CAAE,WAAW,CAC5B,QAAQ,CAAE,QAAQ,CACrB,AAGD,AAAA,QAAQ,CAAC,MAAM,CAAE,QAAQ,CAAC,KAAK,AAAC,CAC5B,mBAAmB,CAAE,MAAM,CAE3B,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,CAIV,AAED,AAAA,QAAQ,CAAC,MAAM,CAAE,QAAQ,CAAC,KAAK,AAAA,CAC3B,QAAQ,CAAE,QAAQ,CACrB,AAGD,AAAA,QAAQ,CAAC,MAAM,AAAC,CACZ,OAAO,CAAE,CAAC,CACV,GAAG,CAAE,CAAC,CAEN,SAAS,CAAE,aAAa,CAC3B,AAGD,AAAA,QAAQ,CAAC,KAAK,AAAC,CACX,SAAS,CAAE,eAAe,CAC7B,AAGD,AAAA,QAAQ,AAAC,CACL,OAAO,CAAE,WAAW,CACpB,SAAS,CAAE,IAAI,CACf,eAAe,CAAE,UAAU,CAC9B,AACD,AAAA,QAAQ,CAAG,GAAG,AAAC,CAAC,OAAO,CAAC,KAAK,CAAE"
+}

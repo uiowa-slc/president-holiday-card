@@ -1,0 +1,13 @@
+.garland{
+	display: block;
+	margin: auto;
+	width: 90%;
+
+}
+
+.garland__container{
+	position: fixed;
+	width: 100%;
+	z-index:999;
+	top: -36px;
+}

@@ -164,13 +164,5 @@ $hr-margin-y: $spacer * 2;
 @import "icon-list";
 @import "components/main-image";
 @import "components/spotlight";
-@import "components/flipper";
+@import "components/garland";
 
-body {
-  padding: 3rem 1.5rem;
-}
-
-// Style Bootstrap icons
-.bi {
-  fill: currentcolor;
-}

@@ -39,6 +39,22 @@ HTMLElement.prototype.swapClasses = function(dosclasses) {
     return this;
 };
 
+// addEventListener('scroll', (event) => {});
+// const garland = document.getElementById('garland');
+
+// onscroll = (event) => {
+// 	console.log('scrolling');
+// 	garland.style.top = garland.style.top - 1;
+	
+
+//  };
+
+window.addEventListener("scroll", function() {
+  const distance = window.scrollY * -1.7;
+  document.querySelector("#garland").style.transform = `translateY(${distance *
+    1}px)`
+})
+
 
 // const spotlightEl = document.querySelector("#spotlight");
 

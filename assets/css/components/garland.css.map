@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "garland.css",
+	"sources": [
+		"../../../scss/components/garland.scss"
+	],
+	"sourcesContent": [
+		".garland{\n\tdisplay: block;\n\tmargin: auto;\n\twidth: 90%;\n\n}\n\n.garland__container{\n\tposition: fixed;\n\twidth: 100%;\n\tz-index:999;\n\ttop: -36px;\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,QAAQ,AAAA,CACP,OAAO,CAAE,KAAK,CACd,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,GAAG,CAEV,AAED,AAAA,mBAAmB,AAAA,CAClB,QAAQ,CAAE,KAAK,CACf,KAAK,CAAE,IAAI,CACX,OAAO,CAAC,GAAG,CACX,GAAG,CAAE,KAAK,CACV"
+}

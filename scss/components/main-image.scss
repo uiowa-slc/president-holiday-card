@@ -1,8 +1,17 @@
-.main-image{
-	width: 100%;
-	height: auto;
+.front{
+  width: 100%;
+  height: auto;
 }
 
-.back{
-	padding: 0 200px;
+.back {
+
+  &__img {
+    background: #f2ede3;
+    width: 100%;
+    padding: 30px 50px; 
+    @media (min-width: 768px) {
+      padding: 100px 200px;
+    }
+
+  }
 }

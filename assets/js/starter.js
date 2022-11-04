@@ -22,46 +22,20 @@
 // import "../../node_modules/bootstrap/js/dist/modal.js";
 
 
-HTMLElement.prototype.swapClasses = function(dosclasses) {
-    //progressContainer.style.display = 'none';
-    //clearTimeout(timer);
-    console.log('hello');
-    var clases = dosclasses.split(/\s*\,\s*/);
-    var entra = clases[0];
-    var sale = clases[1];
-    if (this.classList.contains(sale)) {
-        this.classList.remove(sale);
-        this.classList.add(entra);
-    } else {
-        this.classList.remove(entra);
-        this.classList.add(sale);
-    }
-    return this;
-};
-
-// addEventListener('scroll', (event) => {});
-// const garland = document.getElementById('garland');
-
-// onscroll = (event) => {
-// 	console.log('scrolling');
-// 	garland.style.top = garland.style.top - 1;
-	
-
-//  };
 
 window.addEventListener("scroll", function() {
   const distance = window.scrollY * -1.7;
-  document.querySelector("#garland").style.transform = `translateY(${distance *
-    1}px)`
+  document.querySelector("#garland").style.transform = `translateY(${distance * 1}px)`
+  document.querySelector("#back").style.transform = `translateY(${distance * 0.2}px)`
 })
 
 
-// const spotlightEl = document.querySelector("#spotlight");
+const spotlightEl = document.querySelector("#spotlight");
 
-// function handleMouseMove(event) {
-//     const { clientX, clientY } = event;
+function handleMouseMove(event) {
+    const { clientX, clientY } = event;
 
-//     spotlightEl.style.background = `radial-gradient(circle at ${clientX}px ${clientY}px, #00000000 10px, #000000ee 600px)`;
-// }
+    spotlightEl.style.background = `radial-gradient(circle at ${clientX}px ${clientY}px, #00000000 10px, #000000ee 600px)`;
+}
 
-// document.addEventListener("mousemove", handleMouseMove)
+document.addEventListener("mousemove", handleMouseMove)

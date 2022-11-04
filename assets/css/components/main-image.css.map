@@ -5,8 +5,8 @@
 		"../../../scss/components/main-image.scss"
 	],
 	"sourcesContent": [
-		".main-image{\n\twidth: 100%;\n\theight: auto;\n}\n\n.back{\n\tpadding: 0 200px;\n}"
+		".front{\n  width: 100%;\n  height: auto;\n}\n\n.back {\n\n  &__img {\n    background: #f2ede3;\n    width: 100%;\n    padding: 30px 50px; \n    @media (min-width: 768px) {\n      padding: 100px 200px;\n    }\n\n  }\n}\n"
 	],
 	"names": [],
-	"mappings": "AAAA,AAAA,WAAW,AAAA,CACV,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,AAED,AAAA,KAAK,AAAA,CACJ,OAAO,CAAE,OAAO,CAChB"
+	"mappings": "AAAA,AAAA,MAAM,AAAA,CACJ,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACb,AAIE,AAAD,UAAM,AAAC,CACL,UAAU,CAAE,OAAO,CACnB,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,SAAS,CAKnB,AAJC,MAAM,EAAE,SAAS,EAAE,KAAK,EAJzB,AAAD,UAAM,AAAC,CAKH,OAAO,CAAE,WAAW,CAGvB"
 }

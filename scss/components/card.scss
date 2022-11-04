@@ -1,10 +1,16 @@
-.front{
-  width: 100%;
-  height: auto;
+.card{
+
 }
 
-.back {
+.card-front{
+	&__video{
+		width: 100%;
+		height: auto;
+	}
 
+}
+
+.card-back {
   &__img {
     background: #f2ede3;
     width: 100%;
@@ -12,6 +18,5 @@
     @media (min-width: 768px) {
       padding: 100px 200px;
     }
-
   }
 }

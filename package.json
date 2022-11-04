@@ -7,10 +7,10 @@
   "homepage": "https://greeting.president.uiowa.edu",
   "scripts": {
     "build": "npm run css",
-    "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 scss -o assets/css/",
+    "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 scss -o dist/css/",
     "css-lint": "stylelint scss/",
-    "css-prefix": "postcss --replace assets/css/main.css --use autoprefixer --map",
-    "css-purge": "purgecss --keyframes --css assets/css/main.css --content index.html \"node_modules/bootstrap/js/dist/{util,modal}.js\" --output assets/css/",
+    "css-prefix": "postcss --replace dist/css/main.css --use autoprefixer --map",
+    "css-purge": "purgecss --keyframes --css dist/css/main.css --content index.html \"node_modules/bootstrap/js/dist/{util,modal}.js\" --output dist/css/",
     "css": "npm-run-all css-compile css-prefix",
     "server": "live-server --port=3000",
     "start": "npm-run-all --parallel watch server",

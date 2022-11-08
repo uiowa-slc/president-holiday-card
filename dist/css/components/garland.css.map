@@ -5,8 +5,8 @@
 		"../../../scss/components/garland.scss"
 	],
 	"sourcesContent": [
-		".garland{\n\tdisplay: block;\n\tmargin: auto;\n\twidth: 90%;\n\n}\n\n.garland__container{\n\tposition: fixed;\n\twidth: 100%;\n\tz-index:999;\n\ttop: -36px;\n}"
+		".garland{\n\tdisplay: block;\n\tmargin: auto;\n\twidth: 100%;\n\n\t    @media (min-width: 768px) {\n\t    \t\n\t    }\n}\n\n.garland__container{\n\tposition: fixed;\n\twidth: 110%;\n\tleft: -20px;\n\tz-index:999;\n\ttop: -40px;\n\twill-change: transform; \n\theight: 100%;\n\n\t    @media (min-width: 480px) {\n\t    \ttop: -50px;\n\n\t    }\n\n\t    @media (min-width: 768px) {\n\t    \ttop: -60px;\n\t    \twidth: 100%;\n\t    \tleft: 0;\n\t    }\n\n\t   \t@media (min-width: 992px) {\n\t    \ttop: -60px;\n\t    }\n\n\t    @media (min-width: 1100px) {\n\t    \ttop: -80px;\n\t    }\n\t    @media (min-width: 1280px) {\n\t    \ttop: -140px;\n\t    }\n\t// background: url(\"../images/garland-8bit.png\");\n\t// background-size: cover;\n\t// background-repeat: no-repeat;\n}"
 	],
 	"names": [],
-	"mappings": "AAAA,AAAA,QAAQ,AAAA,CACP,OAAO,CAAE,KAAK,CACd,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,GAAG,CAEV,AAED,AAAA,mBAAmB,AAAA,CAClB,QAAQ,CAAE,KAAK,CACf,KAAK,CAAE,IAAI,CACX,OAAO,CAAC,GAAG,CACX,GAAG,CAAE,KAAK,CACV"
+	"mappings": "AAAA,AAAA,QAAQ,AAAA,CACP,OAAO,CAAE,KAAK,CACd,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,IAAI,CAKX,AAED,AAAA,mBAAmB,AAAA,CAClB,QAAQ,CAAE,KAAK,CACf,KAAK,CAAE,IAAI,CACX,IAAI,CAAE,KAAK,CACX,OAAO,CAAC,GAAG,CACX,GAAG,CAAE,KAAK,CACV,WAAW,CAAE,SAAS,CACtB,MAAM,CAAE,IAAI,CA0BZ,AAxBI,MAAM,EAAE,SAAS,EAAE,KAAK,EAT7B,AAAA,mBAAmB,AAAA,CAUb,GAAG,CAAE,KAAK,CAuBf,CAnBI,MAAM,EAAE,SAAS,EAAE,KAAK,EAd7B,AAAA,mBAAmB,AAAA,CAeb,GAAG,CAAE,KAAK,CACV,KAAK,CAAE,IAAI,CACX,IAAI,CAAE,CAAC,CAgBZ,CAbI,MAAM,EAAE,SAAS,EAAE,KAAK,EApB7B,AAAA,mBAAmB,AAAA,CAqBb,GAAG,CAAE,KAAK,CAYf,CATI,MAAM,EAAE,SAAS,EAAE,MAAM,EAxB9B,AAAA,mBAAmB,AAAA,CAyBb,GAAG,CAAE,KAAK,CAQf,CANI,MAAM,EAAE,SAAS,EAAE,MAAM,EA3B9B,AAAA,mBAAmB,AAAA,CA4Bb,GAAG,CAAE,MAAM,CAKhB"
 }

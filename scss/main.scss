@@ -161,6 +161,10 @@ $hr-margin-y: $spacer * 2;
 // Custom styles
 //
 
+body{
+    overflow-x: hidden;
+}
+
 @import "icon-list";
 @import "components/card";
 @import "components/spotlight";

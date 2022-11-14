@@ -1,44 +1,40 @@
-.garland{
-	display: block;
-	margin: auto;
-	width: 100%;
+.garland {
+  display: block;
+  margin: auto;
+  width: 100%;
 
-	    @media (min-width: 768px) {
-	    	
-	    }
+  @media (min-width: 768px) {}
 }
 
-.garland__container{
-	position: fixed;
-	width: 110%;
-	left: -20px;
-	z-index:999;
-	top: -40px;
-	will-change: transform; 
-	height: 100%;
+.garland__container {
+  position: fixed;
+  width: 110%;
+  left: -5%;
+  z-index: 999;
+  top: -40px;
+  will-change: transform;
+  height: 100%;
 
-	    @media (min-width: 480px) {
-	    	top: -50px;
+  @media (min-width: 480px) {
+    top: -50px;
 
-	    }
+  }
 
-	    @media (min-width: 768px) {
-	    	top: -60px;
-	    	width: 100%;
-	    	left: 0;
-	    }
+  @media (min-width: 992px) {
+    top: -60px;
+    width: 100%;
+    left: 0;
+  }
 
-	   	@media (min-width: 992px) {
-	    	top: -60px;
-	    }
+  @media (min-width: 1100px) {
+    top: -80px;
+  }
 
-	    @media (min-width: 1100px) {
-	    	top: -80px;
-	    }
-	    @media (min-width: 1280px) {
-	    	top: -140px;
-	    }
-	// background: url("../images/garland-8bit.png");
-	// background-size: cover;
-	// background-repeat: no-repeat;
+  @media (min-width: 1280px) {
+    top: -140px;
+  }
+
+  // background: url("../images/garland-8bit.png");
+  // background-size: cover;
+  // background-repeat: no-repeat;
 }

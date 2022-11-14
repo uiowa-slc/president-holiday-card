@@ -1,5 +1,5 @@
 .card{
-
+	overflow: scroll;
 }
 
 .card-front{
@@ -11,12 +11,30 @@
 }
 
 .card-back {
+	position: relative;
+  margin-top: 100px;
+  background: #f2f0e9;
+
+  &__video{
+    width: 30%;
+    margin: auto;
+    display: block;
+    height: auto;
+  }
   &__img {
-    background: #f2ede3;
+    // background: #f2ede3;
+    position: absolute;
+    top: 10%;
     width: 100%;
     padding: 30px 50px; 
     @media (min-width: 768px) {
       padding: 100px 200px;
     }
+
+    @media (min-width: 1200px) {
+      padding: 100px 400px;
+    }
+
   }
 }
+

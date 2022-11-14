@@ -9,25 +9,27 @@
   <title></title>
 </head>
 
-<body>
-  <div id="spotlight"></div>
+<body id="body">
   <div class="garland__container" id="garland__container">
     <img src="dist/images/garland-8bit.png" class="garland" />
   </div>
 
-        <div class="card-front p-3 p-lg-8">
-          <video src="dist/images/front-no-garland-1000kbps-cropped.mp4" width="1080" height="1564" class="card-front__video" autoplay loop muted playsinline></video>
-        </div>
-        <div id="card-back">
-          <img src="dist/images/back.png" id="back" class="card-back__img" />
-        </div>
-      </div>
-      <div class="arrow">
-        <div class="arrow__container">
-          <img class="arrow__img" src="dist/images/chevron-down.svg" alt="" role="presentation" />
-        </div>
+  <div class="card" id="card">
+  <div class="card-front p-3 p-lg-8" id="card-front">
+    <video src="dist/images/front.mp4" width="1080" height="1564" class="card-front__video" id="card-front__video" autoplay loop muted playsinline></video>
+  </div>
+  <div id="card-back" class="card-back" id="card-back" >
+    <video src="dist/images/bookfall.mp4" width="3000" height="4200" class="card-back__video" id="card-back__video" autoplay loop muted playsinline></video>
+    <img src="dist/images/back-transparent.png" class="card-back__img" />
+  </div>
+</div>
 
-  <script type="module" src="dist/js/main.js"></script>
+  <div class="arrow" id="arrow">
+    <div class="arrow__container">
+      <svg class="arrow__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+    </div>
+  </div>
+    <script type="module" src="dist/js/main.js"></script>
 </body>
 
 </html>

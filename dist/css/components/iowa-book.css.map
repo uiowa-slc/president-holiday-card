@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "iowa-book.css",
+	"sources": [
+		"../../../scss/components/iowa-book.scss"
+	],
+	"sourcesContent": [
+		".iowa-book{\n\tposition: absolute;\n\twidth: 100%;\n\t&__img{\n\t\tdisplay: block;\n\t\tmax-width: 20%;\n\t\tmargin: auto;\n\t}\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,UAAU,AAAA,CACT,QAAQ,CAAE,QAAQ,CAClB,KAAK,CAAE,IAAI,CAMX,AALC,AAAD,eAAM,AAAA,CACL,OAAO,CAAE,KAAK,CACd,SAAS,CAAE,GAAG,CACd,MAAM,CAAE,IAAI,CACZ"
+}

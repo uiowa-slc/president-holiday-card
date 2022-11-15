@@ -21,12 +21,17 @@
     display: block;
     height: auto;
   }
+
+  &__bottom-img{
+    width: 80%;
+    margin: auto;
+    display: block;
+  }
   &__img {
     // background: #f2ede3;
     position: absolute;
     top: 10%;
     width: 100%;
-    padding: 30px 50px; 
     @media (min-width: 768px) {
       padding: 100px 200px;
     }

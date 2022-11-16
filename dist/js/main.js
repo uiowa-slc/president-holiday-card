@@ -1,9 +1,11 @@
 window.addEventListener("scroll", function() {
-  // const distance = window.scrollY;
+
   const distance = window.scrollY * -1.7;
 
   document.querySelector("#garland__container").style.transform = `translateY(${distance}px)`
   document.querySelector("#card-back").style.transform = `translateY(${distance * 0.2}px)`
+
+  // Stuff to try and adjust body height-- doesn't really work:
   // document.querySelector("#card").style.height = `${document.querySelector("#card-front").offsetHeight + document.querySelector("#card-back").offsetHeight + distance * 1.2}px`;
   // document.querySelector("#body").style.overflowY = `hidden`;
   // document.querySelector("#body").style.height = `300px`;
@@ -13,13 +15,20 @@ window.addEventListener("scroll", function() {
   }
 })
 
+const target = document.querySelector('#card-back__bottom-img');
+const video = document.querySelector('#card-back__video');
 
-// const spotlightEl = document.querySelector("#spotlight");
+function handleIntersection(entries) {
+  entries.map((entry) => {
+    if (entry.isIntersecting) {
+      //console.log('visible')
+      video.play();
+    } else {
+      video.load();
+      //console.log('invisible')
+    }
+  });
+}
 
-// function handleMouseMove(event) {
-//     const { clientX, clientY } = event;
-
-//     spotlightEl.style.background = `radial-gradient(circle at ${clientX}px ${clientY}px, #00000000 10px, #000000ee 600px)`;
-// }
-
-// document.addEventListener("mousemove", handleMouseMove)
+const observer = new IntersectionObserver(handleIntersection);
+observer.observe(target);

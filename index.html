@@ -5,38 +5,44 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="dist/css/main.css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto Condensed:regular,bold|Roboto:light,regular,bold,italic,lightitalic|Zilla Slab:light,regular,semibold,bold,italic,lightitalic" />
-  <title></title>
+  <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto Condensed:regular,bold|Roboto:light,regular,bold,italic,lightitalic|Zilla Slab:light,regular,semibold,bold,italic,lightitalic" /> -->
+  <title>Best wishes for a joyous holiday season and a bright start to your next chapter in 2023. | The University of Iowa</title>
 </head>
 
 <body id="body">
   <div class="garland__container" id="garland__container">
-    <img src="dist/images/garland-8bit.png" class="garland" />
-  </div>
+    <picture>
+      <source srcset="dist/images/garland.webp" type="image/webp" class="garland">
+      <source srcset="dist/images/garland.png" type="image/png" class="garland">
+      <img src="dist/images/garland-8bit.png" class="garland" />
+    </picture>
 
+    
+  </div>
   <div class="card" id="card">
-  <div class="card-front p-3 p-lg-8" id="card-front">
-    <video src="dist/images/front.mp4" width="1080" height="1564" class="card-front__video" id="card-front__video" autoplay loop muted playsinline></video>
-  </div>
-  <div id="card-back" class="card-back" id="card-back" >
-    <div class="card-back-vid-container">
-    <video src="dist/images/bookfall.mp4" width="3000" height="4200" class="card-back__video" id="card-back__video" muted playsinline></video>
-    <img src="dist/images/back-top.png" alt="Contains the text 'Season's Greetings'" id="back-top" class="card-back__top-img" />
-  </div>
-
-    <img src="dist/images/back-bottom.png" alt="Contains the text 'Best wishes for a joyous holiday season and a bright start to your next chapter in 2023.' and a stack of colorful books. The top book is a gold book with 'Iowa' written on the spine." class="card-back__bottom-img" id="card-back__bottom-img" />
-  </div>
-  <div>
-
-  </div>
-</div>
-
-  <div class="arrow" id="arrow">
-    <div class="arrow__container">
-      <svg class="arrow__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+    <div class="card-front p-3 p-lg-8" id="card-front">
+      <video src="dist/images/front-full-quality.mp4" width="1080" height="1564" class="card-front__video" id="card-front__video" autoplay loop muted playsinline></video>
+    </div>
+    <div id="card-back" class="card-back" id="card-back">
+      <div class="card-back-vid-container">
+        <video src="dist/images/bookfall.mp4" width="3000" height="4200" class="card-back__video" id="card-back__video" muted playsinline></video>
+        <div class="card-back__top-img-container">
+          <img src="dist/images/back-top.png" width="1582" height="462" alt="Contains the text 'Season's Greetings'" id="card-back__top-img" class="card-back__top-img" />
+        </div>
+      </div>
+      <img src="dist/images/back-bottom.png" alt="Contains the text 'Best wishes for a joyous holiday season and a bright start to your next chapter in 2023.' and a stack of colorful books. The top book is a gold book with 'Iowa' written on the spine." class="card-back__bottom-img" id="card-back__bottom-img" width="1614" height="1455" />
+    </div>
+    <div>
     </div>
   </div>
-    <script type="module" src="dist/js/main.js"></script>
+  <div class="arrow" id="arrow">
+    <div class="arrow__container">
+      <svg class="arrow__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+        <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
+    </div>
+  </div>
+  <script type="module" src="dist/js/main.js"></script>
 </body>
 
 </html>

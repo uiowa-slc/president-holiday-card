@@ -117,20 +117,20 @@ $card-border-color: darken($highlight, 5%);
 
 $hr-margin-y: $spacer * 2;
 
-@import "bootstrap/scss/functions"; // Required
-@import "bootstrap/scss/variables"; // Required
-@import "bootstrap/scss/mixins"; // Required
+// @import "bootstrap/scss/functions"; // Required
+// @import "bootstrap/scss/variables"; // Required
+// @import "bootstrap/scss/mixins"; // Required
 
-@import "bootstrap/scss/root"; // Required
-@import "bootstrap/scss/reboot"; // Required
-@import "bootstrap/scss/type";
+// @import "bootstrap/scss/root"; // Required
+// @import "bootstrap/scss/reboot"; // Required
+// @import "bootstrap/scss/type";
 // @import "bootstrap/scss/images";
 // @import "bootstrap/scss/code";
-@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/grid";
 // @import "bootstrap/scss/tables";
 // @import "bootstrap/scss/forms";
-@import "bootstrap/scss/buttons";
-@import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/buttons";
+// @import "bootstrap/scss/transitions";
 // @import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
 // @import "bootstrap/scss/input-group"; // Requires forms
@@ -146,14 +146,14 @@ $hr-margin-y: $spacer * 2;
 // @import "bootstrap/scss/progress";
 // @import "bootstrap/scss/media";
 // @import "bootstrap/scss/list-group";
-@import "bootstrap/scss/close";
+// @import "bootstrap/scss/close";
 // @import "bootstrap/scss/toasts";
-@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/modal"; // Requires transitions
 // @import "bootstrap/scss/tooltip";
 // @import "bootstrap/scss/popover";
 // @import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
-@import "bootstrap/scss/utilities";
+// @import "bootstrap/scss/utilities";
 // @import "bootstrap/scss/print";
 
 
@@ -161,8 +161,16 @@ $hr-margin-y: $spacer * 2;
 // Custom styles
 //
 
+html{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     overflow-x: hidden;
+    background: #f2f0e9;
+    margin: 0;
+    padding: 0;
 }
 
 @import "icon-list";

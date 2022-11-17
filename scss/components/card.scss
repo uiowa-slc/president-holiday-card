@@ -1,5 +1,7 @@
 .card{
 	overflow: scroll;
+  max-width: 1600px;
+  margin: auto;
 }
 
 .card-front{
@@ -12,7 +14,7 @@
 
 .card-back {
 	position: relative;
-  margin-top: 100px;
+  margin-top: 25%;
   background: #f2f0e9;
 
   &__video{
@@ -22,26 +24,38 @@
     height: auto;
   }
 
-  &__top-img {
-    // background: #f2ede3;
+  &__top-img-container {
     position: absolute;
     top: 0;
     width: 100%;
+    margin: auto;
+    height: auto;
+    display: block;
     @media (min-width: 768px) {
-      padding: 100px 200px;
+      // padding: 100px 200px;
     }
 
     @media (min-width: 1200px) {
-      padding: 100px 200px;
+      // padding: 100px 200px;
     }
+  }
+
+  &__top-img{
+    height: auto;
+    margin-top: 15%;
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 
   &__bottom-img{
-    width: 60%;
+    width: 40%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
-    padding: 30px 0;
+    padding-top: 5%;
     display: block;
   }
 

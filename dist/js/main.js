@@ -21,14 +21,20 @@ const video = document.querySelector('#card-back__video');
 function handleIntersection(entries) {
   entries.map((entry) => {
     if (entry.isIntersecting) {
-      //console.log('visible')
+      console.log('visible')
       video.play();
     } else {
-      video.load();
-      //console.log('invisible')
+      video.pause;
+      video.currentTime = 0;
+      console.log('invisible')
     }
   });
 }
 
-const observer = new IntersectionObserver(handleIntersection);
+ const observerOptions = {
+    // root: null,
+    // rootMargin: "200px",
+    // threshold: 0
+  };
+const observer = new IntersectionObserver(handleIntersection, observerOptions);
 observer.observe(target);

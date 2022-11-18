@@ -4,8 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Season's Greetings" />
+  <meta property="og:url" content="https://greeting.president.uiowa.edu" />
+  <meta property="og:image" content="https://greeting.president.uiowa.edu/dist/images/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:site_name" content="The University of Iowa" />
+  <meta property="og:description" content="Best wishes for a joyous holiday season and a bright start to your next chapter in 2023." />
   <link rel="stylesheet" href="dist/css/main.css">
-  <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto Condensed:regular,bold|Roboto:light,regular,bold,italic,lightitalic|Zilla Slab:light,regular,semibold,bold,italic,lightitalic" /> -->
   <title>Best wishes for a joyous holiday season and a bright start to your next chapter in 2023. | The University of Iowa</title>
 </head>
 
@@ -20,17 +27,17 @@
     
   </div>
   <div class="card" id="card">
-    <div class="card-front p-3 p-lg-8" id="card-front">
-      <video src="dist/images/front-full-quality.mp4" width="1080" height="1564" class="card-front__video" id="card-front__video" autoplay loop muted playsinline></video>
+    <div class="card-front" id="card-front">
+      <video src="dist/images/front.mp4" width="1080" height="1564" class="card-front__video" id="card-front__video" autoplay loop muted playsinline></video>
     </div>
     <div id="card-back" class="card-back" id="card-back">
       <div class="card-back-vid-container">
         <video src="dist/images/bookfall.mp4" width="3000" height="4200" class="card-back__video" id="card-back__video" muted playsinline></video>
         <div class="card-back__top-img-container">
-          <img src="dist/images/back-top.png" width="1582" height="462" alt="Contains the text 'Season's Greetings'" id="card-back__top-img" class="card-back__top-img" />
+          <img src="dist/images/back-top.png" width="1582" height="462" loading="lazy" alt="Contains the text 'Season's Greetings'" id="card-back__top-img" class="card-back__top-img" />
         </div>
       </div>
-      <img src="dist/images/back-bottom.png" alt="Contains the text 'Best wishes for a joyous holiday season and a bright start to your next chapter in 2023.' and a stack of colorful books. The top book is a gold book with 'Iowa' written on the spine." class="card-back__bottom-img" id="card-back__bottom-img" width="1614" height="1455" />
+      <img src="dist/images/back-bottom.png" loading="lazy" alt="Contains the text 'Best wishes for a joyous holiday season and a bright start to your next chapter in 2023.' and a stack of colorful books. The top book is a gold book with 'Iowa' written on the spine." class="card-back__bottom-img" id="card-back__bottom-img" width="1614" height="1455" />
     </div>
     <div>
     </div>
@@ -42,7 +49,101 @@
         <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
     </div>
   </div>
-  <script type="module" src="dist/js/main.js"></script>
+
+<script>
+window.addEventListener("scroll", function() {
+  const distance = window.scrollY * -1.7;
+  document.querySelector("#garland__container").style.transform = `translateY(${distance}px)`
+  document.querySelector("#card-back").style.transform = `translateY(${distance * 0.2}px)`
+  if (distance < -200) {
+    document.querySelector("#arrow").style.opacity = 0;
+  }
+})
+
+const bottomImg = document.querySelector('#card-back__bottom-img');
+const topImg = document.querySelector('#card-back__top-img');
+const video = document.querySelector('#card-back__video');
+
+
+const topObserverOptions = {
+  root: null,
+  rootMargin: '0%',
+  threshold: 0.75
+};
+
+
+const bottomObserverOptions = {
+  root: null,
+  rootMargin: '0%',
+  threshold: 0.6
+};
+
+
+const topImgObserver = new IntersectionObserver(handleTopIntersection, topObserverOptions);
+topImgObserver.observe(topImg);
+
+
+const bottomImgObserver = new IntersectionObserver(handleBottomIntersection, bottomObserverOptions);
+bottomImgObserver.observe(bottomImg);
+
+var topVisible = true;
+var bottomVisible = false;
+
+// Reset video when top isn't visible
+function handleTopIntersection(entries) {
+  entries.map((entry) => {
+    if (entry.isIntersecting) {
+      // console.log('top visible')
+      topVisible = true;
+      if(!bottomVisible){
+
+        var playPromise = video.play();
+
+        if (playPromise !== undefined) {
+          playPromise.then(function() {
+            // Automatic playback started!
+          }).catch(function(error) {
+            video.currentTime = 3;
+          });
+        }
+
+        // video.play();
+
+
+      }
+    } else {
+      topVisible = false;
+      //Reset video if bottom isn't visible either
+      if(!bottomVisible){
+        video.pause;
+        video.currentTime = 0;
+      }
+      // console.log('top invisible')
+      // console.log('is bottom visible?')
+      // console.log(bottomVisible);
+    }
+  });
+}
+
+
+function handleBottomIntersection(entries) {
+  entries.map((entry) => {
+    if (entry.isIntersecting) {
+      bottomVisible = true;
+      // console.log('bottom visible')
+
+    } else {
+      bottomVisible = false;
+      // console.log('bottom invisible')
+    }
+  });
+}
+
+
+
+
+
+  </script>
 </body>
 
 </html>

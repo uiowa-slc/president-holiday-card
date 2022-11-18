@@ -3,24 +3,27 @@
   max-width: 1600px;
   margin: auto;
 }
+
 .card-front {
   &__video {
     width: 100%;
     height: auto;
   }
 }
+
 .card-back {
   position: relative;
   margin-top: 25%;
   background: #f2f0e9;
 
   &__video {
-     width: 50%;
+    width: 50%;
     margin: auto;
     display: block;
     height: auto;
+
     @media (min-width: 768px) {
-       width: 30%;
+      width: 30%;
     }
   }
 
@@ -62,4 +65,11 @@
     }
   }
 
+}
+
+.bookfall-gif {
+  margin: auto;
+  max-width: 600px;
+  height: auto;
+  display: block;
 }

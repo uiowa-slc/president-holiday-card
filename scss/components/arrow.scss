@@ -1,23 +1,23 @@
-.arrow{
+.arrow {
 	position: fixed;
-	z-index:99;
+	z-index: 99;
 	width: 100%;
 	bottom: 0;
 	transition: all 0.5s linear;
-	&__container{
+
+	&__container {
 		border-radius: 50%;
-  		width: 150px;
-  		height: 150px;
-  		margin: auto;
-  		background: rgba(#eee, 0.2);
+		width: 150px;
+		height: 150px;
+		margin: auto;
+		background: rgba(#eee, 0.6);
 	}
-	&__img{
+
+	&__img {
 		display: block;
 		width: 100px;
-		padding-top: 25px;
 		height: 150px;
 		margin: auto;
 		fill: #4f453a;
-
 	}
 }

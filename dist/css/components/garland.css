@@ -1,3 +1,3 @@
-.garland{display:block;margin:auto;width:100%;max-width:1200px}.garland__container{position:fixed;width:110%;left:-5%;z-index:999;top:-4%;will-change:transform;height:100%}@media (min-width: 992px){.garland__container{top:-10%;width:100%;left:0}}
+.garland{display:block;margin:auto;width:100%;max-width:1440px}.garland__container{position:fixed;width:110%;left:-5%;z-index:999;top:-4%;will-change:transform;height:100%}@media (min-width: 992px){.garland__container{top:-10%;width:100%;left:0}}
 
 /*# sourceMappingURL=garland.css.map */

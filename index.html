@@ -18,36 +18,42 @@
 </head>
 
 <body id="body">
-  <div class="garland__container" id="garland__container">
-    <picture>
-      <source srcset="dist/images/garland.webp" type="image/webp" class="garland">
-      <source srcset="dist/images/garland.png" type="image/png" class="garland">
-      <img src="dist/images/garland-8bit.png" class="garland" />
-    </picture>
-  </div>
-  <div class="card" id="card">
-    <div class="card-front" id="card-front">
-      <video src="dist/images/front.mp4" width="1080" height="1564" class="card-front__video" id="card-front__video"
-        autoplay loop muted playsinline></video>
-    </div>
-    <div id="card-back" class="card-back" id="card-back">
-      <div class="card-back-vid-container">
-        <div id="bookfall">
-          <video src="dist/images/bookfall.mp4" width="3000" height="4200" class="card-back__video"
-            id="card-back__video" muted playsinline></video>
-        </div>
-        <div class="card-back__top-img-container">
-          <img src="dist/images/back-top.png" width="1582" height="462" loading="lazy"
-            alt="Contains the text 'Season's Greetings'" id="card-back__top-img" class="card-back__top-img" />
-        </div>
+  <div class="wrapper">
+    <header>
+
+      <div class="card-front background" id="card-front">
+        <video src="dist/images/front.mp4" width="1080" height="1564" class="card-front__video" id="card-front__video"
+          autoplay loop muted playsinline></video>
       </div>
-      <img src="dist/images/back-bottom.png" loading="lazy"
-        alt="Contains the text 'Best wishes for a joyous holiday season and a bright start to your next chapter in 2023.' and a stack of colorful books. The top book is a gold book with 'Iowa' written on the spine."
-        class="card-back__bottom-img" id="card-back__bottom-img" width="1614" height="1455" />
-    </div>
-    <div>
-    </div>
+
+      <div class="garland__container foreground" id="garland__container">
+        <picture>
+          <source srcset="dist/images/garland.webp" type="image/webp" class="garland">
+          <source srcset="dist/images/garland.png" type="image/png" class="garland">
+          <img src="dist/images/garland-8bit.png" class="garland" />
+        </picture>
+      </div>
+    </header>
+    <section>
+      <div id="card-back" class="card-back" id="card-back">
+        <div class="card-back-vid-container">
+          <div id="bookfall">
+            <video src="dist/images/bookfall.mp4" width="3000" height="4200" class="card-back__video"
+              id="card-back__video" muted playsinline></video>
+          </div>
+          <div class="card-back__top-img-container">
+            <img src="dist/images/back-top.png" width="1582" height="462" loading="lazy"
+              alt="Contains the text 'Season's Greetings'" id="card-back__top-img" class="card-back__top-img" />
+          </div>
+        </div>
+        <img src="dist/images/back-bottom.png" loading="lazy"
+          alt="Contains the text 'Best wishes for a joyous holiday season and a bright start to your next chapter in 2023.' and a stack of colorful books. The top book is a gold book with 'Iowa' written on the spine."
+          class="card-back__bottom-img" id="card-back__bottom-img" width="1614" height="1455" />
+      </div>
+    </section>
   </div>
+
+
   <div class="arrow" id="arrow">
     <div class="arrow__container">
       <svg class="arrow__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -59,14 +65,14 @@
   </div>
   <script>
     // Arrow fade away on scroll:
-    window.addEventListener("scroll", function () {
-      const distance = window.scrollY * -1.7;
-      document.querySelector("#garland__container").style.transform = `translateY(${distance}px)`
-      document.querySelector("#card-back").style.transform = `translateY(${distance * 0.2}px)`
-      if (distance < -200) {
-        document.querySelector("#arrow").style.opacity = 0;
-      }
-    })
+    // window.addEventListener("scroll", function () {
+    //   const distance = window.scrollY * -1.7;
+    //   document.querySelector("#garland__container").style.transform = `translateY(${distance}px)`
+    //   document.querySelector("#card-back").style.transform = `translateY(${distance * 0.2}px)`
+    //   if (distance < -200) {
+    //     document.querySelector("#arrow").style.opacity = 0;
+    //   }
+    // })
 
     // Book fall animation timing:
     const bottomImg = document.querySelector('#card-back__bottom-img');

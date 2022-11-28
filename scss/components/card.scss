@@ -1,6 +1,5 @@
 .card {
-  // overflow: scroll;
-  max-width: 1600px;
+  max-width: 1024px;
   margin: auto;
 }
 
@@ -23,7 +22,7 @@
     height: auto;
 
     @media (min-width: 768px) {
-      width: 30%;
+      width: 45%;
     }
   }
 
@@ -46,7 +45,7 @@
 
     @media (min-width: 768px) {
       margin-top: 12%;
-      width: 50%;
+      width: 75%;
     }
   }
 
@@ -61,7 +60,7 @@
     width: 90%;
 
     @media (min-width: 768px) {
-      width: 50%;
+      width: 75%;
     }
   }
 
@@ -69,7 +68,7 @@
 
 .bookfall-gif {
   margin: auto;
-  max-width: 50%;
+  max-width: 70%;
   height: auto;
   display: block;
 }

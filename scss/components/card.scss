@@ -68,7 +68,10 @@
 
 .bookfall-gif {
   margin: auto;
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
   display: block;
+  @media (min-width: 768px) {
+    max-width: 45%;
+  }
 }

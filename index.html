@@ -10,8 +10,7 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="600" />
   <meta property="og:site_name" content="The University of Iowa" />
-  <meta property="og:description"
-    content="Best wishes for a joyous holiday season and a bright start to your next chapter in 2023." />
+  <meta property="og:description" content="Best wishes for a joyous holiday season and a bright start to your next chapter in 2023." />
   <link rel="stylesheet" href="dist/css/main.css">
   <title>Best wishes for a joyous holiday season and a bright start to your next chapter in 2023. | The University of
     Iowa</title>
@@ -27,23 +26,29 @@
   </div>
   <div class="card" id="card">
     <div class="card-front" id="card-front">
-      <video src="dist/images/front.mp4" width="1080" height="1564" class="card-front__video" id="card-front__video"
-        autoplay loop muted playsinline></video>
+      <video src="dist/images/front.mp4" width="1080" height="1564" class="card-front__video" id="card-front__video" autoplay loop muted playsinline></video>
     </div>
     <div id="card-back" class="card-back" id="card-back">
       <div class="card-back-vid-container">
         <div id="bookfall">
-          <video src="dist/images/bookfall.mp4" width="3000" height="4200" class="card-back__video"
-            id="card-back__video" muted playsinline></video>
+          <video src="dist/images/bookfall.mp4" width="3000" height="4200" class="card-back__video" id="card-back__video" muted playsinline></video>
         </div>
         <div class="card-back__top-img-container">
-          <img src="dist/images/back-top.png" width="1582" height="462" loading="lazy"
-            alt="Contains the text 'Season's Greetings'" id="card-back__top-img" class="card-back__top-img" />
+          <img src="dist/images/back-top.png" width="1582" height="462" loading="lazy" alt="Contains the text 'Season's Greetings'" id="card-back__top-img" class="card-back__top-img" />
         </div>
       </div>
-      <img src="dist/images/back-bottom.png" loading="lazy"
-        alt="Contains the text 'Best wishes for a joyous holiday season and a bright start to your next chapter in 2023.' and a stack of colorful books. The top book is a gold book with 'Iowa' written on the spine."
-        class="card-back__bottom-img" id="card-back__bottom-img" width="1614" height="1455" />
+      <img src="dist/images/back-bottom.png" loading="lazy" alt="Contains the text 'Best wishes for a joyous holiday season and a bright start to your next chapter in 2023.' and a stack of colorful books. The top book is a gold book with 'Iowa' written on the spine." class="card-back__bottom-img" id="card-back__bottom-img" width="1614" height="1455" />
+      <a href="https://uiowa.edu" class="logo-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="logo-icon" aria-labelledby="logo-header" role="img" viewBox="0 0 311.6 90.2">
+          <path class="st0" d="M40 18.8h-7.3v52.4H40v19H0v-19h7.3V18.8H0V0h40V18.8z"></path>
+          <path class="st0" d="M93.8 90.2h-29c-10.5 0-17.4-6.9-17.4-18.2V18.2C47.4 7 54.4 0 64.8 0h29c10.5 0 17.4 7 17.4 18.2V72C111.2 83.2 104.2 90.2 93.8 90.2zM85.6 71.2V18.8H73v52.4H85.6z"></path>
+          <path class="st0" d="M122.6 18.8h-6.4V0h38v18.9H147l6.5 43.4L167 0h19.2l14.4 62.3 5.2-43.4h-6.6V0h37.5v18.9h-6.2l-11.3 71.4h-30.6l-11.8-53.2 -12.1 53.1h-29.4L122.6 18.8z"></path>
+          <path class="st0" d="M230.1 71.2h6.9L250.7 0h41l13.5 71.2h6.4v19H281l-2.9-22h-15.2l-2.7 22h-30L230.1 71.2 230.1 71.2zM276.5 51.7l-5.8-36.4 -6 36.4H276.5z"></path>
+          <image src="dist/images/iowa.png">
+            <title id="logo-header">University of Iowa</title>
+          </image>
+        </svg>
+      </a>
     </div>
     <div>
     </div>
@@ -52,100 +57,11 @@
     <div class="arrow__container">
       <svg class="arrow__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-        <path
-          d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+        <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
       </svg>
     </div>
   </div>
-  <script>
-    // Arrow fade away and parallax on scroll:
-    window.addEventListener("scroll", function () {
-      const distance = window.scrollY * -1.7;
-      document.querySelector("#garland__container").style.transform = `translateY(${distance}px)`
-      document.querySelector("#card-back").style.transform = `translateY(${distance * 0.2}px)`
-      if (distance < -200) {
-        document.querySelector("#arrow").style.opacity = 0;
-      }
-    })
-
-    // Book fall animation timing:
-    const bottomImg = document.querySelector('#card-back__bottom-img');
-    const topImg = document.querySelector('#card-back__top-img');
-    const video = document.querySelector('#card-back__video');
-    const topObserverOptions = {
-      root: null,
-      rootMargin: '0%',
-      threshold: 0.75
-    };
-    const bottomObserverOptions = {
-      root: null,
-      rootMargin: '0%',
-      threshold: 0.6
-    };
-    const topImgObserver = new IntersectionObserver(handleTopIntersection, topObserverOptions);
-    topImgObserver.observe(topImg);
-    const bottomImgObserver = new IntersectionObserver(handleBottomIntersection, bottomObserverOptions);
-    bottomImgObserver.observe(bottomImg);
-    var topVisible = true;
-    var bottomVisible = false;
-
-    // Reset video when top isn't visible:
-    function handleTopIntersection(entries) {
-      entries.map((entry) => {
-        if (entry.isIntersecting) {
-          // console.log('top visible')
-          topVisible = true;
-          if (!bottomVisible) {
-
-            var playPromise = video.play();
-
-            if (playPromise !== undefined) {
-              playPromise.then(function () {
-                // Automatic playback is enabled and started.
-              }).catch(function (error) {
-                // Automatic playback is disabled, replace with GIF:
-                video.remove();
-                if (bookfallGifExisting = document.getElementById('bookfall-gif')) {
-                  bookfallGifExisting.remove();
-                }
-                var bookfallGif = document.createElement('img');
-                bookfallGif.id = 'bookfall-gif'
-                bookfallGif.height = 756;
-                bookfallGif.width = 600;
-                bookfallGif.src = 'dist/images/bookfall.gif';
-                bookfallGif.classList.add('bookfall-gif');
-                document.getElementById('bookfall').appendChild(bookfallGif);
-              });
-            }
-
-          }
-        } else {
-          topVisible = false;
-          // Reset video if bottom isn't visible either
-          if (!bottomVisible) {
-            video.pause;
-            video.currentTime = 0;
-          }
-          // console.log('top invisible')
-          // console.log('is bottom visible?')
-          // console.log(bottomVisible);
-        }
-      });
-    }
-
-    // Toggle bottomVisible when bottom part of card is visible/invisible
-    function handleBottomIntersection(entries) {
-      entries.map((entry) => {
-        if (entry.isIntersecting) {
-          bottomVisible = true;
-          // console.log('bottom visible')
-        } else {
-          bottomVisible = false;
-          // console.log('bottom invisible')
-        }
-      });
-    }
-  </script>
+  <script type="text/javascript" src="dist/js/main.js"></script>
 </body>
 
 </html>

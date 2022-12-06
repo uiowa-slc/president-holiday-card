@@ -4,6 +4,8 @@
 }
 
 .card-front {
+  width: 100%;
+  aspect-ratio: 0.69;
   &__video {
     width: 100%;
     height: auto;

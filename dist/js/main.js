@@ -41,11 +41,10 @@ var bottomVisible = false;
 var playPromise;
 var gifEnabled = false;
 
-// Reset video when top isn't visible:
+// Reset video when top half of the inside of the card isn't visible:
 function handleTopIntersection(entries) {
   entries.map((entry) => {
     if (entry.isIntersecting) {
-      // console.log('top visible')
       topVisible = true;
 
       if (!bottomVisible) {
@@ -77,20 +76,19 @@ function handleTopIntersection(entries) {
       }
     } else {
       topVisible = false;
-      // Reset video after one second if bottom isn't visible either
+      // Reset video after one second if bottom isn't visible either.
       if (!bottomVisible) {
         video.pause;
         video.currentTime = 0;
       }
-      // console.log('top invisible')
-      // console.log('is bottom visible?')
-      // console.log(bottomVisible);
     }
   });
 }
-
+// Removes video and replaces it with a GIF.
 function playBookfallGif() {
   video.remove();
+  // If we've already played the GIF once, we want to "loop" it by
+  // removing the GIF first and re-adding it.
   if ((bookfallGifExisting = document.getElementById("bookfall-gif"))) {
     bookfallGifExisting.remove();
   }
@@ -103,15 +101,13 @@ function playBookfallGif() {
   document.getElementById("bookfall").appendChild(bookfallGif);
 }
 
-// Toggle bottomVisible when bottom part of card is visible/invisible
+// Toggle bottomVisible when bottom part of card is visible/invisible.
 function handleBottomIntersection(entries) {
   entries.map((entry) => {
     if (entry.isIntersecting) {
       bottomVisible = true;
-      // console.log('bottom visible')
     } else {
       bottomVisible = false;
-      // console.log('bottom invisible')
     }
   });
 }

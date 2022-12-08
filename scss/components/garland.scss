@@ -3,8 +3,6 @@
   margin: auto;
   width: 100%;
   max-width: 1200px;
-
-  @media (min-width: 768px) {}
 }
 
 .garland__container {
@@ -15,28 +13,8 @@
   top: -1%;
   will-change: transform;
   height: 100%;
-
-  @media (min-width: 480px) {
-    // top: -50px;
-
-  }
-
   @media (min-width: 992px) {
-    // top: -10%;
-    // top: -80px;
     width: 100%;
     left: 0;
   }
-
-  @media (min-width: 1100px) {
-    // top: -100px;
-  }
-
-  @media (min-width: 1280px) {
-    // top: -140px;
-  }
-
-  // background: url("../images/garland-8bit.png");
-  // background-size: cover;
-  // background-repeat: no-repeat;
 }

@@ -9,6 +9,8 @@ window.addEventListener("scroll", function () {
   }px)`;
   if (distance < -200) {
     document.querySelector("#arrow").style.opacity = 0;
+  } else {
+    document.querySelector("#arrow").style.opacity = 100;
   }
 });
 

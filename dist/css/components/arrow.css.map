@@ -5,8 +5,8 @@
 		"../../../scss/components/arrow.scss"
 	],
 	"sourcesContent": [
-		".arrow {\n\tposition: fixed;\n\tz-index: 99;\n\twidth: 100%;\n\tbottom: 0;\n\ttransition: all 0.5s linear;\n\n\t&__container {\n\t\tborder-radius: 50%;\n\t\twidth: 150px;\n\t\theight: 150px;\n\t\tmargin: auto;\n\t\tbackground: #f2f0e9;\n\t}\n\n\t&__img {\n\t\tdisplay: block;\n\t\twidth: 100px;\n\t\theight: 150px;\n\t\tmargin: auto;\n\t\tfill: #4f453a;\n\t}\n}"
+		".arrow {\n\tposition: fixed;\n\tz-index: 999;\n\twidth: 100%;\n\tbottom: 0;\n\ttransition: all 0.5s linear;\n\tdisplay: block;\n\n\t&__container {\n\t\tborder-radius: 50%;\n\t\twidth: 100px;\n\t\theight: 100px;\n\t\tmargin: auto;\n\t\tbackground: rgba(#eee3d7, 0.6);\n\n\t\t@media (min-width: 768px) {\n\t\t\t// background: #f2f0e9;\n\t\t\twidth: 150px;\n\t\t\theight: 150px;\n\t\t}\n\t}\n\n\t&__img {\n\t\tdisplay: block;\n\t\twidth: 50px;\n\t\theight: 100px;\n\t\tmargin: auto;\n\t\tfill: #4f453a;\n\n\t\t@media (min-width: 768px) {\n\t\twidth: 100px;\n\t\theight: 150px;\n\t\t}\n\t}\n}"
 	],
 	"names": [],
-	"mappings": "AAAA,AAAA,MAAM,AAAC,CACN,QAAQ,CAAE,KAAK,CACf,OAAO,CAAE,EAAE,CACX,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,CAAC,CACT,UAAU,CAAE,eAAe,CAiB3B,AAfC,AAAD,iBAAY,AAAC,CACZ,aAAa,CAAE,GAAG,CAClB,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,IAAI,CACZ,UAAU,CAAE,OAAO,CACnB,AAEA,AAAD,WAAM,AAAC,CACN,OAAO,CAAE,KAAK,CACd,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,IAAI,CACZ,IAAI,CAAE,OAAO,CACb"
+	"mappings": "AAAA,AAAA,MAAM,AAAC,CACN,QAAQ,CAAE,KAAK,CACf,OAAO,CAAE,GAAG,CACZ,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,CAAC,CACT,UAAU,CAAE,eAAe,CAC3B,OAAO,CAAE,KAAK,CA4Bd,AA1BC,AAAD,iBAAY,AAAC,CACZ,aAAa,CAAE,GAAG,CAClB,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,IAAI,CACZ,UAAU,CAAO,qBAAO,CAOxB,AALA,MAAM,EAAE,SAAS,EAAE,KAAK,EAPxB,AAAD,iBAAY,AAAC,CASX,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CAEd,CAEA,AAAD,WAAM,AAAC,CACN,OAAO,CAAE,KAAK,CACd,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,IAAI,CACZ,IAAI,CAAE,OAAO,CAMb,AAJA,MAAM,EAAE,SAAS,EAAE,KAAK,EAPxB,AAAD,WAAM,AAAC,CAQN,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CAEb"
 }

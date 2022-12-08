@@ -1,3 +1,3 @@
-.arrow{position:fixed;z-index:99;width:100%;bottom:0;transition:all 0.5s linear}.arrow__container{border-radius:50%;width:150px;height:150px;margin:auto;background:#f2f0e9}.arrow__img{display:block;width:100px;height:150px;margin:auto;fill:#4f453a}
+.arrow{position:fixed;z-index:999;width:100%;bottom:0;transition:all 0.5s linear;display:block}.arrow__container{border-radius:50%;width:100px;height:100px;margin:auto;background:rgba(238,227,215,0.6)}@media (min-width: 768px){.arrow__container{width:150px;height:150px}}.arrow__img{display:block;width:50px;height:100px;margin:auto;fill:#4f453a}@media (min-width: 768px){.arrow__img{width:100px;height:150px}}
 
 /*# sourceMappingURL=arrow.css.map */

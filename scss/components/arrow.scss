@@ -1,23 +1,35 @@
 .arrow {
 	position: fixed;
-	z-index: 99;
+	z-index: 999;
 	width: 100%;
 	bottom: 0;
 	transition: all 0.5s linear;
+	display: block;
 
 	&__container {
 		border-radius: 50%;
-		width: 150px;
-		height: 150px;
+		width: 100px;
+		height: 100px;
 		margin: auto;
-		background: #f2f0e9;
+		background: rgba(#eee3d7, 0.6);
+
+		@media (min-width: 768px) {
+			// background: #f2f0e9;
+			width: 150px;
+			height: 150px;
+		}
 	}
 
 	&__img {
 		display: block;
-		width: 100px;
-		height: 150px;
+		width: 50px;
+		height: 100px;
 		margin: auto;
 		fill: #4f453a;
+
+		@media (min-width: 768px) {
+		width: 100px;
+		height: 150px;
+		}
 	}
 }

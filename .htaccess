@@ -1,0 +1,7 @@
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+#Redirect root to 2022 when 2023 card is ready
+#RewriteRule ^$ ./2022 [L]

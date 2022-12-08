@@ -1,3 +1,3 @@
-.arrow{position:fixed;z-index:99;width:100%;bottom:0;transition:all 0.5s linear}.arrow__container{border-radius:50%;width:150px;height:150px;margin:auto;background:rgba(238,238,238,0.6)}.arrow__img{display:block;width:100px;height:150px;margin:auto;fill:#4f453a}
+.arrow{position:fixed;z-index:99;width:100%;bottom:0;transition:all 0.5s linear}.arrow__container{border-radius:50%;width:150px;height:150px;margin:auto;background:#ede3d7}.arrow__img{display:block;width:100px;height:150px;margin:auto;fill:#4f453a}
 
 /*# sourceMappingURL=arrow.css.map */

@@ -5,8 +5,8 @@
 		"../../../scss/components/arrow.scss"
 	],
 	"sourcesContent": [
-		".arrow {\n\tposition: fixed;\n\tz-index: 99;\n\twidth: 100%;\n\tbottom: 0;\n\ttransition: all 0.5s linear;\n\n\t&__container {\n\t\tborder-radius: 50%;\n\t\twidth: 150px;\n\t\theight: 150px;\n\t\tmargin: auto;\n\t\tbackground: rgba(#eee, 0.6);\n\t}\n\n\t&__img {\n\t\tdisplay: block;\n\t\twidth: 100px;\n\t\theight: 150px;\n\t\tmargin: auto;\n\t\tfill: #4f453a;\n\t}\n}"
+		".arrow {\n\tposition: fixed;\n\tz-index: 99;\n\twidth: 100%;\n\tbottom: 0;\n\ttransition: all 0.5s linear;\n\n\t&__container {\n\t\tborder-radius: 50%;\n\t\twidth: 150px;\n\t\theight: 150px;\n\t\tmargin: auto;\n\t\tbackground: #ede3d7;\n\t\t//backdrop-filter: blur(5px);\n\t}\n\n\t&__img {\n\t\tdisplay: block;\n\t\twidth: 100px;\n\t\theight: 150px;\n\t\tmargin: auto;\n\t\tfill: #4f453a;\n\t}\n}"
 	],
 	"names": [],
-	"mappings": "AAAA,AAAA,MAAM,AAAC,CACN,QAAQ,CAAE,KAAK,CACf,OAAO,CAAE,EAAE,CACX,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,CAAC,CACT,UAAU,CAAE,eAAe,CAiB3B,AAfC,AAAD,iBAAY,AAAC,CACZ,aAAa,CAAE,GAAG,CAClB,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,IAAI,CACZ,UAAU,CAAO,qBAAI,CACrB,AAEA,AAAD,WAAM,AAAC,CACN,OAAO,CAAE,KAAK,CACd,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,IAAI,CACZ,IAAI,CAAE,OAAO,CACb"
+	"mappings": "AAAA,AAAA,MAAM,AAAC,CACN,QAAQ,CAAE,KAAK,CACf,OAAO,CAAE,EAAE,CACX,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,CAAC,CACT,UAAU,CAAE,eAAe,CAkB3B,AAhBC,AAAD,iBAAY,AAAC,CACZ,aAAa,CAAE,GAAG,CAClB,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,IAAI,CACZ,UAAU,CAAE,OAAO,CAEnB,AAEA,AAAD,WAAM,AAAC,CACN,OAAO,CAAE,KAAK,CACd,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,IAAI,CACZ,IAAI,CAAE,OAAO,CACb"
 }

@@ -1,3 +1,8 @@
+@import "components/card";
+@import "components/garland";
+@import "components/arrow";
+@import "components/logo";
+
 html{
     margin: 0;
     padding: 0;
@@ -10,7 +15,19 @@ body{
     padding: 0;
 }
 
-@import "components/card";
-@import "components/garland";
-@import "components/arrow";
-@import "components/logo";
+.element-invisible, .visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px,1px,1px,1px);
+}
+
+.main{
+    position: relative;
+    margin-top: 10%;    
+
+    @media (min-width: 768px) {
+		margin-top: 140px;
+	}
+}

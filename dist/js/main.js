@@ -1,23 +1,8 @@
-// Arrow fade away and parallax on scroll:
-window.addEventListener("scroll", function () {
-  const distance = window.scrollY * -1.7;
-  document.querySelector(
-    "#garland__container"
-  ).style.transform = `translateY(${distance}px)`;
-  document.querySelector("#card-back").style.transform = `translateY(${
-    distance * 0.2
-  }px)`;
-  if (distance < -200) {
-    document.querySelector("#arrow").style.opacity = 0;
-  } else {
-    document.querySelector("#arrow").style.opacity = 100;
-  }
-});
-
-// Book fall animation timing:
-const bottomImg = document.querySelector("#card-back__bottom-img");
-const topImg = document.querySelector("#card-back__top-img");
+const arrow = document.querySelector("#arrow");
 const video = document.querySelector("#card-back__video");
+const topImg = document.querySelector("#card-back__top-img");
+const bottomImg = document.querySelector("#card-back__bottom-img");
+
 const topObserverOptions = {
   root: null,
   rootMargin: "0%",
@@ -32,11 +17,30 @@ const topImgObserver = new IntersectionObserver(
   handleTopIntersection,
   topObserverOptions
 );
-topImgObserver.observe(topImg);
 const bottomImgObserver = new IntersectionObserver(
   handleBottomIntersection,
   bottomObserverOptions
 );
+
+
+// Arrow fade away and parallax on scroll:
+window.addEventListener("scroll", function () {
+  const distance = window.scrollY * -1.7;
+  document.querySelector(
+    "#garland__container"
+  ).style.transform = `translateY(${distance}px)`;
+  document.querySelector("#card-back").style.transform = `translateY(${
+    distance * 0.2
+  }px)`;
+  if (distance < -200) {
+    arrow.style.opacity = 0;
+  } else {
+    arrow.style.opacity = 100;
+  }
+});
+
+// Book fall animation timing:
+topImgObserver.observe(topImg);
 bottomImgObserver.observe(bottomImg);
 var topVisible = true;
 var bottomVisible = false;
@@ -113,3 +117,5 @@ function handleBottomIntersection(entries) {
     }
   });
 }
+
+

@@ -40,12 +40,13 @@
       <video src="dist/images/front.mp4" width="1080" height="1564" class="card-front__video" id="card-front__video" autoplay loop muted playsinline></video>
     </div>
     <p class="element-invisible" id="video-desc">A silent illustrated animation of a book shelf with several books and other items on the shelves. The set of books on the top shelf includes a gold book with "Iowa" written on the spine on the top shelf. The top shelf also contains a snowglobe with animated snow falling over a model of the Old Capitol inside the snowglobe. The snowglobe has "Home Sweet Home" written on its base. There's a decorative card on the top shelf that has "Season's Greetings" written on the front. The second shelf has a framed photo of Ollie the dog with flickering animated candles and books next to it. The bottom shelf contains some more books, plants in a vase, and a statuette of Herky the Hawk in a pose with his hands on his hips.</p>
+    <a id="inside"></a>
     <div id="card-back" class="card-back" id="card-back">
       <div class="card-back-vid-container">
         <div id="bookfall">
           <video src="dist/images/bookfall.mp4" width="3000" height="4200" class="card-back__video" id="card-back__video" muted playsinline></video>
         </div>
-        <div class="card-back__top-img-container" id="inside">
+        <div class="card-back__top-img-container">
           <img src="dist/images/back-top.png" width="1582" height="462" loading="lazy" alt="Contains the stylized text 'Season's Greetings'" id="card-back__top-img" class="card-back__top-img" />
         </div>
       </div>
@@ -65,14 +66,15 @@
     </div>
   </div>
   </div>
-  <div class="arrow" id="arrow">
+  <a class="arrow" id="arrow" href="#inside">
     <div class="arrow__container">
       <svg class="arrow__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
         <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
       </svg>
     </div>
-  </div>
+  </a>
+  <script type="text/javascript" src="dist/js/smoothscroll.js"></script>
   <script type="text/javascript" src="dist/js/main.js"></script>
 </body>
 

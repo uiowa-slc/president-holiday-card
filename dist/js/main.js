@@ -1,3 +1,6 @@
+
+
+
 const arrow = document.querySelector("#arrow");
 const video = document.querySelector("#card-back__video");
 const topImg = document.querySelector("#card-back__top-img");
@@ -22,6 +25,11 @@ const bottomImgObserver = new IntersectionObserver(
   bottomObserverOptions
 );
 
+var scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 3000,
+  speedAsDuration: true,
+  offset: 150
+});
 
 // Arrow fade away and parallax on scroll:
 window.addEventListener("scroll", function () {
@@ -31,7 +39,10 @@ window.addEventListener("scroll", function () {
   ).style.transform = `translateY(${distance}px)`;
   document.querySelector("#card-back").style.transform = `translateY(${
     distance * 0.2
-  }px)`;
+    }px)`;
+    // document.querySelector("#inside").style.transform = `translateY(${
+    //   distance * 0.3
+    // }px)`;
   if (distance < -200) {
     arrow.style.opacity = 0;
   } else {

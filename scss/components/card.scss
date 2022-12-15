@@ -9,9 +9,11 @@
 
   background-size: contain;
   background-repeat: no-repeat;
+
   &__video {
     width: 100%;
     height: auto;
+    clip-path: inset(1px 1px);
   }
 }
 
@@ -76,6 +78,7 @@
   max-width: 50%;
   height: auto;
   display: block;
+
   @media (min-width: 768px) {
     max-width: 45%;
   }

@@ -3,32 +3,33 @@
 @import "components/arrow";
 @import "components/logo";
 
-html{
-    margin: 0;
-    padding: 0;
-    // scroll-behavior: smooth;
+html {
+  margin: 0;
+  padding: 0;
+  // scroll-behavior: smooth;
 }
 
-body{
-    overflow-x: hidden;
-    background: #f2f0e9;
-    margin: 0;
-    padding: 0;
+body {
+  overflow-x: hidden;
+  background: #f1ede5;
+  margin: 0;
+  padding: 0;
 }
 
-.element-invisible, .visually-hidden {
+.element-invisible,
+.visually-hidden {
   position: absolute !important;
   height: 1px;
   width: 1px;
   overflow: hidden;
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
-.main{
-    position: relative;
-    margin-top: 10%;    
+.main {
+  position: relative;
+  margin-top: 10%;
 
-    @media (min-width: 768px) {
-		margin-top: 140px;
-	}
+  @media (min-width: 768px) {
+    margin-top: 140px;
+  }
 }
